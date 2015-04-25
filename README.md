@@ -27,3 +27,6 @@ go to samples dir and run merge script
 run training
 
 ```opencv_traincascade -data classifier -vec samples/samples.vec -bg negatives.txt -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000 -numNeg 13 -w 300 -h 175 -mode BASIC -precalcValBufSize 512```
+
+nb. [numPos needs to be somewhat less than the number of postive samples, based on background similarity, numStages, minHitRate]
+(http://stackoverflow.com/questions/10863560/haar-training-opencv-assertion-failed)
