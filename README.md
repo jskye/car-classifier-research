@@ -1,7 +1,7 @@
 # haar-classifier-tute
 a tutorial to do haar classifier in opencv
  
- forked from ____
+A clone of https://github.com/mrnugget/opencv-haar-classifier-training
  
  
 ```find ./negative_images -iname "*.jpg" > negatives.txt```
@@ -9,6 +9,7 @@ a tutorial to do haar classifier in opencv
 ```find ./positive_images -iname "*.jpg" > positives.txt```
 
 create many positive samples from provided ones
+
 ```perl bin/createsamples.pl positives.txt negatives.txt samples 1500\
 "opencv_createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1\
 -maxyangle 1.1 maxzangle 0.5 -maxidev 40 -w 300 -h 175"```
