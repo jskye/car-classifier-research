@@ -2,7 +2,8 @@
 a tutorial to do haar classifier in opencv
  
 A clone of https://github.com/mrnugget/opencv-haar-classifier-training
- 
+
+Create list of samples from images:
  
 ```find ./negative_images -iname "*.jpg" > negatives.txt```
 
@@ -13,6 +14,11 @@ create many positive samples from provided ones
 ```perl bin/createsamples.pl positives.txt negatives.txt samples 1500\
 "opencv_createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1\
 -maxyangle 1.1 maxzangle 0.5 -maxidev 40 -w 300 -h 175"```
+
+nb. warnings may come up when running the perl script, since i had to rename some files from png to jpg. 
+This is because of stricter libpng rules (http://tex.stackexchange.com/questions/125612/warning-pdflatex-libpng-warning-iccp-known-incorrect-srgb-profile)
+but it still works with them. 
+
 
 go to samples dir and run merge script
 
