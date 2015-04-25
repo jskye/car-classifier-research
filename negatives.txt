@@ -1,0 +1,13 @@
+./negative_images/opencv_negative_01.jpg
+./negative_images/opencv_negative_02.jpg
+./negative_images/opencv_negative_03.jpg
+./negative_images/opencv_negative_04.jpg
+./negative_images/opencv_negative_05.jpg
+./negative_images/opencv_negative_06.jpg
+./negative_images/opencv_negative_07.jpg
+./negative_images/opencv_negative_08.jpg
+./negative_images/opencv_negative_09.jpg
+./negative_images/opencv_negative_10.jpg
+./negative_images/opencv_negative_11.jpg
+./negative_images/opencv_negative_12.jpg
+./negative_images/opencv_negative_13.jpg
