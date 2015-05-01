@@ -11,8 +11,8 @@ Create list of samples from images:
 
 create many positive samples from provided ones
 
-```perl bin/createsamples.pl positives.txt negatives.txt samples 1500
-"opencv_createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1
+```perl bin/createsamples.pl positives.txt negatives.txt samples 1500\
+"opencv_createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1\
 -maxyangle 1.1 maxzangle 0.5 -maxidev 40 -w 300 -h 175"```
 
 nb. warnings may come up when running the perl script, since i had to change some files from png to jpg. 
