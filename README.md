@@ -1,4 +1,4 @@
-# haar-classifier-tute
+# car-classifier-research
 
 This repo is for a final year University of Newcastle Computer Vision research assignment conducted by 
 myself and [Dylan Barnett](https://github.com/DBarnett73).<br>
