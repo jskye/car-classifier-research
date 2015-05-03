@@ -1,7 +1,8 @@
 # haar-classifier-tute
 
-This repo is for a University of Newcastle Computer Vision research assignment by @jskye & @DBarnett73.
-We were tasked with conducting some research into training object detectors using feature extraction.
+This repo is for a final year University of Newcastle Computer Vision research assignment conducted by 
+myself and [Dylan Barnett](https://github.com/DBarnett73).<br>
+We were tasked with conducting some research into training object detectors using feature extraction.<br>
 We decided to look at training car detection using OpenCV's cascaded training on Haar-like features 
 as well as utilise an old implementation of Viola Jones framework (JViolaJones).
 
@@ -18,6 +19,7 @@ Test with - <br>
 light (normal) vs dark (night, tunnels) images
 * (normal) vs low powered (raspPi)
 
+The research is currently underway.
 
 We started with a clone of https://github.com/mrnugget/opencv-haar-classifier-training
 And followed the following method: 
