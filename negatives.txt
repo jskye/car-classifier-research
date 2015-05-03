@@ -1,13 +1,361 @@
-./negative_images/opencv_negative_01.jpg
-./negative_images/opencv_negative_02.jpg
-./negative_images/opencv_negative_03.jpg
-./negative_images/opencv_negative_04.jpg
-./negative_images/opencv_negative_05.jpg
-./negative_images/opencv_negative_06.jpg
-./negative_images/opencv_negative_07.jpg
-./negative_images/opencv_negative_08.jpg
-./negative_images/opencv_negative_09.jpg
-./negative_images/opencv_negative_10.jpg
-./negative_images/opencv_negative_11.jpg
-./negative_images/opencv_negative_12.jpg
-./negative_images/opencv_negative_13.jpg
+./negative_images
+./negative_images/IMG_0281.JPG
+./negative_images/IMAG0039 (2).jpg
+./negative_images/2011-04-12 19.01.47.jpg
+./negative_images/2012-04-08 12.24.26.jpg
+./negative_images/2012-04-08 12.17.36.jpg
+./negative_images/2012-04-08 12.17.45.jpg
+./negative_images/2011-11-28 15.35.49.jpg
+./negative_images/2012-07-15 16.55.26.jpg
+./negative_images/IMG_0275.JPG
+./negative_images/2012-03-24 11.22.59.jpg
+./negative_images/edit.jpg
+./negative_images/2012-04-08 12.19.43.jpg
+./negative_images/IMAG0097.jpg
+./negative_images/2011-12-09 15.33.34.jpg
+./negative_images/2011-10-09 14.46.04.jpg
+./negative_images/2011-08-30 08.39.21.jpg
+./negative_images/IMAG0288.jpg
+./negative_images/2011-12-14 19.23.46.jpg
+./negative_images/2011-09-19 13.22.13.jpg
+./negative_images/2012-04-06 10.48.00.jpg
+./negative_images/2012-02-05 16.21.12.jpg
+./negative_images/2011-09-19 13.24.01.jpg
+./negative_images/2011-10-17 12.45.14.jpg
+./negative_images/2011-04-20 15.32.24.jpg
+./negative_images/2011-07-11 09.59.42.jpg
+./negative_images/IMG_0160.JPG
+./negative_images/2012-03-24 11.23.08.jpg
+./negative_images/IMG_0156.JPG
+./negative_images/2011-10-09 14.48.08.jpg
+./negative_images/DSC00317.JPG
+./negative_images/2012-02-05 16.18.49.jpg
+./negative_images/2012-02-05 16.20.34.jpg
+./negative_images/IMAG0068.jpg
+./negative_images/2012-04-08 12.20.53.jpg
+./negative_images/2011-04-20 15.32.59.jpg
+./negative_images/2011-05-09 13.18.44.jpg
+./negative_images/2011-05-31 18.42.27.jpg
+./negative_images/IMAG0038.jpg
+./negative_images/2012-06-11 11.30.49.jpg
+./negative_images/2011-12-09 15.35.02.jpg
+./negative_images/2011-09-19 13.22.38.jpg
+./negative_images/2011-10-09 14.44.41.jpg
+./negative_images/IMAG0029.jpg
+./negative_images/2012-02-17 08.30.07.jpg
+./negative_images/IMAG0025.jpg
+./negative_images/IMG_0154.JPG
+./negative_images/2011-10-09 14.44.25.jpg
+./negative_images/2012-04-12 18.29.08.jpg
+./negative_images/2011-12-24 17.00.16.jpg
+./negative_images/101018_195209.jpg
+./negative_images/IMAG0211.jpg
+./negative_images/2011-12-09 15.34.28.jpg
+./negative_images/2011-10-07 15.04.58.jpg
+./negative_images/2011-12-24 17.28.42.jpg
+./negative_images/155593_118505631545895_586376_n.jpg
+./negative_images/IMAG0035 (2).jpg
+./negative_images/2011-12-09 15.36.13.jpg
+./negative_images/IMAG0028.jpg
+./negative_images/2012-03-04 20.18.07.jpg
+./negative_images/2011-09-19 13.24.56.jpg
+./negative_images/2011-08-11 18.46.38.jpg
+./negative_images/2011-12-24 17.28.32.jpg
+./negative_images/2012-04-08 12.23.17.jpg
+./negative_images/2012-04-28 08.46.41.jpg
+./negative_images/IMAG0061.jpg
+./negative_images/2011-12-24 17.27.58.jpg
+./negative_images/DSC00328.JPG
+./negative_images/2011-05-31 18.35.47.jpg
+./negative_images/2011-05-30 12.03.56.jpg
+./negative_images/IMAG0030.jpg
+./negative_images/2012-07-15 16.54.57.jpg
+./negative_images/2011-05-31 18.37.34.jpg
+./negative_images/2012-01-12 11.37.40.jpg
+./negative_images/2012-06-11 11.29.47.jpg
+./negative_images/IMG_0300.JPG
+./negative_images/IMAG0289.jpg
+./negative_images/2012-04-06 06.21.53.jpg
+./negative_images/IMAG0113.jpg
+./negative_images/2012-04-06 10.46.58.jpg
+./negative_images/2011-10-09 14.42.48.jpg
+./negative_images/2011-09-19 13.21.12.jpg
+./negative_images/IMAG0017.jpg
+./negative_images/2011-09-19 13.25.21.jpg
+./negative_images/2011-11-28 15.35.35.jpg
+./negative_images/IMG_0298.JPG
+./negative_images/13122011_003_1.jpg
+./negative_images/IMG_0296.JPG
+./negative_images/2011-05-31 18.34.49.jpg
+./negative_images/IMAG0033 (2).jpg
+./negative_images/180845_132501483482468_4229057_n.jpg
+./negative_images/2011-08-30 08.38.43.jpg
+./negative_images/2012-04-06 10.48.34.jpg
+./negative_images/2012-02-05 16.20.42.jpg
+./negative_images/2011-12-02 14.20.12.jpg
+./negative_images/IMAG0024.jpg
+./negative_images/2012-01-25 10.27.08.jpg
+./negative_images/2011-10-07 15.04.17.jpg
+./negative_images/IMG_0274.JPG
+./negative_images/2011-12-24 16.57.44.jpg
+./negative_images/2012-03-25 10.12.25.jpg
+./negative_images/2011-12-09 15.33.53.jpg
+./negative_images/IMAG0002.jpg
+./negative_images/2012-04-08 12.21.33.jpg
+./negative_images/2011-08-30 08.36.54.jpg
+./negative_images/2011-09-19 13.22.23.jpg
+./negative_images/2011-09-19 13.23.02.jpg
+./negative_images/2011-12-02 14.19.57.jpg
+./negative_images/DSC00378.JPG
+./negative_images/2012-04-08 12.21.43.jpg
+./negative_images/IMG_0276.JPG
+./negative_images/2011-09-19 13.25.27.jpg
+./negative_images/2011-10-09 14.44.33.jpg
+./negative_images/2011-04-23 19.40.55.jpg
+./negative_images/101103_134055 (2).jpg
+./negative_images/2012-07-15 16.55.10.jpg
+./negative_images/2011-05-28 15.05.44.jpg
+./negative_images/IMAG0032.jpg
+./negative_images/2011-12-09 15.36.45.jpg
+./negative_images/IMAG0015.jpg
+./negative_images/IMAG0192.jpg
+./negative_images/2011-12-24 17.27.48.jpg
+./negative_images/2012-02-05 16.18.10.jpg
+./negative_images/IMAG0045 (2).jpg
+./negative_images/30042011.jpg
+./negative_images/IMAG0210.jpg
+./negative_images/IMG_0279.JPG
+./negative_images/100906_172341.jpg
+./negative_images/2011-10-07 15.05.20.jpg
+./negative_images/2011-10-07 15.05.11.jpg
+./negative_images/2012-04-07 12.46.44.jpg
+./negative_images/2012-03-04 20.18.16.jpg
+./negative_images/IMAG0018.jpg
+./negative_images/2012-04-12 18.29.15.jpg
+./negative_images/IMAG0261.jpg
+./negative_images/2011-07-01 11.03.20.jpg
+./negative_images/IMG_0302.JPG
+./negative_images/923206_512358565496756_2000684909_n.jpg
+./negative_images/2012-04-06 10.47.13.jpg
+./negative_images/IMAG0294.jpg
+./negative_images/IMAG0071.jpg
+./negative_images/2011-05-22 16.15.16.jpg
+./negative_images/2012-04-08 12.22.47.jpg
+./negative_images/IMAG0021.jpg
+./negative_images/2011-10-09 14.42.57.jpg
+./negative_images/2012-01-25 10.27.00.jpg
+./negative_images/2011-05-31 18.36.47.jpg
+./negative_images/IMAG0223.jpg
+./negative_images/IMG_0285.JPG
+./negative_images/.gitkeep
+./negative_images/IMAG0024 (2).jpg
+./negative_images/2011-09-19 13.21.46.jpg
+./negative_images/2011-05-20 13.32.13.jpg
+./negative_images/2011-12-25 16.02.13.jpg
+./negative_images/575714_515508435181769_637899915_n.jpg
+./negative_images/100906_172341 (2).jpg
+./negative_images/IMG_0270.JPG
+./negative_images/2011-09-19 13.24.11.jpg
+./negative_images/2011-12-24 17.28.53.jpg
+./negative_images/2012-03-04 20.18.25.jpg
+./negative_images/IMAG0034 (2).jpg
+./negative_images/2011-08-30 08.39.12.jpg
+./negative_images/IMAG0224.jpg
+./negative_images/IMG_0278.JPG
+./negative_images/IMAG0069.jpg
+./negative_images/16052011_002_.jpg
+./negative_images/2011-12-24 16.58.06.jpg
+./negative_images/IMAG0067.jpg
+./negative_images/2012-02-07 16.25.53.jpg
+./negative_images/2011-06-18 14.15.56.jpg
+./negative_images/IMG_0288.JPG
+./negative_images/IMAG0072.jpg
+./negative_images/2011-09-19 13.23.34.jpg
+./negative_images/IMG_0293.JPG
+./negative_images/IMAG0128.jpg
+./negative_images/IMG_0155.JPG
+./negative_images/IMAG0026.jpg
+./negative_images/2011-04-18 14.51.35.jpg
+./negative_images/DSC00375.JPG
+./negative_images/2011-09-19 13.23.11.jpg
+./negative_images/IMAG0226.jpg
+./negative_images/2011-10-07 15.05.31.jpg
+./negative_images/2011-10-09 14.44.05.jpg
+./negative_images/2011-05-06 08.02.57.jpg
+./negative_images/10122011_002_1.jpg
+./negative_images/IMAG0033.jpg
+./negative_images/IMG_0159.JPG
+./negative_images/2011-10-09 14.49.00.jpg
+./negative_images/2011-11-28 15.39.00.jpg
+./negative_images/2011-04-20 15.33.09.jpg
+./negative_images/2011-05-24 14.51.32.jpg
+./negative_images/101018_195209 (2).jpg
+./negative_images/2012-01-25 10.26.29.jpg
+./negative_images/2011-06-13 12.48.10.jpg
+./negative_images/IMAG0028 (2).jpg
+./negative_images/02062011_005_.jpg
+./negative_images/2012-04-08 12.19.16.jpg
+./negative_images/2011-12-09 15.33.42.jpg
+./negative_images/2012-04-06 10.47.52.jpg
+./negative_images/2011-05-06 08.02.40.jpg
+./negative_images/2012-04-27 21.40.57.jpg
+./negative_images/IMAG0062.jpg
+./negative_images/2012-03-04 20.18.44.jpg
+./negative_images/2011-04-18 14.16.10.jpg
+./negative_images/IMAG0046.jpg
+./negative_images/2012-02-05 16.20.18.jpg
+./negative_images/IMAG0031.jpg
+./negative_images/IMAG0027.jpg
+./negative_images/2011-11-27 17.54.05.jpg
+./negative_images/DSC00372.JPG
+./negative_images/2012-02-17 08.32.43.jpg
+./negative_images/2011-12-09 15.36.36.jpg
+./negative_images/IMAG0109.jpg
+./negative_images/2011-11-27 17.53.42.jpg
+./negative_images/2011-10-09 14.43.08.jpg
+./negative_images/DSC00370.JPG
+./negative_images/2012-02-05 16.20.27.jpg
+./negative_images/IMAG0026 (2).jpg
+./negative_images/IMAG0130.jpg
+./negative_images/2011-05-28 15.05.22.jpg
+./negative_images/2012-04-08 12.19.06.jpg
+./negative_images/2012-04-08 12.20.40.jpg
+./negative_images/2011-10-17 12.45.25.jpg
+./negative_images/2012-02-05 16.19.27.jpg
+./negative_images/2011-12-09 15.33.26.jpg
+./negative_images/2011-10-09 14.44.52.jpg
+./negative_images/IMG_0299.JPG
+./negative_images/IMAG0212.jpg
+./negative_images/IMG_0282.JPG
+./negative_images/2011-05-07 14.35.31.jpg
+./negative_images/IMG_0287.JPG
+./negative_images/2012-04-06 10.47.43.jpg
+./negative_images/IMAG0073.jpg
+./negative_images/101103_134055.jpg
+./negative_images/2011-09-19 13.21.37.jpg
+./negative_images/IMG_0271.JPG
+./negative_images/2011-08-30 08.37.38.jpg
+./negative_images/2012-01-25 10.26.45.jpg
+./negative_images/IMAG0291.jpg
+./negative_images/2012-02-15 20.40.22.jpg
+./negative_images/2011-10-17 12.45.00.jpg
+./negative_images/2012-04-08 12.21.13.jpg
+./negative_images/IMAG0222.jpg
+./negative_images/IMAG0290.jpg
+./negative_images/IMAG0282.jpg
+./negative_images/2012-04-06 10.48.10.jpg
+./negative_images/IMAG0058.jpg
+./negative_images/2011-10-17 12.44.38.jpg
+./negative_images/2011-10-09 14.47.06.jpg
+./negative_images/2011-04-20 15.32.36.jpg
+./negative_images/IMAG0283.jpg
+./negative_images/IMAG0292.jpg
+./negative_images/2012-04-08 12.17.57.jpg
+./negative_images/2011-05-30 12.04.06.jpg
+./negative_images/IMG_0273.JPG
+./negative_images/2011-05-28 15.05.32.jpg
+./negative_images/2011-11-28 15.38.43.jpg
+./negative_images/IMAG0035.jpg
+./negative_images/2011-11-28 15.36.04.jpg
+./negative_images/2012-04-08 12.17.28.jpg
+./negative_images/2011-09-19 13.25.33.jpg
+./negative_images/2012-04-12 18.28.57.jpg
+./negative_images/2011-05-09 13.36.39.jpg
+./negative_images/IMAG0022.jpg
+./negative_images/2011-10-09 14.43.50.jpg
+./negative_images/2012-07-15 16.55.36.jpg
+./negative_images/2011-11-27 17.54.29.jpg
+./negative_images/IMAG0037 (2).jpg
+./negative_images/IMAG0019.jpg
+./negative_images/2012-02-05 16.18.29.jpg
+./negative_images/2012-04-12 18.28.41.jpg
+./negative_images/2011-06-13 12.48.02.jpg
+./negative_images/2011-10-17 12.44.47.jpg
+./negative_images/IMAG0110.jpg
+./negative_images/2012-04-27 21.41.14.jpg
+./negative_images/IMAG0057.jpg
+./negative_images/IMAG0041.jpg
+./negative_images/2012-04-06 10.47.37.jpg
+./negative_images/2011-09-19 13.22.53.jpg
+./negative_images/2011-09-19 13.22.02.jpg
+./negative_images/2012-04-06 10.47.19.jpg
+./negative_images/IMG_0272.JPG
+./negative_images/2011-05-24 14.52.01.jpg
+./negative_images/2012-01-11 15.29.49.jpg
+./negative_images/2012-04-06 06.21.15.jpg
+./negative_images/2011-12-25 16.02.29.jpg
+./negative_images/2011-12-24 17.29.15.jpg
+./negative_images/IMG_0284.JPG
+./negative_images/2012-06-11 11.29.59.jpg
+./negative_images/2011-10-07 15.04.41.jpg
+./negative_images/IMG_0280.JPG
+./negative_images/2011-12-24 17.29.04.jpg
+./negative_images/DSC00376.JPG
+./negative_images/IMAG0296.jpg
+./negative_images/2011-09-19 13.21.31.jpg
+./negative_images/2011-05-31 18.34.41.jpg
+./negative_images/2011-06-13 12.47.50.jpg
+./negative_images/2011-06-18 14.54.38.jpg
+./negative_images/2011-06-13 12.50.44.jpg
+./negative_images/2012-04-06 10.47.07.jpg
+./negative_images/2012-03-24 11.22.52.jpg
+./negative_images/2011-08-30 08.38.05.jpg
+./negative_images/2012-03-24 11.23.31.jpg
+./negative_images/IMG_0297.JPG
+./negative_images/2012-04-27 21.41.07.jpg
+./negative_images/2011-11-28 15.35.43.jpg
+./negative_images/2011-12-09 15.34.37.jpg
+./negative_images/2011-05-06 08.03.22.jpg
+./negative_images/IMG_0269.JPG
+./negative_images/DSC00369.JPG
+./negative_images/IMAG0220.jpg
+./negative_images/2011-10-17 12.44.23.jpg
+./negative_images/2011-08-30 08.38.51.jpg
+./negative_images/2011-06-18 14.55.06.jpg
+./negative_images/2011-07-11 10.15.28.jpg
+./negative_images/2011-05-31 18.35.37.jpg
+./negative_images/11025926_912410292158246_140299301649652315_o.jpg
+./negative_images/2012-03-24 11.23.17.jpg
+./negative_images/2011-09-19 08.50.56.jpg
+./negative_images/252227_434581159941164_1093377413_n.jpg
+./negative_images/IMAG0016.jpg
+./negative_images/IMAG0065.jpg
+./negative_images/2012-03-23 20.48.45.jpg
+./negative_images/birthday.jpg
+./negative_images/2011-08-30 08.37.55.jpg
+./negative_images/2012-03-24 11.23.47.jpg
+./negative_images/2011-12-24 16.55.48.jpg
+./negative_images/IMG_0157.JPG
+./negative_images/IMG_0289.JPG
+./negative_images/25122011_006_1.jpg
+./negative_images/IMAG0036.jpg
+./negative_images/2011-05-28 15.03.52.jpg
+./negative_images/2011-10-09 14.47.27.jpg
+./negative_images/2011-05-28 15.04.38.jpg
+./negative_images/2012-07-15 16.55.53.jpg
+./negative_images/2012-04-08 12.18.51.jpg
+./negative_images/22052011_001_.jpg
+./negative_images/IMAG0191.jpg
+./negative_images/2012-04-08 12.18.04.jpg
+./negative_images/2011-05-28 15.05.11.jpg
+./negative_images/IMAG0038 (2).jpg
+./negative_images/IMAG0225.jpg
+./negative_images/IMG_0292.JPG
+./negative_images/2012-04-07 12.44.45.jpg
+./negative_images/IMG_0301.JPG
+./negative_images/2011-05-31 18.36.18.jpg
+./negative_images/2011-12-02 14.20.03.jpg
+./negative_images/Ash smiling.jpg
+./negative_images/2012-04-06 10.48.23.jpg
+./negative_images/13122011_006_1.jpg
+./negative_images/IMAG0040.jpg
+./negative_images/IMAG0295.jpg
+./negative_images/2011-07-11 10.16.20.jpg
+./negative_images/2011-05-30 07.41.22.jpg
+./negative_images/IMG_0158.JPG
+./negative_images/2011-10-09 14.46.56.jpg
+./negative_images/2011-12-09 15.35.13.jpg
+./negative_images/IMG_0283.JPG
+./negative_images/IMAG0039.jpg
+./negative_images/IMAG0034.jpg
+./negative_images/2012-04-06 10.46.51.jpg
