@@ -8,15 +8,15 @@ as well as utilise an old implementation of Viola Jones framework (JViolaJones).
 
 We decided the main goals of the project were:<br>
 *Train object detector to -<br>
-** recognise cars ahead, from road view
+* recognise cars ahead, from road view <br>
 Train with - <br>
 * Cascaded Haar-features
 * Cascaded Haar-features & Viola Jones Framework
-* Cascaded Local Binary Patterns (LBP)
+* Cascaded Local Binary Patterns (LBP)<br>
 Test with - <br>
 * color (normal) vs grayscale
 * clean (normal) vs noisy
-light (normal) vs dark (night, tunnels) images
+*light (normal) vs dark (night, tunnels) images
 * (normal) vs low powered (raspPi)
 
 The research is currently underway.
