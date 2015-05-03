@@ -1,18 +1,18 @@
 # haar-classifier-tute
 
-This repo is for a University Computer Vision research assignment.
+This repo is for a University of Newcastle Computer Vision research assignment by @jskye & @DBarnett73.
 We were tasked with conducting some research into training object detectors using feature extraction.
 We decided to look at training car detection using OpenCV's cascaded training on Haar-like features 
 as well as utilise an old implementation of Viola Jones framework (JViolaJones).
 
-We decided the main goals of the project were:
+We decided the main goals of the project were:<br>
 Train object detector to -
 * recognise cars ahead, from road view
-Train with - 
+Train with - <br>
 * Cascaded Haar-features
 * Cascaded Haar-features & Viola Jones Framework
 * Cascaded Local Binary Patterns (LBP)
-Test with - 
+Test with - <br>
 * color (normal) vs grayscale
 * clean (normal) vs noisy
 light (normal) vs dark (night, tunnels) images
