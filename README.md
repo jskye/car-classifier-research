@@ -1,7 +1,26 @@
 # haar-classifier-tute
-a tutorial to do haar classifier in opencv
- 
-A clone of https://github.com/mrnugget/opencv-haar-classifier-training
+
+This repo is for a University Computer Vision research assignment.
+We were tasked with conducting some research into training object detectors using feature extraction.
+We decided to look at training car detection using OpenCV's cascaded training on Haar-like features 
+as well as utilise an old implementation of Viola Jones framework (JViolaJones).
+
+We decided the main goals of the project were:
+Train object detector to -
+* recognise cars ahead, from road view
+Train with - 
+* Cascaded Haar-features
+* Cascaded Haar-features & Viola Jones Framework
+* Cascaded Local Binary Patterns (LBP)
+Test with - 
+* color (normal) vs grayscale
+* clean (normal) vs noisy
+light (normal) vs dark (night, tunnels) images
+* (normal) vs low powered (raspPi)
+
+
+We started with a clone of https://github.com/mrnugget/opencv-haar-classifier-training
+And followed the following method: 
 
 Create list of samples from images:
  
