@@ -7,8 +7,8 @@ We decided to look at training car detection using OpenCV's cascaded training on
 as well as utilise an old implementation of Viola Jones framework (JViolaJones).
 
 We decided the main goals of the project were:<br>
-Train object detector to -
-* recognise cars ahead, from road view
+*Train object detector to -<br>
+** recognise cars ahead, from road view
 Train with - <br>
 * Cascaded Haar-features
 * Cascaded Haar-features & Viola Jones Framework
