@@ -34,6 +34,22 @@ The image can be preprocessed for diff color spaces:
 grayscale, HSV, HLS, CIELAB, CIELUV
 Note: by default, im.read outputs in BGR order not RGB
 
+For more info about convesion algorithms see:
+http://docs.opencv.org/master/de/d25/
+imgproc_color_conversions.html#color_convert_rgb_hls
+
+For good default values see:
+http://www.searchalleasy.com/q/20801015/2589776
+    Means checking scales 10percent of size increments
+    scaleFactor=1.1
+    Higher value results in less detections but with higher quality
+    minNeighbors=5
+
+    minSize=(30, 30)
+    flags = cv2.cv.CV_HAAR_SCALE_IMAGE
+
+    maxSize by default assumed size of image but can be set.
+
 '''
 
 import cv2
@@ -68,8 +84,8 @@ else:
 if colorCVT is None:
     objects = trainedCascade.detectMultiScale(
     # Detect objects in the image
-        scaleFactor=1.1,
-        minNeighbors=5,
+        scaleFactor=1.05,
+        minNeighbors=4,
         minSize=(30, 30),
         flags = cv2.cv.CV_HAAR_SCALE_IMAGE
     )
