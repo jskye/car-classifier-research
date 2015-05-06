@@ -31,7 +31,7 @@ File Description:
 This program uses opencv's cascade function: detectMuliScale
 to perfom detection with a given detector on a given image.
 The image can be preprocessed for diff color spaces:
-grayscale, HSV, HLS, CIELAB, CIELUV
+grayscale, YUV, HSV, HLS, CIELAB, CIELUV
 Note: by default, im.read outputs in BGR order not RGB
 
 For more info about convesion algorithms see:
@@ -70,13 +70,17 @@ image = cv2.imread(imagePath)
 if colorspace == "gray":
     colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 elif colorspace == "hsv":
-    colorCVT = cv2.cvtColor(image, cv2.CV_BGR2HSV)
+    colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 elif colorspace == "hls":
-    colorCVT = cv2.cvtColor(image, cv2.CV_BGR2HLS)
+    colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2HLS)
 elif colorspace == "lab":
-    colorCVT = cv2.cvtColor(image, cv2.CV_BGR2Lab)
+    colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2Lab)
 elif colorspace == "luv":
-    colorCVT = cv2.cvtColor(image, cv2.CV_BGR2Luv)
+    colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2Luv)
+elif colorspace == "luv":
+    colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2Luv)
+elif colorspace == "yuv":
+    colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2YUV)
 else:
     colorCVT = None
 
@@ -89,8 +93,8 @@ if colorCVT is None:
         minSize=(30, 30),
         flags = cv2.cv.CV_HAAR_SCALE_IMAGE
     )
+# otherwise pass colorCVT
 else:
-    colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     # Detect objects in the image
     objects = trainedCascade.detectMultiScale(
         colorCVT,
