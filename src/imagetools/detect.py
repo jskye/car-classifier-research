@@ -97,7 +97,7 @@ if colorCVT is None:
     # Detect objects in the image
         image,
         scaleFactor=1.05,
-        minNeighbors=4,
+        minNeighbors=2,
         minSize=(30, 30),
         flags = cv2.cv.CV_HAAR_SCALE_IMAGE
     )
@@ -107,7 +107,7 @@ else:
     objects = trainedCascade.detectMultiScale(
         colorCVT,
         scaleFactor=1.02,
-        minNeighbors=1,
+        minNeighbors=5,
         minSize=(10, 10),
         maxSize=(100,100),
         flags = cv2.cv.CV_HAAR_SCALE_IMAGE
