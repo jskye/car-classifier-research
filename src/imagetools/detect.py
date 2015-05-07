@@ -56,9 +56,17 @@ import cv2
 import sys
 
 # Get user supplied values
-imagePath = sys.argv[1]
-cascPath = sys.argv[2]
-colorspace = sys.argv[3]
+if len(sys.argv) == 4:
+    imagePath = sys.argv[1]
+    cascPath = sys.argv[2]
+    colorspace = sys.argv[3]
+elif len(sys.argv) == 3:
+    imagePath = sys.argv[1]
+    cascPath = sys.argv[2]
+    colorspace = "rgb"
+else:
+    print("check arguments!")
+
 
 # Create the haar cascade
 trainedCascade = cv2.CascadeClassifier(cascPath)
@@ -74,20 +82,20 @@ elif colorspace == "hsv":
 elif colorspace == "hls":
     colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2HLS)
 elif colorspace == "lab":
-    colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2Lab)
+    colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
 elif colorspace == "luv":
-    colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2Luv)
-elif colorspace == "luv":
-    colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2Luv)
+    colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2LUV)
 elif colorspace == "yuv":
     colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2YUV)
 else:
     colorCVT = None
 
+print('using color mode: '+colorspace)
 # if using rgb space, dont pass conversion param
 if colorCVT is None:
     objects = trainedCascade.detectMultiScale(
     # Detect objects in the image
+        image,
         scaleFactor=1.05,
         minNeighbors=4,
         minSize=(30, 30),
@@ -98,9 +106,10 @@ else:
     # Detect objects in the image
     objects = trainedCascade.detectMultiScale(
         colorCVT,
-        scaleFactor=1.1,
-        minNeighbors=5,
-        minSize=(30, 30),
+        scaleFactor=1.02,
+        minNeighbors=1,
+        minSize=(10, 10),
+        maxSize=(100,100),
         flags = cv2.cv.CV_HAAR_SCALE_IMAGE
     )
 
@@ -110,7 +119,11 @@ print "Found {0} objects!".format(len(objects))
 
 # Draw a rectangle around the faces
 for (x, y, w, h) in objects:
+    #cv2.rectangle(colorCVT, (x, y), (x+w, y+h), (0, 255, 0), 2)
     cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
-cv2.imshow("Objects found", image)
+
+#cv2.imshow("Found {0} objects!".format(len(objects)), colorCVT)
+cv2.imshow("Found {0} objects!".format(len(objects)), image)
+
 cv2.waitKey(0)
