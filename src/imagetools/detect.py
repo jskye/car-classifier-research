@@ -50,6 +50,10 @@ http://www.searchalleasy.com/q/20801015/2589776
 
     maxSize by default assumed size of image but can be set.
 
+    use like this:
+
+    python cardetect.py image/path/image.extension cascade/path/cascade.xml colorspace
+
 '''
 
 import cv2
