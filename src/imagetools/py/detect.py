@@ -75,6 +75,8 @@ else:
 # Create the haar cascade
 trainedCascade = cv2.CascadeClassifier(cascPath)
 
+
+
 # Read the image
 image = cv2.imread(imagePath)
 
@@ -92,30 +94,29 @@ elif colorspace == "luv":
 elif colorspace == "yuv":
     colorCVT = cv2.cvtColor(image, cv2.COLOR_BGR2YUV)
 else:
-    colorCVT = None
+    colorCVT = image
 
 print('using color mode: '+colorspace)
-# if using rgb space, dont pass conversion param
-if colorCVT is None:
-    objects = trainedCascade.detectMultiScale(
-    # Detect objects in the image
-        image,
-        scaleFactor=1.05,
-        minNeighbors=2,
-        minSize=(30, 30),
-        flags = cv2.cv.CV_HAAR_SCALE_IMAGE
-    )
-# otherwise pass colorCVT
-else:
-    # Detect objects in the image
-    objects = trainedCascade.detectMultiScale(
-        colorCVT,
-        scaleFactor=1.02,
-        minNeighbors=5,
-        minSize=(10, 10),
-        maxSize=(100,100),
-        flags = cv2.cv.CV_HAAR_SCALE_IMAGE
-    )
+
+with open('Output.txt', 'w') as text_file:
+    text_file.write("Purchase Amount: {0}".format(colorspace))
+text_file.close()
+
+# training PARAMS
+SCALE_FACTOR = 1.02
+MIN_NEIGHBORS = 1
+MIN_SIZE = (10,10)
+MAX_SIZE = (100,100)
+
+# Detect objects in the image
+objects = trainedCascade.detectMultiScale(
+    colorCVT,
+    scaleFactor=SCALE_FACTOR,
+    minNeighbors=MIN_NEIGHBORS,
+    minSize=MIN_SIZE,
+    maxSize=MAX_SIZE,
+    flags = cv2.cv.CV_HAAR_SCALE_IMAGE
+)
 
 
 
@@ -128,6 +129,6 @@ for (x, y, w, h) in objects:
 
 
 #cv2.imshow("Found {0} objects!".format(len(objects)), colorCVT)
-cv2.imshow("Found {0} objects!".format(len(objects)), image)
+cv2.imshow("Found {0} objects!".format(len(objects)), colorCVT)
 
 cv2.waitKey(0)
