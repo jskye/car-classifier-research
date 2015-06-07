@@ -1,6 +1,0 @@
-./positive_images/opencv_positive_cropped_scaled_01.jpg
-./positive_images/opencv_positive_cropped_scaled_02.jpg
-./positive_images/opencv_positive_cropped_scaled_03.jpg
-./positive_images/opencv_positive_cropped_scaled_04.jpg
-./positive_images/opencv_positive_cropped_scaled_05.jpg
-./positive_images/opencv_positive_cropped_scaled_06.jpg
