@@ -22,6 +22,7 @@ as well as utilise an old implementation of Viola Jones framework (JViolaJones).
 The research is currently underway.
 
 # Setup:<br>
+The process of setting up openCV on Windows machine is found [here](http://docs.opencv.org/doc/tutorials/introduction/windows_install/windows_install.html)
 
 We started with a clone of https://github.com/mrnugget/opencv-haar-classifier-training
 And followed the following method: 
