@@ -1,10 +1,13 @@
 # car-classifier-research
 
-This repo is for a final year University of Newcastle Computer Vision research assignment conducted by 
-myself and [Dylan Barnett](https://github.com/DBarnett73).<br>
-We were tasked with conducting some research into training object detectors using feature extraction.<br>
-We decided to look at training car detection using OpenCV's cascaded training on Haar-like features 
-as well as utilise an old implementation of Viola Jones framework (JViolaJones).
+This repo combines research documentation, source files and results from two final year university research subjects
+ 1. COMP4110 Computer Vision 
+     - Authors: myself and [Dylan Barnett](https://github.com/DBarnett73):
+     - This course tasked us to conduct some computer vision based research within a group, for which we chose to focus on training object detectors using feature extraction
+ 2. COMP4120 Directed Studies
+     - Author: myself  
+     - This course allowed for any directed study for which i chose to extend the previous car detection research.
+
 
 # Project Goals:<br>
 <b>Train object detector to -</b> <br>
