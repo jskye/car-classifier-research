@@ -262,7 +262,6 @@ def is_xcontained_overlap(r1,r2):
 
 # returns the rectangle overlap that is contained in x
 # this happens when tests have one differing result in y (no zeroes)
-# eg. [1 -1 1 1] or [-1 1 1 1]
 def rect_xcontained_overlap(r1,r2):
     # boundary_tests = [lowest, highest, leftest, rightest]
 
@@ -309,25 +308,71 @@ def is_ycontained_overlap:
 
 # returns the rectangle overlap that is contained in y
 # this happens when tests have one differing result in x (no zeroes)
-# eg. [1 1 -1 1], [1 1 1 -1]
 def rect_ycontained_overlap(r1,r2):
     # boundary_tests = [lowest, highest, leftest, rightest]
-    #TODO
+
+        # r2 is not bound at left
+        if b0 == 1 and b1 == 1 and b2 == -1 and b3 != -1:
+            overlap_left = r1.getLeftXCoord()
+            overlap_right = r2.getRightXCoord()
+            overlap_bottom = r2.getBottomYCoord()
+            overlap_top = r2.getTopYCoord()
+            overlap_width = overlap_right - overlap_left
+            overlap_height = overlap_bottom - overlap_top
+            return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
+
+        # r2 is not bound at right
+        elif b0 == 1 and b1 == 1 and b2 != -1 and b3 == -1:
+            overlap_left = r2.getLeftXCoord()
+            overlap_right = r1.getRightXCoord()
+            overlap_bottom = r2.getBottomYCoord()
+            overlap_top = r2.getTopYCoord()
+            overlap_width = overlap_right - overlap_left
+            overlap_height = overlap_bottom - overlap_top
+            return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
+
+        # r2 is not bound at left or right
+        elif b0 == 1 and b1 == 1 and b2 == -1 and b3 == -1:
+            overlap_left = r1.getLeftXCoord()
+            overlap_right = r1.getRightXCoord()
+            overlap_bottom = r2.getBottomYCoord()
+            overlap_top = r2.getTopYCoord()
+            overlap_width = overlap_right - overlap_left
+            overlap_height = overlap_bottom - overlap_top
+            return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
+
+        # test inverse
+        elif rect_ycontained_overlap(r2,r1) != None:
+            return rect_xcontained_overlap(r2,r1)
+
+        else return None
 
 def is_xparrallel_overlap(r1,r2):
     if horiz_parallel(r1,r2) and !dont_x_overlap(r1,r2):
         return True
 
 def rect_xparrallel_overlap(r1,r2):
-    #TODO
+    overlap_right = rect_leftmost(r1,r2).getRightXCoord()
+    overlap_left = rect_rightmost(r1,r2).getLeftXCoord()
+    overlap_bottom = r1.getBottomYCoord()
+    overlap_top = r1.getTopYCoord()
+    overlap_width = overlap_right - overlap_left
+    overlap_height = overlap_bottom - overlap_top
+    return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
 
 def is_yparrallel_overlap(r1,r2):
     if vert_parallel(r1,r2) and !dont_y_overlap(r1,r2):
         return True
 
-def rect_xparrallel_overlap(r1,r2):
-    #TODO
+def rect_yparrallel_overlap(r1,r2):
+    overlap_top = rect_highest(r1,r2).getTopYCoord()
+    overlap_bottom = rect_lowest(r1,r2).getBottomYCoord()
+    overlap_left = r1.getLeftXCoord()
+    overlap_right = r1.getRightXCoord()
+    overlap_width = overlap_right - overlap_left
+    overlap_height = overlap_bottom - overlap_top
+    return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
 def is_nocontainment_notparrallel_overlap(r1,r2):
     vert_tests = [b0 b1]
@@ -336,7 +381,13 @@ def is_nocontainment_notparrallel_overlap(r1,r2):
         return True
 
 def rect_nocontainment_notparrallel_overlap(r1,r2):
-    #TODO
+    overlap_top = rect_highest(r1,r2).getTopYCoord()
+    overlap_bottom = rect_lowest(r1,r2).getBottomYCoord()
+    overlap_right = rect_leftmost(r1,r2).getRightXCoord()
+    overlap_left = rect_rightmost(r1,r2).getLeftXCoord()
+    overlap_width = overlap_right - overlap_left
+    overlap_height = overlap_bottom - overlap_top
+    return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
 
 
