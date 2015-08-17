@@ -1,16 +1,23 @@
+# # define rectangle class
 class Rectangle(object):
 	def __init__(self, x,y,w, h):
-		self.left = x
-		self.top = y
+		self.leftXCoord = x
+		self.topYCoord = y
 		self.width = w
 		self.height = h
-	def left(self):
-		return self.left
-	def top(self):
-		return self.top
-	def width(self):
+        self.rightXCoord = self.leftXCoord+self.width
+        self.bottomYCoord = self.topYCoord+self.height
+	def getLeftXCoord(self):
+		return self.leftXCoord
+	def getRightXCoord(self):
+		return self.rightXCoord
+	def getTopYCoord(self):
+		return self.topYCoord
+	def getBottomYCoord(self):
+		return self.bottomYCoord
+	def getWidth(self):
 		return self.width
-	def height(self):
+	def getHeight(self):
 		return self.height
 	def setWidth(self, w):
 		self.width = w
@@ -18,4 +25,3 @@ class Rectangle(object):
 		self.height = h
 	def area(self):
 		return self.getWidth() * self.getHeight()
-	left = property(left)
