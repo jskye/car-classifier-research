@@ -41,8 +41,8 @@ which is the best method for comparing similarity of two rectangles.
 #     return n / float(len(set_1) + len(set_2) - n)
 # http://love-python.blogspot.com.au/2012/07/python-code-to-compute-jaccard-index.html
 
-import Rectangle.py
-import CompareRectangles.py
+import Rectangle
+import CompareRectangles
 
 #define simple jaccard index function
 def compute_jaccard_index(r1, r2):
@@ -54,6 +54,9 @@ def compute_jaccard_index(r1, r2):
 
 #TODO: add test data
 
+r1 = Rectangle(0, 5, 3, 5)
+r2 = Rectangle(1.5, 4, 4.5, 4)
+print(compute_jaccard_index(r1,r2))
 
 if __name__ == '__main__':
     main()

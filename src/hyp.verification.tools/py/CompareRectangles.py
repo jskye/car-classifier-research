@@ -28,67 +28,49 @@ Author: julius.skye@gmail.com
 Date: 15.08.2015
 File Description:
 This class compares two rectangles r1 and r2.
-It is used to compute functions like:
-
-
-
-The Jaccard Index is the best method for comparing similarity of two rectangles.
-
-    jaccard_index = intersection / union
-
-See PASCAL VOC challenge:
-http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2012/htmldoc/devkit_doc.html#SECTION00054000000000000000
-intersectionArea=rectint(gt,pr)
-unionCoords=[min(x_g,x_p),min(y_g,y_p),max(x_g+width_g-1,x_p+width_p-1),max(y_g+height_g-1,y_p+height_p-1];
-unionArea=(unionCoords(3)-unionCoords(1)+1)*(unionCoords(4)-unionCoords(2)+1);
-overlapArea=intersectionArea/unionArea; This should be greater than 0.5 to consider it as a valid detection.
+It also contains a function to calculate the intersection of two rectangles.
 '''
 
-#But we can make it more efficient.
-#e really don't need to compute the union set, rather the cardinality. So this code works better:
-# def compute_jaccard_index(set_1, set_2):
-#     n = len(set_1.intersection(set_2))
-#     return n / float(len(set_1) + len(set_2) - n)
-# http://love-python.blogspot.com.au/2012/07/python-code-to-compute-jaccard-index.html
-
-
-def intersection_rect(r1,r2):
-    intX = leftside.rightmost
-    intY = topside.bottommost
-    intW = rightside.leftmost -
-    intH
-    intRect = Rectangle(x,y,w,h)
-
+def __init__(self, r1,r2):
+    # global variables for boundary tests
+    boundary_tests = [rect_lowest(r1,r2), rect_highest(r1,r2), rect_leftmost(r1,r2), rect_rightmost(r1,r2)]
+    b0 = boundary_tests[0]
+    b1 = boundary_tests[1]
+    b2 = boundary_tests[2]
+    b3 = boundary_tests[3]
 
 # two rectangles are vertically parrallel
 def vert_parrallel(r1,r2):
-    if (r1.getLeftXCoord()==r2.getLeftXCoord()
-        and r1.getRightXCoord==r2.getRightXCoord():
-    return true
-    else return false
+    if r1.getLeftXCoord()==r2.getLeftXCoord() and \
+        r1.getRightXCoord==r2.getRightXCoord():
+            return True
+    else:
+        return False
 
 # two rectangles are horizontally parrallel
 def horiz_parallel(r1,r2):
-    if (r1.getTopYCoord()==r2.getTopYCoord()
-        and r1.getBottomYCoord==r2.getBottomYCoord():
-        return true
-    else return false
+    if r1.getTopYCoord()==r2.getTopYCoord() and \
+        r1.getBottomYCoord==r2.getBottomYCoord():
+            return True
+    else:
+        return False
 
-def same_bottom_y(r1,r2)
+# two rectangles have same bottom Y coord
+def same_bottom_y(r1,r2):
     if r1.getBottomYCoord() == r2.getBottomYCoord():
-        return true
+        return True
 
-def same_top_y(r1,r2)
+def same_top_y(r1,r2):
     if r1.getTopYCoord() == r2.getTopYCoord():
-        return true
+        return True
 
-def same_left_x()
+def same_left_x(r1,r2):
     if r1.getLeftXCoord() == r2.getLeftXCoord():
-        return true
+        return True
 
-def same_right_x()
+def same_right_x(r1,r2):
     if r1.getRightXCoord() == r2.getRightXCoord():
-        return true
+        return True
 
 # TODO: combine above functions into one check given the side.
 # def equal_side(r1,r2,side):
@@ -97,8 +79,8 @@ def same_right_x()
 
 def equals(r1,r2):
     if horiz_parallel(r1,r2) and vert_parrallel(r1,r2):
-        return true
-    else return false
+        return True
+    else: return False
 
 # returns leftmost rectangle
 # where leftest has leftest LeftXCoord
@@ -107,7 +89,7 @@ def rect_leftmost(r1,r2):
         return r1
     elif r2.getLeftXCoord()<r2.getLeftXCoord():
         return r2
-    else return False
+    else: return False
 
 # returns 1 if r1 is leftmost, -1 if not
 # where leftest has leftest LeftXCoord
@@ -116,7 +98,7 @@ def is_leftmost(r1,r2):
         return 1
     elif r2.getLeftXCoord()<r2.getLeftXCoord():
         return -1
-    else return 0
+    else: return 0
 
 # returns rightmost rectangle
 # where rightest has highest RightXCoord
@@ -125,7 +107,7 @@ def rect_rightmost(r1,r2):
         return r1
     elif r2.getRightXCoord() > r2.getRightXCoord():
         return r2
-    else return False
+    else: return False
 
 # returns 1 if r1 is rightmost, -1 if not
 # where rightest has highest RightXCoord
@@ -134,7 +116,7 @@ def is_rightmost(r1,r2):
         return 1
     elif r2.getRightXCoord() > r2.getRightXCoord():
         return -1
-    else return 0
+    else: return 0
 
 # returns highest rectangle
 # where highest has lowest TopYCoord
@@ -143,7 +125,7 @@ def rect_highest(r1,r2):
         return r1
     elif r2.getTopYCoord() > r1.getTopYCoord():
         return r2
-    else return False
+    else: return False
 
 # returns 1 if r1 is highest, -1 if not
 # where highest has lowest TopYCoord
@@ -152,7 +134,7 @@ def is_highest(r1,r2):
         return 1
     elif r2.getTopYCoord() < r2.getTopYCoord():
         return -1
-    else return 0
+    else: return 0
 
 # returns strictly lowest rectangle
 # where lowest has highest TopYCoord
@@ -161,7 +143,7 @@ def rect_lowest(r1,r2):
         return r1
     elif r2.getBottomYCoord() > r2.getBottomYCoord():
         return r2
-    else return False
+    else: return False
 
 # returns 1 if r1 is lowest, -1 if not
 # where lowest has highest TopYCoord
@@ -170,31 +152,24 @@ def is_lowest(r1,r2):
         return 1
     elif r2.getTopYCoord()<r2.getTopYCoord():
         return -1
-    else return 0
-
-# global variables for boundary tests
-boundary_tests = [rect_lowest(r1,r2), rect_highest(r1,r2), rect_leftmost(r1,r2), rect_rightmost(r1,r2)]
-b0 = boundary_tests[0]
-b1 = boundary_tests[1]
-b2 = boundary_tests[2]
-b3 = boundary_tests[3]
+    else: return 0
 
 
-# returns true if rectangles have an x gap
+# returns True if rectangles have an x gap
 def dont_x_overlap(r1,r2):
     if rect_rightmost(r1,r2).getLeft() >= rect_leftmost(r1,r2).getRight():
         return True
-    else return False
+    else: return False
 
-# returns true if rectangles have an y gap
+# returns True if rectangles have an y gap
 def dont_y_overlap(r1,r2):
     if rect_highest(r1,r2).getBottomYCoord() <= rect_lowest(r1,r2).getTopYCoord():
         return True
-    else return False
+    else: return False
 
-# returns true if rectangles dont intersect
+# returns True if rectangles dont intersect
 def rect_dont_intersect(r1, r2):
-    # same rectangles mean they do intersect so return false
+    # same rectangles mean they do intersect so return False
     if equals(r1,r2):
         return False
     #  parall in x but gap
@@ -220,24 +195,24 @@ def rect_fully_contains(r1,r2):
     inverse_boundary_tests = [rect_lowest(r2,r1), rect_highest(r2,r1), rect_leftmost(r2,r1), rect_rightmost(r2,r1)]
 
     # test r1 fully contains r2
-    fullyContains = true
+    fullyContains = True
     for boundary in boundary_tests:
         if boundary != 0 and boundary == 1:
             continue
         else:
-            fullyContains = false
+            fullyContains = False
             break
 
     if fullyContains:
         return r1
 
     # test r2 fully contains r1
-    fullyContains = true
+    fullyContains = True
     for boundary in inverse_boundary_tests:
         if boundary != 0 and boundary == 1:
             continue
         else:
-            fullyContains = false
+            fullyContains = False
             break
 
     if fullyContains:
@@ -252,7 +227,7 @@ def rect_fully_contained(r1,r2):
         return r2
     elif rect_fully_contained(r1,r2) == r2:
         return r1
-    else return None
+    else: return None
 
 
 

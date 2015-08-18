@@ -82,9 +82,9 @@ else:
 
 
 # initiate variables
-tot_true_positives = 0
-tot_false_positives = 0
-tot_false_neg = 0
+tot_True_positives = 0
+tot_False_positives = 0
+tot_False_neg = 0
 
 testset = os.path.basename(imageDir[:-1])
 # cwd = os.path.dirname(os.path.realpath(cascadePath))
@@ -128,9 +128,9 @@ results.close()
 imageNum=0
 images = glob.glob(imageDir+'*.jpg')
 for imagePath in images:
-    img_true_positives=0
-    img_false_positives=0
-    img_false_neg =0
+    img_True_positives=0
+    img_False_positives=0
+    img_False_neg =0
     imageName = os.path.basename(imagePath)
     print("loading image for detection: "+imageName +", image number {0}".format(imageNum))
     if imageNum<len(images):
@@ -222,57 +222,57 @@ for imagePath in images:
 
         cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (0, 255, 0), 2)
         detectedArea = detectedWidth*detectedHeight
-        for trueRect in labelled_rectangles[str(imageNum)]:
-            truex = int(trueRect[0])
-            truey = int(trueRect[1])
-            trueWidth = int(trueRect[2])
-            trueHeight = int(trueRect[3])
-            trueArea = trueWidth*trueHeight
+        for TrueRect in labelled_rectangles[str(imageNum)]:
+            Truex = int(TrueRect[0])
+            Truey = int(TrueRect[1])
+            TrueWidth = int(TrueRect[2])
+            TrueHeight = int(TrueRect[3])
+            TrueArea = TrueWidth*TrueHeight
             #check if detected rectangle is considered TP or FP
 
-            # use simple_compare_rects to comapre similarity of true and detected rectangles
-            # to determine true or false positive
+            # use simple_compare_rects to comapre similarity of True and detected rectangles
+            # to determine True or False positive
             # TODO: move to function
             # TODO: replace with jaccard index
             #   this method has flaws where some dissimilar rectangles are marked as TP
 
-            # if detected.area smaller than true.area but still bigger than half,
+            # if detected.area smaller than True.area but still bigger than half,
             # and side lengths are within 50% of eachother then rects are similar.
             # OR
-            # if true.area smaller than detected.area  but still bigger than half,
+            # if True.area smaller than detected.area  but still bigger than half,
             # and side lengths are within 50% of eachother then rects are similar.
-            A = (detectedArea < trueArea)
-            B = (detectedArea > 0.5*trueArea)
-            C = (detectedWidth<2*trueWidth)
-            D = (detectedWidth>0.5*trueWidth)
-            E = (detectedHeight<2*trueHeight)
-            F = (detectedHeight>0.5*trueHeight)
+            A = (detectedArea < TrueArea)
+            B = (detectedArea > 0.5*TrueArea)
+            C = (detectedWidth<2*TrueWidth)
+            D = (detectedWidth>0.5*TrueWidth)
+            E = (detectedHeight<2*TrueHeight)
+            F = (detectedHeight>0.5*TrueHeight)
 
-            G = (trueArea < detectedArea)
-            H = (trueArea > 0.5*detectedArea)
-            I = (detectedWidth<2*trueWidth)
-            J = (detectedWidth>0.5*trueWidth)
-            K = (detectedHeight<2*trueHeight)
-            L = (detectedHeight>0.5*trueHeight)
+            G = (TrueArea < detectedArea)
+            H = (TrueArea > 0.5*detectedArea)
+            I = (detectedWidth<2*TrueWidth)
+            J = (detectedWidth>0.5*TrueWidth)
+            K = (detectedHeight<2*TrueHeight)
+            L = (detectedHeight>0.5*TrueHeight)
 
             if (A and B and C and D and E and F) or (G and H and I and J and K and L ):
-                img_true_positives +=1
-            else: img_false_positives +=1
+                img_True_positives +=1
+            else: img_False_positives +=1
 
-    # increment false negatives
+    # increment False negatives
     if expectedObjects>0 and len(objects)<1:
-        img_false_neg = expectedObjects - img_true_positives
-        tot_false_neg+=img_false_neg
+        img_False_neg = expectedObjects - img_True_positives
+        tot_False_neg+=img_False_neg
 
-    tot_true_positives +=img_true_positives
-    tot_false_positives += img_false_positives
+    tot_True_positives +=img_True_positives
+    tot_False_positives += img_False_positives
 
-    print("TP:{0}, FP: {1}, FN: {2}".format(img_true_positives, img_false_positives, img_false_neg), colorCVT)
+    print("TP:{0}, FP: {1}, FN: {2}".format(img_True_positives, img_False_positives, img_False_neg), colorCVT)
 
 
     # append to end of file
     with open(outputFilename, 'a') as results:
-        results.write("TP:{0}, FP: {1}, FN: {2}".format(img_true_positives, img_false_positives, img_false_neg))
+        results.write("TP:{0}, FP: {1}, FN: {2}".format(img_True_positives, img_False_positives, img_False_neg))
         results.write("\n")
     results.close()
 
@@ -299,14 +299,14 @@ with open(outputFilename, 'a') as results:
     results.write("Total labelled objects: {0}".format(total_labelled_objects))
     results.write("Total objects detected: {0}".format(total_objects_detected))
     results.write("\n")
-    results.write("Total TP:{0}, Total FP: {1}, Total FN: {2}".format(tot_true_positives, tot_false_positives, tot_false_neg))
+    results.write("Total TP:{0}, Total FP: {1}, Total FN: {2}".format(tot_True_positives, tot_False_positives, tot_False_neg))
     results.write("\n")
 
     if total_labelled_objects != 0:
-        # true positive rate (sensitivity/hitrate/recall)
-        tpr = tot_true_positives/total_labelled_objects
-        # fall-out or false positive rate (FPR)
-        fpr = tot_false_positives/total_labelled_objects
+        # True positive rate (sensitivity/hitrate/recall)
+        tpr = tot_True_positives/total_labelled_objects
+        # fall-out or False positive rate (FPR)
+        fpr = tot_False_positives/total_labelled_objects
     else:
         tpr = 0
         fpr = 0
@@ -319,8 +319,8 @@ with open(outputFilename, 'a') as results:
     # recall is the number of correct positive results divided by the number of positive results that should have been returned.
 
     delta = 0.0001
-    precision = tot_true_positives/(tot_true_positives+tot_false_positives+delta)
-    recall = tot_true_positives/ (tot_true_positives + tot_false_neg+delta)
+    precision = tot_True_positives/(tot_True_positives+tot_False_positives+delta)
+    recall = tot_True_positives/ (tot_True_positives + tot_False_neg+delta)
     #harmonic mean = 2 ((precisin x recall)/(precision + recall))
     harmonic_mean = ((precision*recall) / (precision+recall+delta))*2
 
