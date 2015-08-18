@@ -31,13 +31,11 @@ This class compares two rectangles r1 and r2.
 It also contains a function to calculate the intersection of two rectangles.
 '''
 
-def __init__(self, r1,r2):
-    # global variables for boundary tests
-    boundary_tests = [rect_lowest(r1,r2), rect_highest(r1,r2), rect_leftmost(r1,r2), rect_rightmost(r1,r2)]
-    b0 = boundary_tests[0]
-    b1 = boundary_tests[1]
-    b2 = boundary_tests[2]
-    b3 = boundary_tests[3]
+import Rectangle
+
+def __init__(self,r1,r2):
+    self.r1 = r1
+    self.r2 = r2
 
 # two rectangles are vertically parrallel
 def vert_parrallel(r1,r2):
@@ -72,7 +70,7 @@ def same_right_x(r1,r2):
     if r1.getRightXCoord() == r2.getRightXCoord():
         return True
 
-# TODO: combine above functions into one check given the side.
+# TODO: consider combined above functions into one check given the side.
 # def equal_side(r1,r2,side):
 #     if side == 'left':
 #         if r1.getLeftXCoord == r2.get
@@ -179,7 +177,7 @@ def rect_dont_intersect(r1, r2):
     elif vert_parrallel(r1,r2) and dont_y_overlap(r1,r2):
         return True
     # not parall (and gap in both)
-    elif !horiz_parallel(r1,r2) and !vert_parrallel(r1,r2) and \
+    elif horiz_parallel(r1,r2)==False and vert_parrallel(r1,r2)==False and \
         dont_x_overlap(r1,r2) and dont_y_overlap(r1,r2):
         return True
 
@@ -230,18 +228,27 @@ def rect_fully_contained(r1,r2):
     else: return None
 
 
+def initialise_boundary_tests(self, r1,r2):
+    # global variables for boundary tests
+    boundary_tests = [rect_lowest(r1,r2), rect_highest(r1,r2), rect_leftmost(r1,r2), rect_rightmost(r1,r2)]
+    # TODO: replace with private vars _b
+    self.b0 = boundary_tests[0]
+    self.b1 = boundary_tests[1]
+    self.b2 = boundary_tests[2]
+    self.b3 = boundary_tests[3]
 
-def is_xcontained_overlap(r1,r2):
-    if ((b0 == -1 or b1 == -1) and (b2 == 1 and b3 == 1)):
+def is_xcontained_overlap(self,r1,r2):
+    initialise_boundary_tests(r1,r2)
+    if ((self.b0 == -1 or self.b1 == -1) and (self.b2 == 1 and self.b3 == 1)):
         return True
 
 # returns the rectangle overlap that is contained in x
 # this happens when tests have one differing result in y (no zeroes)
 def rect_xcontained_overlap(r1,r2):
     # boundary_tests = [lowest, highest, leftest, rightest]
-
+    initialise_boundary_tests(r1,r2)
     # r2 is not bound at top
-    if b0 != -1 and b1 == -1 and b2 == 1 and b3 == 1:
+    if self.b0 != -1 and b1 == -1 and b2 == 1 and b3 == 1:
         overlap_left = r2.getLeftXCoord()
         overlap_right = r2.getRightXCoord()
         overlap_bottom = r2.getBottomYCoord()
@@ -274,7 +281,7 @@ def rect_xcontained_overlap(r1,r2):
     elif rect_xcontained_overlap(r2,r1) != None:
         return rect_xcontained_overlap(r2,r1)
 
-    else return None
+    else: return None
 
 
 def is_ycontained_overlap:
@@ -320,7 +327,7 @@ def rect_ycontained_overlap(r1,r2):
         elif rect_ycontained_overlap(r2,r1) != None:
             return rect_xcontained_overlap(r2,r1)
 
-        else return None
+        else: return None
 
 def is_xparrallel_overlap(r1,r2):
     if horiz_parallel(r1,r2) and !dont_x_overlap(r1,r2):
@@ -337,7 +344,7 @@ def rect_xparrallel_overlap(r1,r2):
 
 
 def is_yparrallel_overlap(r1,r2):
-    if vert_parallel(r1,r2) and !dont_y_overlap(r1,r2):
+    if vert_parrallel(r1,r2) and !dont_y_overlap(r1,r2):
         return True
 
 def rect_yparrallel_overlap(r1,r2):
