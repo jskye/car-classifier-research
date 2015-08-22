@@ -60,7 +60,9 @@ import os
 import glob
 import cv2
 import sys
-from scipy import misc
+# from scipy import misc
+from CompareRectangles import CompareRectangles
+from Rectangle import Rectangle
 from PIL import Image
 
 
@@ -177,7 +179,7 @@ for imagePath in images:
     MAX_SIZE = (128,128)
 
     # Detect objects in the image
-    objects = trainedCascade.detectMultiScale(
+    detected_objects = trainedCascade.detectMultiScale(
         colorCVT,
         scaleFactor=SCALE_FACTOR,
         minNeighbors=MIN_NEIGHBORS,
@@ -216,51 +218,77 @@ for imagePath in images:
         cv2.rectangle(colorCVT, (x, y), (x+w, y+h), groundColor, 1)
 
 
+
+
+
     # Draw detected objects
-    for (detx, dety, detectedWidth, detectedHeight) in objects:
+    for (detx, dety, detectedWidth, detectedHeight) in detected_objects:
 
 
-        cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (0, 255, 0), 2)
-        detectedArea = detectedWidth*detectedHeight
-        for TrueRect in labelled_rectangles[str(imageNum)]:
-            Truex = int(TrueRect[0])
-            Truey = int(TrueRect[1])
-            TrueWidth = int(TrueRect[2])
-            TrueHeight = int(TrueRect[3])
-            TrueArea = TrueWidth*TrueHeight
+        # draw detected rectangle only if rectangles are similar according to Jaccard Index.
+        # compare detected object with labelled rectangles
+
+
+        # cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (0, 255, 0), 2)
+
+        detected_rectangle = Rectangle(detx, dety, detectedHeight, detectedWidth)
+        # detectedArea = detectedWidth*detectedHeight
+        for true_rect in labelled_rectangles[str(imageNum)]:
+            true_x = int(true_rect[0])
+            true_y = int(true_rect[1])
+            true_width = int(true_rect[2])
+            true_height = int(true_rect[3])
+
+            true_rectangle = Rectangle(true_x, true_y, true_width, true_height)
+            # TrueArea = true_width*true_height
             #check if detected rectangle is considered TP or FP
 
-            # use simple_compare_rects to comapre similarity of True and detected rectangles
-            # to determine True or False positive
-            # TODO: move to function
-            # TODO: replace with jaccard index
-            #   this method has flaws where some dissimilar rectangles are marked as TP
+            rectangle_comparison = CompareRectangles(detected_rectangle,true_rectangle)
+            # will be true if greater than 0.5
+            jaccard_similar = rectangle_comparison.similar_rectangles()
 
-            # if detected.area smaller than True.area but still bigger than half,
-            # and side lengths are within 50% of eachother then rects are similar.
-            # OR
-            # if True.area smaller than detected.area  but still bigger than half,
-            # and side lengths are within 50% of eachother then rects are similar.
-            A = (detectedArea < TrueArea)
-            B = (detectedArea > 0.5*TrueArea)
-            C = (detectedWidth<2*TrueWidth)
-            D = (detectedWidth>0.5*TrueWidth)
-            E = (detectedHeight<2*TrueHeight)
-            F = (detectedHeight>0.5*TrueHeight)
+            # detected_rectangle is true positive if jaccard similar
 
-            G = (TrueArea < detectedArea)
-            H = (TrueArea > 0.5*detectedArea)
-            I = (detectedWidth<2*TrueWidth)
-            J = (detectedWidth>0.5*TrueWidth)
-            K = (detectedHeight<2*TrueHeight)
-            L = (detectedHeight>0.5*TrueHeight)
-
-            if (A and B and C and D and E and F) or (G and H and I and J and K and L ):
+            if jaccard_similar:
+                cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (0, 255, 0), 2)
                 img_True_positives +=1
             else: img_False_positives +=1
 
+
+        #     # use simple_compare_rects to comapre similarity of True and detected rectangles
+        #     # to determine True or False positive
+        #     # TODO: move to function
+        #     # TODO: replace with jaccard index
+        #     #   this method has flaws where some dissimilar rectangles are marked as TP
+        #
+        #     # if detected.area smaller than True.area but still bigger than half,
+        #     # and side lengths are within 50% of eachother then rects are similar.
+        #     # OR
+        #     # if True.area smaller than detected.area  but still bigger than half,
+        #     # and side lengths are within 50% of eachother then rects are similar.
+        #     A = (detectedArea < TrueArea)
+        #     B = (detectedArea > 0.5*TrueArea)
+        #     C = (detectedWidth<2*TrueWidth)
+        #     D = (detectedWidth>0.5*TrueWidth)
+        #     E = (detectedHeight<2*TrueHeight)
+        #     F = (detectedHeight>0.5*TrueHeight)
+        #
+        #     G = (TrueArea < detectedArea)
+        #     H = (TrueArea > 0.5*detectedArea)
+        #     I = (detectedWidth<2*TrueWidth)
+        #     J = (detectedWidth>0.5*TrueWidth)
+        #     K = (detectedHeight<2*TrueHeight)
+        #     L = (detectedHeight>0.5*TrueHeight)
+
+            # if (A and B and C and D and E and F) or (G and H and I and J and K and L ):
+            #     img_True_positives +=1
+            # else: img_False_positives +=1
+
+
+
+
     # increment False negatives
-    if expectedObjects>0 and len(objects)<1:
+    if expectedObjects>0 and len(detected_objects)<1:
         img_False_neg = expectedObjects - img_True_positives
         tot_False_neg+=img_False_neg
 
@@ -290,7 +318,7 @@ for imagePath in images:
     misc.imsave(resultsDir+'/detected_'+imageName, colorCVT)
 
     #increment total detected objects
-    total_objects_detected = total_objects_detected+len(objects)
+    total_objects_detected = total_objects_detected+len(detected_objects)
 
 
 
