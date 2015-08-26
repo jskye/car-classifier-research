@@ -60,7 +60,7 @@ import os
 import glob
 import cv2
 import sys
-# from scipy import misc
+from scipy import misc
 from CompareRectangles import CompareRectangles
 from Rectangle import Rectangle
 from PIL import Image
@@ -90,7 +90,7 @@ tot_False_neg = 0
 
 testset = os.path.basename(imageDir[:-1])
 # cwd = os.path.dirname(os.path.realpath(cascadePath))
-testPath = "/Users/juliusskye/Desktop/COMP.VISION/final.tests/final_testing/final.results/"
+testPath = "/Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/"
 labelName = os.path.basename(labelPath)
 
 print("current working dir: "+testPath)
@@ -126,10 +126,12 @@ with open(outputFilename, 'w') as results:
     results.write("*********************************\n")
 results.close()
 
+print(imageDir)
 # for imagePath in imageDir:
 imageNum=0
 images = glob.glob(imageDir+'*.jpg')
 for imagePath in images:
+    print('heelo')
     img_True_positives=0
     img_False_positives=0
     img_False_neg =0
@@ -169,7 +171,7 @@ for imagePath in images:
     with open(outputFilename, 'a') as results:
         results.write("Running detection on image:  "+imagePath +"\n")
         results.write("Detecting using trained classifier: "+cascadePath +"\n")
-    # results.close()
+    results.close()
 
 
     # training PARAMS
@@ -243,13 +245,14 @@ for imagePath in images:
             # TrueArea = true_width*true_height
             #check if detected rectangle is considered TP or FP
 
+            print('true rectangle: '+str(true_rectangle)+'\n'+'detected rectangle: '+str(detected_rectangle))
             rectangle_comparison = CompareRectangles(detected_rectangle,true_rectangle)
             # will be true if greater than 0.5
             jaccard_similar = rectangle_comparison.similar_rectangles()
 
             # detected_rectangle is true positive if jaccard similar
-
             if jaccard_similar:
+                print('rectangles are jaccard similar')
                 cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (0, 255, 0), 2)
                 img_True_positives +=1
             else: img_False_positives +=1
@@ -325,6 +328,7 @@ for imagePath in images:
 # print("Total objects detected: {0}".format(len(objects)))
 with open(outputFilename, 'a') as results:
     results.write("Total labelled objects: {0}".format(total_labelled_objects))
+    results.write("\n")
     results.write("Total objects detected: {0}".format(total_objects_detected))
     results.write("\n")
     results.write("Total TP:{0}, Total FP: {1}, Total FN: {2}".format(tot_True_positives, tot_False_positives, tot_False_neg))

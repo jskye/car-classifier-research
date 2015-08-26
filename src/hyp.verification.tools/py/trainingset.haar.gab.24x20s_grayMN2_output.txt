@@ -1,0 +1,6 @@
+*********************************
+Batch Detection results 
+*********************************
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset/car_0001.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.gab.24x20s.xml
+TP:2, FP: 0, FN: 0
