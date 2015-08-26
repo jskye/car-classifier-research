@@ -25,3 +25,8 @@ class Rectangle(object):
         self.height = h
     def area(self):
         return self.getWidth() * self.getHeight()
+    def __str__(self):
+     return "("+str(self.getLeftXCoord()) + ', ' + \
+        str(self.getTopYCoord()) + ', ' + \
+        str(self.getWidth()) + ', ' + \
+        str(self.getHeight()) +")"

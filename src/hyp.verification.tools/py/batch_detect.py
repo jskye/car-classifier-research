@@ -99,8 +99,9 @@ cascadeName = os.path.basename(cascadePath)
 cascadeNameMinusEx = cascadeName[:-4]
 
 print("using cascade: "+cascadeNameMinusEx+": "+cascadePathMinusEx)
+outputDirPath = "/Users/juliusskye/COMP4120 Car Detection/car-classifier-research/results/jaccard/"
 outputFilename=testset+"."+cascadeNameMinusEx+'_'+colorspace+"MN"+min_neighbors+'_'+'output.txt'
-
+outputDestination = outputDirPath+outputFilename
 
 print("reading labelled rectangles from: ")
 labelled_rectangles = {}
@@ -120,7 +121,7 @@ print("loading classifier...")
 trainedCascade = cv2.CascadeClassifier(cascadePath)
 total_objects_detected = 0
 print("writing to output file: "+outputFilename)
-with open(outputFilename, 'w') as results:
+with open(outputDestination, 'w') as results:
     results.write("*********************************\n")
     results.write("Batch Detection results \n")
     results.write("*********************************\n")
@@ -131,7 +132,6 @@ print(imageDir)
 imageNum=0
 images = glob.glob(imageDir+'*.jpg')
 for imagePath in images:
-    print('heelo')
     img_True_positives=0
     img_False_positives=0
     img_False_neg =0
@@ -144,7 +144,7 @@ for imagePath in images:
     # Read the image
     image = cv2.imread(imagePath)
 
-    print("labelname"+labelName)
+    print("labelname: "+labelName)
 
     # convert to grayscale (default algorithm)
     if colorspace == "gray":
@@ -168,13 +168,13 @@ for imagePath in images:
 
     print('using color mode: '+colorspace)
 
-    with open(outputFilename, 'a') as results:
+    with open(outputDestination, 'a') as results:
         results.write("Running detection on image:  "+imagePath +"\n")
         results.write("Detecting using trained classifier: "+cascadePath +"\n")
     results.close()
 
 
-    # training PARAMS
+    # detection window PARAMS
     SCALE_FACTOR = 1.02
     MIN_NEIGHBORS = int(min_neighbors)
     MIN_SIZE = (10,10)
@@ -229,9 +229,7 @@ for imagePath in images:
 
         # draw detected rectangle only if rectangles are similar according to Jaccard Index.
         # compare detected object with labelled rectangles
-
-
-        # cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (0, 255, 0), 2)
+        # if true positive found, then stop comparing.
 
         detected_rectangle = Rectangle(detx, dety, detectedHeight, detectedWidth)
         # detectedArea = detectedWidth*detectedHeight
@@ -247,47 +245,16 @@ for imagePath in images:
 
             print('true rectangle: '+str(true_rectangle)+'\n'+'detected rectangle: '+str(detected_rectangle))
             rectangle_comparison = CompareRectangles(detected_rectangle,true_rectangle)
-            # will be true if greater than 0.5
+
             jaccard_similar = rectangle_comparison.similar_rectangles()
 
-            # detected_rectangle is true positive if jaccard similar
+            # detected_rectangle is true positive if jaccard similar (JI > 0.5)
             if jaccard_similar:
                 print('rectangles are jaccard similar')
                 cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (0, 255, 0), 2)
                 img_True_positives +=1
+                break
             else: img_False_positives +=1
-
-
-        #     # use simple_compare_rects to comapre similarity of True and detected rectangles
-        #     # to determine True or False positive
-        #     # TODO: move to function
-        #     # TODO: replace with jaccard index
-        #     #   this method has flaws where some dissimilar rectangles are marked as TP
-        #
-        #     # if detected.area smaller than True.area but still bigger than half,
-        #     # and side lengths are within 50% of eachother then rects are similar.
-        #     # OR
-        #     # if True.area smaller than detected.area  but still bigger than half,
-        #     # and side lengths are within 50% of eachother then rects are similar.
-        #     A = (detectedArea < TrueArea)
-        #     B = (detectedArea > 0.5*TrueArea)
-        #     C = (detectedWidth<2*TrueWidth)
-        #     D = (detectedWidth>0.5*TrueWidth)
-        #     E = (detectedHeight<2*TrueHeight)
-        #     F = (detectedHeight>0.5*TrueHeight)
-        #
-        #     G = (TrueArea < detectedArea)
-        #     H = (TrueArea > 0.5*detectedArea)
-        #     I = (detectedWidth<2*TrueWidth)
-        #     J = (detectedWidth>0.5*TrueWidth)
-        #     K = (detectedHeight<2*TrueHeight)
-        #     L = (detectedHeight>0.5*TrueHeight)
-
-            # if (A and B and C and D and E and F) or (G and H and I and J and K and L ):
-            #     img_True_positives +=1
-            # else: img_False_positives +=1
-
-
 
 
     # increment False negatives
@@ -302,7 +269,7 @@ for imagePath in images:
 
 
     # append to end of file
-    with open(outputFilename, 'a') as results:
+    with open(outputDestination, 'a') as results:
         results.write("TP:{0}, FP: {1}, FN: {2}".format(img_True_positives, img_False_positives, img_False_neg))
         results.write("\n")
     results.close()
@@ -326,7 +293,7 @@ for imagePath in images:
 
 
 # print("Total objects detected: {0}".format(len(objects)))
-with open(outputFilename, 'a') as results:
+with open(outputDestination, 'a') as results:
     results.write("Total labelled objects: {0}".format(total_labelled_objects))
     results.write("\n")
     results.write("Total objects detected: {0}".format(total_objects_detected))
@@ -356,9 +323,9 @@ with open(outputFilename, 'a') as results:
     #harmonic mean = 2 ((precisin x recall)/(precision + recall))
     harmonic_mean = ((precision*recall) / (precision+recall+delta))*2
 
-    results.write("Precision: {0}".format(precision))
-    results.write("Recall: {0}".format(recall))
-    results.write("Harmonic Mean: {0}".format(harmonic_mean))
+    results.write("Precision: {0} \n".format(precision))
+    results.write("Recall: {0} \n".format(recall))
+    results.write("Harmonic Mean: {0} \n".format(harmonic_mean))
 
     results.write("\n")
 results.close()

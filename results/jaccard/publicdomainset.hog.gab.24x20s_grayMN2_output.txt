@@ -1,0 +1,83 @@
+*********************************
+Batch Detection results 
+*********************************
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_fog1.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_fog2.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_fog3.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:1, FP: 0, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_fog4.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:2, FP: 0, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_highway1.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:4, FP: 0, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_highway2.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:3, FP: 7, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_hydro1.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:2, FP: 0, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_hydro2.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:1, FP: 1, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_hydro3.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:0, FP: 8, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_hydro4.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_lowlight1.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:4, FP: 0, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_lowlight2.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:4, FP: 4, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_night1.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:2, FP: 0, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_night2.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:2, FP: 0, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_night3.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:2, FP: 0, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_night4.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:3, FP: 5, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_night5.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:3, FP: 0, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_snow1.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:2, FP: 1, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_snow2.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:0, FP: 3, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_snow3.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:0, FP: 1, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_snow4.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:2, FP: 4, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_traffic1.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:2, FP: 2, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_traffic4.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:2, FP: 23, FN: 0
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_tunnel1.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.gab.24x20s.xml
+TP:1, FP: 0, FN: 0
+Total labelled objects: 24
+Total objects detected: 57
+Total TP:42, Total FP: 59, Total FN: 3
+Total TPR:1.75, Total FPR: 2.45833333333
+Precision: 0.415841172434 
+Recall: 0.933331259264 
+Harmonic Mean: 0.575299036731 
+

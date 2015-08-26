@@ -213,7 +213,7 @@ class CompareRectangles(object):
     # initalise boundary tests used in other functions
     def initialise_boundary_tests(self):
 
-        print("initialising boundary test array")
+        # print("initialising boundary test array")
         # global variables for boundary tests
         self.boundary_tests = \
             [self.is_lowest(),
@@ -221,7 +221,7 @@ class CompareRectangles(object):
              self.is_leftmost(),
              self.is_rightmost()]
 
-        print(self.boundary_tests)
+        # print(self.boundary_tests)
 
 
         # TODO: replace with private vars _b
@@ -251,27 +251,27 @@ class CompareRectangles(object):
         # that is, if 0 or 1
         # test r1 fully contains r2
 
-        print(str(self.boundary_tests))
+        # print(str(self.boundary_tests))
 
-        print("testing if r1 fully contains r2")
+        # print("testing if r1 fully contains r2")
 
         fullyContains = True
         for boundary in self.boundary_tests:
             if boundary == 0 or boundary == 1:
-                print("boundary 1 continue")
+                # print("boundary 1 continue")
                 continue
             else:
-                print("boundary not 1 break")
+                # print("boundary not 1 break")
                 fullyContains = False
                 break
 
-        print("r1 fully contains r2:" + str(fullyContains))
+        # print("r1 fully contains r2:" + str(fullyContains))
 
         if fullyContains:
             return self.r1
 
         # r2 fully contains r2 if all nonzeroes in inverse boundary tests are -1.
-        print("testing if r2 fully contains r1")
+        # print("testing if r2 fully contains r1")
 
         fullyContains = True
         for boundary in self.inverse_boundary_tests:
@@ -281,7 +281,7 @@ class CompareRectangles(object):
                 fullyContains = False
                 break
 
-        print("r2 fully contains r1:" + str(fullyContains))
+        # print("r2 fully contains r1:" + str(fullyContains))
 
         if fullyContains:
             return self.r2
@@ -445,24 +445,24 @@ class CompareRectangles(object):
     def rect_intersection(self):
         # if rectangles equal then intersect is either.
         if self.equals():
-            print("rectangles are equal")
+            # print("rectangles are equal")
             return self.r1
         # if rectangles dont intersect then return None.
         elif self.rect_dont_intersect():
-            print("rectangles dont intersect")
+            # print("rectangles dont intersect")
             return None
         # they do intersect
         else:
-            print("rectangles intersect")
+            # print("rectangles intersect")
 
             # if one fully contains the other, then the intersection area is the contained.
             contained_rectangle = self.rect_fully_contained()
             containing_rectangle = self.rect_fully_contains()
 
             if contained_rectangle is not None:
-                print(str(contained_rectangle)+"is fully contained by other")
-                print("containing rectangles area: "+str(containing_rectangle.area()))
-                print("contained rectangles area: "+str(contained_rectangle.area()))
+                # print(str(contained_rectangle)+"is fully contained by other")
+                # print("containing rectangles area: "+str(containing_rectangle.area()))
+                # print("contained rectangles area: "+str(contained_rectangle.area()))
                 remaining_area = containing_rectangle.area() - contained_rectangle.area()
                 return Rectangle(0,0,10, remaining_area/10.0)
                 # return Rectangle(containing_rectangle.area() - contained_rectangle.area())
@@ -473,34 +473,34 @@ class CompareRectangles(object):
             # construct intersectRect by testing bounds
             else :
 
-                print("no rectangle fully contains other")
+                # print("no rectangle fully contains other")
 
                 # they x contained overlap
                 if self.is_xcontained_overlap():
-                    print("they xcontained overlap")
+                    # print("they xcontained overlap")
                     return self.rect_xcontained_overlap()
 
                 # they y contained overlap
                 elif self.is_ycontained_overlap():
-                    print("they ycontained overlap")
+                    # print("they ycontained overlap")
                     return self.rect_ycontained_overlap()
 
                 # they x parrallel overlap
                 elif self.is_xparrallel_overlap():
-                    print("they are parrallel in x and overlap")
+                    # print("they are parrallel in x and overlap")
                     return self.rect_xparrallel_overlap()
 
                 # they y parrallel overlap
                 elif self.is_yparrallel_overlap():
-                    print("they are parrallel in y and overlap")
+                    # print("they are parrallel in y and overlap")
                     return self.rect_yparrallel_overlap()
 
                 # otherwise no containment overlap
                 elif self.is_nocontainment_notparrallel_overlap():
-                    print("they are not parrallel in x or y and overlap")
+                    # print("they are not parrallel in x or y and overlap")
                     return self.rect_nocontainment_notparrallel_overlap()
                 else:
-                    print("huh?..")
+                    # print("huh?..")
                     return None
 
  # returns the intersection (overlap) area, of the two rectangles.
