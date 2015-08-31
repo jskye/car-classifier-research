@@ -252,6 +252,7 @@ for imagePath in images:
             if jaccard_similar:
                 print('rectangles are jaccard similar')
                 cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (0, 255, 0), 2)
+                # cv2.rectangle(colorCVT, (0,0), (1,1), (0,0,255),2)
                 img_True_positives +=1
                 break
             else: img_False_positives +=1
