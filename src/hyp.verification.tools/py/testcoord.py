@@ -23,9 +23,9 @@ r3 = Rectangle(0,200,20,20)
 cv2.rectangle(image, (r1.getLeftXCoord(), r1.getTopYCoord()), (r1.getLeftXCoord()+r1.getWidth(), r1.getTopYCoord()+r1.getHeight()), (0, 255, 0), 1)
 cv2.rectangle(image, (r2.getLeftXCoord(), r2.getTopYCoord()), (r2.getLeftXCoord()+r2.getWidth(), r2.getTopYCoord()+r2.getHeight()), (255, 255, 0), 1)
 cv2.rectangle(image, (r3.getLeftXCoord(), r3.getTopYCoord()), (r3.getLeftXCoord()+r3.getWidth(), r3.getTopYCoord()+r2.getHeight()), (255, 255, 0), 1)
-cv2.circle(image, (r2.getLeftXCoord(), r2.getTopYCoord()), 5, (255, 0, 0), 1)
-cv2.circle(image, (40, r2.getTopYCoord()), 5, (255, 0, 0), 1)
-cv2.circle(image, (80, r2.getTopYCoord()), 5, (255, 0, 0), 1)
+# cv2.circle(image, (r2.getLeftXCoord(), r2.getTopYCoord()), 5, (255, 0, 0), 1)
+# cv2.circle(image, (40, r2.getTopYCoord()), 5, (255, 0, 0), 1)
+# cv2.circle(image, (80, r2.getTopYCoord()), 5, (255, 0, 0), 1)
 
 
 misc.imsave(filepath, image)

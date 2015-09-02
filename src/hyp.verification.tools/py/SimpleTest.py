@@ -71,7 +71,9 @@ class SimpleTest(object):
             image = np.zeros((height,width,3), np.uint8)
 
         cv2.rectangle(image, (r1.getLeftXCoord(), r1.getTopYCoord()), (r1.getLeftXCoord()+r1.getWidth(), r1.getTopYCoord()+r1.getHeight()), (255, 255, 0), 1)
+        cv2.putText(image,"r1", (r1.getLeftXCoord(),r1.getTopYCoord()), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
         cv2.rectangle(image, (r2.getLeftXCoord(), r2.getTopYCoord()), (r2.getLeftXCoord()+r2.getWidth(), r2.getTopYCoord()+r2.getHeight()), (255, 255, 0), 1)
+        cv2.putText(image,"r2", (r2.getLeftXCoord() + 0.5* r1.getLeftXCoord()+r2.getWidth(),r2.getTopYCoord()+ 0.5*r2.getLeftXCoord()+r1.getHeight()), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
         misc.imsave(filepath, image)
 
 

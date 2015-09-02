@@ -26,7 +26,7 @@ Author: julius.skye@gmail.com
 Date: 1.05.2015
 File Description:
 
-	This file contains a function that converts images from PPM format to JPG.
+    This file contains a function that converts images from PPM format to JPG.
 
 
 """
@@ -36,13 +36,16 @@ import os
 import glob
 from PIL import Image
 
-#path = os.path.dirname(os.path.realpath(__file__))
-#path = path +'/*.ppm'
-
-files=glob.glob("*.ppm")
-for file in files:
-    f=open(file)
-    filename=f.name;
-    f.save()
-    im.save("sweet_pic.jpg")
+filetypes = ("*.ppm", "*.pgm")
+#TODO: test with pbm and pnm files.
+files_grabbed = []
+for files in filetypes:
+    files_grabbed.extend(glob.glob(files))
+# files=glob.glob("*.ppm") glob.glob("*.pgm")
+print(files_grabbed)
+for file in files_grabbed:
+    f = open(file)
+    filename = f.name
+    image = Image.open(file)
+    image.save(filename + '.jpg', 'JPEG', quality=100)
     f.close()
