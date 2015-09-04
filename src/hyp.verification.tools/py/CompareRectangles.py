@@ -37,7 +37,7 @@ from Rectangle import Rectangle
 class CompareRectangles(object):
 
     debugging = True
-    debugging = False
+    # debugging = False
 
 
     def __init__(self,r1,r2):
@@ -114,7 +114,7 @@ class CompareRectangles(object):
 
         if self.r1.getLeftXCoord() < self.r2.getLeftXCoord():
             return self.r1
-        elif self.r2.getLeftXCoord() < self.r2.getLeftXCoord():
+        elif self.r2.getLeftXCoord() < self.r1.getLeftXCoord():
             return self.r2
         else:
             return None
@@ -125,7 +125,7 @@ class CompareRectangles(object):
 
         if self.r1.getLeftXCoord() < self.r2.getLeftXCoord():
             return 1
-        elif self.r2.getLeftXCoord() < self.r2.getLeftXCoord():
+        elif self.r2.getLeftXCoord() < self.r1.getLeftXCoord():
             return -1
         else: return 0
 
@@ -135,7 +135,7 @@ class CompareRectangles(object):
 
         if self.r1.getRightXCoord() > self.r2.getRightXCoord():
             return self.r1
-        elif self.r2.getRightXCoord() > self.r2.getRightXCoord():
+        elif self.r2.getRightXCoord() > self.r1.getRightXCoord():
             return self.r2
         else:
             return None
@@ -146,7 +146,7 @@ class CompareRectangles(object):
 
         if self.r1.getRightXCoord() > self.r2.getRightXCoord():
             return 1
-        elif self.r2.getRightXCoord() > self.r2.getRightXCoord():
+        elif self.r2.getRightXCoord() > self.r1.getRightXCoord():
             return -1
         else: return 0
 
@@ -184,9 +184,9 @@ class CompareRectangles(object):
     # where lowest has highest TopYCoord
     def is_lowest(self):
 
-        if self.r1.getTopYCoord() > self.r2.getTopYCoord():
+        if self.r1.getBottomYCoord() > self.r2.getBottomYCoord():
             return 1
-        elif self.r2.getTopYCoord() > self.r1.getTopYCoord():
+        elif self.r2.getBottomYCoord() > self.r1.getBottomYCoord():
             return -1
         else:
             return 0
@@ -436,6 +436,8 @@ class CompareRectangles(object):
 
             # r2 is not bound at left
             if self.b0 == 1 and self.b1 == 1 and self.b2 == -1 and self.b3 != -1:
+                if self.debugging:
+                    print("r2 is not bound at left")
                 overlap_left = r1.getLeftXCoord()
                 overlap_right = r2.getRightXCoord()
                 overlap_bottom = r2.getBottomYCoord()
@@ -446,6 +448,8 @@ class CompareRectangles(object):
 
             # r2 is not bound at right
             elif self.b0 == 1 and self.b1 == 1 and self.b2 != -1 and self.b3 == -1:
+                if self.debugging:
+                    print("r2 is not bound at right")
                 overlap_left = r2.getLeftXCoord()
                 overlap_right = r1.getRightXCoord()
                 overlap_bottom = r2.getBottomYCoord()
@@ -456,6 +460,8 @@ class CompareRectangles(object):
 
             # r2 is not bound at left or right
             elif self.b0 == 1 and self.b1 == 1 and self.b2 == -1 and self.b3 == -1:
+                if self.debugging:
+                    print("r2 is not bound at left or right")
                 overlap_left = r1.getLeftXCoord()
                 overlap_right = r1.getRightXCoord()
                 overlap_bottom = r2.getBottomYCoord()
@@ -559,8 +565,13 @@ class CompareRectangles(object):
 
                 print("no rectangle fully contains other")
 
+                # if no containment overlap
+                if self.is_nocontainment_notparrallel_overlap():
+                    print("they are not parrallel in x or y and overlap")
+                    return self.rect_nocontainment_notparrallel_overlap()
+
                 # they x contained overlap
-                if self.is_xcontained_overlap():
+                elif self.is_xcontained_overlap():
                     print("they xcontained overlap")
                     return self.rect_xcontained_overlap(self.r1,self.r2)
 
@@ -579,10 +590,10 @@ class CompareRectangles(object):
                     # print("they are parrallel in y and overlap")
                     return self.rect_yparrallel_overlap()
 
-                # otherwise no containment overlap
-                elif self.is_nocontainment_notparrallel_overlap():
-                    # print("they are not parrallel in x or y and overlap")
-                    return self.rect_nocontainment_notparrallel_overlap()
+                # # otherwise no containment overlap
+                # elif self.is_nocontainment_notparrallel_overlap():
+                #     # print("they are not parrallel in x or y and overlap")
+                #     return self.rect_nocontainment_notparrallel_overlap()
                 else:
                     # print("huh?..")
                     return None

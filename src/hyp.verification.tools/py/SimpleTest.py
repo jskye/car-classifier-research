@@ -71,9 +71,13 @@ class SimpleTest(object):
             image = np.zeros((height,width,3), np.uint8)
 
         cv2.rectangle(image, (r1.getLeftXCoord(), r1.getTopYCoord()), (r1.getLeftXCoord()+r1.getWidth(), r1.getTopYCoord()+r1.getHeight()), (255, 255, 0), 1)
-        cv2.putText(image,"r1", (r1.getLeftXCoord(),r1.getTopYCoord()), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
+        # cv2.putText(image,"r1", (int(r1.getLeftXCoord() + 0.4 * r1.getWidth()), int(r1.getTopYCoord()+ 0.4*r1.getHeight())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
+        cv2.putText(image,"r1", (int(r1.getLeftXCoord()), int(r1.getBottomYCoord())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
+
         cv2.rectangle(image, (r2.getLeftXCoord(), r2.getTopYCoord()), (r2.getLeftXCoord()+r2.getWidth(), r2.getTopYCoord()+r2.getHeight()), (255, 255, 0), 1)
-        cv2.putText(image,"r2", (r2.getLeftXCoord() + 0.5* r1.getLeftXCoord()+r2.getWidth(),r2.getTopYCoord()+ 0.5*r2.getLeftXCoord()+r1.getHeight()), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
+        # cv2.putText(image,"r2", (int(r2.getLeftXCoord() + 0.4 * r2.getWidth()), int(r2.getTopYCoord()+ 0.4*r2.getHeight())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
+        cv2.putText(image,"r2", (int(r2.getLeftXCoord()), int(r2.getBottomYCoord())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
+
         misc.imsave(filepath, image)
 
 
@@ -105,41 +109,52 @@ print("---------------------------------")
 # r2 = Rectangle(0,100,5,5)
 # test_instance.test(r1,r2)
 
-
-print("---------------------------------")
-print("case: fully contained rectangle")
-print("---------------------------------")
-# r1 should contain r2, should be jaccard similar.
-r1 = Rectangle(0,0,50,50)
-r2 = Rectangle(0,0,40,40)
-test_instance.test(r1,r2)
-test_instance.printImage(r1,r2)
+#
+# print("---------------------------------")
+# print("case: fully contained rectangle")
+# print("---------------------------------")
+# #correct
+# # r1 should contain r2, should be jaccard similar.
+# r1 = Rectangle(0,0,50,50)
+# r2 = Rectangle(0,0,40,40)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
 
 
 print("---------------------------------")
 print("case: x contained rectangle")
 print("---------------------------------")
-r1 = Rectangle(0,100,50,50)
-r2 = Rectangle(20,100,20,100)
+# # correct
+# # r1 = Rectangle(0,100,50,50)
+# # r2 = Rectangle(20,100,20,100)
+# # test_instance.test(r1,r2)
+# # test_instance.printImage(r1,r2)
+
+#correct
+# r1 = Rectangle(0,100,50,50)
+# r2 = Rectangle(20,100,20,150)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+
+# wrong
+# should be y contained.
+# gives xcontained, but doesnt give JI.
+r1 = Rectangle(10,0,100,100)
+r2 = Rectangle(0,5,50,30)
 test_instance.test(r1,r2)
 test_instance.printImage(r1,r2)
 
-#
-#
+
 # print("---------------------------------")
 # print("case: y contained rectangle")
 # print("---------------------------------")
-# # fuly contained
-# # r1 should contain r2, should be jaccard similar.
-# r1 = Rectangle(0,5,5,5)
-# r2 = Rectangle(0,4,4,4)
-# print("Area(r1): "+str(r1.area()))
-# print("Area(r2): "+str(r2.area()))
-# compare_rects = CompareRectangles(r1,r2)
-# print("overlapping/intersection area: "+str(compare_rects.rect_intersection().area()))
-# print("jaccard index: " +str(compare_rects.jaccard_index()))
-# print("rectangles similar: "+str(compare_rects.similar_rectangles()))
-# print("\n")
+
+# wrong
+# r1 = Rectangle(10,0,5,10)
+# r2 = Rectangle(0,5,20,3)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+
 
 
 
