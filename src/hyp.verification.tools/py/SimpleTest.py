@@ -50,11 +50,15 @@ class SimpleTest(object):
         print("r1 fully contains r2:" + str(fullyContains))
 
     def test(self, r1, r2):
-        print("Area(r1): "+str(r1.area()))
-        print("Area(r2): "+str(r2.area()))
+
+        print("Rectangle r1: ["+str(r1.getLeftXCoord())+", "+str(r1.getTopYCoord())+", "+ \
+        str(r1.getWidth())+", " + str(r1.getHeight())+"]"+" | Area(r1): "+str(r1.area()))
+        print("Rectangle r2: ["+str(r2.getLeftXCoord())+", "+str(r2.getTopYCoord())+", "+ \
+        str(r2.getWidth())+", " + str(r2.getHeight())+"]"+" | Area(r2): "+str(r2.area()))
         compare_rects = CompareRectangles(r1,r2)
         if compare_rects.rect_intersection() is not None:
             print("overlapping/intersection area: "+str(compare_rects.area_intersection()))
+            print("union area: "+str(compare_rects.area_union()))
         else:
             print("no intersection area")
         print("jaccard index: " +str(compare_rects.jaccard_index()))
@@ -101,10 +105,10 @@ print("---------------------------------")
 # r2 = Rectangle(0,5,5,5)
 # test_instance.test(r1,r2)
 #
-#
 # print("---------------------------------")
 # print("case: no intersection")
 # print("---------------------------------")
+# #correct
 # r1 = Rectangle(0,5,5,5)
 # r2 = Rectangle(0,100,5,5)
 # test_instance.test(r1,r2)
@@ -121,44 +125,40 @@ print("---------------------------------")
 # test_instance.printImage(r1,r2)
 
 
-print("---------------------------------")
-print("case: x contained rectangle")
-print("---------------------------------")
-# # correct
-# # r1 = Rectangle(0,100,50,50)
-# # r2 = Rectangle(20,100,20,100)
-# # test_instance.test(r1,r2)
-# # test_instance.printImage(r1,r2)
-
-#correct
+# print("---------------------------------")
+# print("case: x contained rectangle")
+# print("---------------------------------")
+# correct
 # r1 = Rectangle(0,100,50,50)
-# r2 = Rectangle(20,100,20,150)
+# r2 = Rectangle(20,100,20,100)
 # test_instance.test(r1,r2)
 # test_instance.printImage(r1,r2)
-
-# wrong
-# should be y contained.
-# gives xcontained, but doesnt give JI.
-r1 = Rectangle(10,0,100,100)
-r2 = Rectangle(0,5,50,30)
-test_instance.test(r1,r2)
-test_instance.printImage(r1,r2)
 
 
 # print("---------------------------------")
 # print("case: y contained rectangle")
 # print("---------------------------------")
+# correct
+# r1 = Rectangle(10,0,100,100)
+# r2 = Rectangle(0,5,50,30)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
 
-# wrong
-# r1 = Rectangle(10,0,5,10)
-# r2 = Rectangle(0,5,20,3)
+# correct
+# r1 = Rectangle(10,0,50,100)
+# r2 = Rectangle(0,5,20,30)
 # test_instance.test(r1,r2)
 # test_instance.printImage(r1,r2)
 
 
-
-
-
+# print("---------------------------------")
+# print("case: not contained not parra intersect")
+# print("---------------------------------")
+# # correct
+# r1 = Rectangle(0,0,50,50)
+# r2 = Rectangle(25,25,50,50)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
 
 
 

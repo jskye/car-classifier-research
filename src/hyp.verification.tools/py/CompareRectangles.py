@@ -36,8 +36,13 @@ from Rectangle import Rectangle
 #class compares two rectangles.
 class CompareRectangles(object):
 
+    basicdebugging = True
+    basicdebugging = False
     debugging = True
-    # debugging = False
+    debugging = False
+
+    if debugging:
+        basicdebugging = True
 
 
     def __init__(self,r1,r2):
@@ -52,11 +57,11 @@ class CompareRectangles(object):
             print("r2.left "+str(self.r2.getLeftXCoord()))
             print("r1.right "+str(self.r1.getRightXCoord()))
             print("r2.right "+str(self.r2.getRightXCoord()))
-        if self.r1.getLeftXCoord()==self.r2.getLeftXCoord() and \
+        if self.r1.getLeftXCoord() == self.r2.getLeftXCoord() and \
             self.r1.getRightXCoord()==self.r2.getRightXCoord():
             if self.debugging:
                 print("rects are vert. parra")
-                return True
+            return True
         else:
             if self.debugging:
                 print("rects are not vert. parra")
@@ -224,7 +229,7 @@ class CompareRectangles(object):
 
     # returns True if rectangles dont intersect
     def rect_dont_intersect(self):
-        if self.debugging:
+        if self.basicdebugging:
             print("testing if they dont intersect")
         # same rectangles mean they do intersect so return False
         if self.equals():
@@ -232,11 +237,11 @@ class CompareRectangles(object):
         #  parall in x but gap
         elif self.horiz_parallel() and self.dont_x_overlap():
             if self.debugging:
-                print("parall in x but gap")
+                print("parall in x but gapx")
             return True
         #  parall in y but gap
         elif self.vert_parrallel() and self.dont_y_overlap():
-            if self.debugging:
+            if self.basicdebugging:
                 print("parall in y but gap")
             return True
         # not parall (and gap in both)
@@ -246,8 +251,9 @@ class CompareRectangles(object):
                 print("not parall and gap in both")
             return True
         else:
-            if self.debugging:
+            if self.basicdebugging:
                 print("they must intersect..")
+            return False
 
     # initalise boundary tests used in other functions
     def initialise_boundary_tests(self):
@@ -363,10 +369,16 @@ class CompareRectangles(object):
             return None
 
 
+    # for x contained overlap, x containing rectangle must be leftest and rightest
+    # and not both lowest and highest
     def is_xcontained_overlap(self):
-        if self.b0 == -1 or self.b1 == -1 and self.b2 == 1 and self.b3 == 1:
+        if not(self.b0 == 1 and self.b1 == 1) and self.b2 == 1 and self.b3 == 1:
+            if self.debugging:
+                print("r1 x contains r2")
             return True
-        elif self.i0 == -1 or self.i1 == -1 and self.i2 == 1 and self.i3 == 1:
+        elif not(self.i0 == 1 and self.i1 == 1) and self.i2 == 1 and self.i3 == 1:
+            if self.debugging:
+                print("r2 x contains r1")
             return True
         else:
             if self.debugging:
@@ -419,15 +431,24 @@ class CompareRectangles(object):
 
         else:
             if self.debugging:
-                print("not x contained overlap")
+                print("was meant to return x contained overlap, but didnt")
             return None
 
-
+    # for y contained overlap, y containing rectangle must be lowest and highest
+    # and not both leftest and rightest
     def is_ycontained_overlap(self):
-        if self.b0 == 1 and self.b1 == 1 and self.b2 == -1 or self.b3 == -1:
+        if self.b0 == 1 and self.b1 == 1 and not(self.b2 == 1 and self.b3 == 1):
             if self.debugging:
-                print("is y contained overlap")
+                print("r1 y contains r2")
             return True
+        elif self.i0 == 1 and self.i1 == 1 and not(self.i2 == 1 and self.i3 == 1):
+            if self.debugging:
+                print("r2 y contains r1")
+            return True
+        else:
+            if self.debugging:
+                print("is not x contained overlap")
+            return False
 
     # returns the rectangle overlap that is contained in y
     # this happens when tests have one differing result in x (no zeroes)
@@ -520,8 +541,8 @@ class CompareRectangles(object):
     # gets the rectangle from the overlap when two rectangles are not parrallel or contained by other.
     def rect_nocontainment_notparrallel_overlap(self):
 
-        overlap_top = self.rect_highest().getTopYCoord()
-        overlap_bottom = self.rect_lowest().getBottomYCoord()
+        overlap_top = self.rect_lowest().getTopYCoord()
+        overlap_bottom = self.rect_highest().getBottomYCoord()
         overlap_right = self.rect_leftmost().getRightXCoord()
         overlap_left = self.rect_rightmost().getLeftXCoord()
         overlap_width = overlap_right - overlap_left
@@ -533,16 +554,19 @@ class CompareRectangles(object):
     def rect_intersection(self):
         # if rectangles equal then intersect is either.
         if self.equals():
-            print("rectangles are equal")
+            if self.basicdebugging:
+                print("rectangles are equal")
+            # just return first one.
             return self.r1
         # if rectangles dont intersect then return None.
         elif self.rect_dont_intersect():
-            if self.debugging:
+            if self.basicdebugging:
                 print("rectangles dont intersect")
             return None
         # they do intersect
         else:
-            print("rectangles intersect")
+            if self.basicdebugging:
+                print("rectangles intersect")
 
             # if one fully contains the other, then the intersection area is the contained.
             contained_rectangle = self.rect_fully_contained()
@@ -562,40 +586,45 @@ class CompareRectangles(object):
             # else they overlap
             # construct intersectRect by testing bounds
             else :
-
-                print("no rectangle fully contains other")
-
-                # if no containment overlap
-                if self.is_nocontainment_notparrallel_overlap():
-                    print("they are not parrallel in x or y and overlap")
-                    return self.rect_nocontainment_notparrallel_overlap()
-
-                # they x contained overlap
-                elif self.is_xcontained_overlap():
-                    print("they xcontained overlap")
-                    return self.rect_xcontained_overlap(self.r1,self.r2)
-
-                # they y contained overlap
-                elif self.is_ycontained_overlap():
-                    # print("they ycontained overlap")
-                    return self.rect_ycontained_overlap()
-
-                # they x parrallel overlap
-                elif self.is_xparrallel_overlap():
-                    # print("they are parrallel in x and overlap")
-                    return self.rect_xparrallel_overlap()
-
-                # they y parrallel overlap
-                elif self.is_yparrallel_overlap():
-                    # print("they are parrallel in y and overlap")
-                    return self.rect_yparrallel_overlap()
+                if self.basicdebugging:
+                    print("no rectangle fully contains other")
 
                 # # otherwise no containment overlap
                 # elif self.is_nocontainment_notparrallel_overlap():
                 #     # print("they are not parrallel in x or y and overlap")
                 #     return self.rect_nocontainment_notparrallel_overlap()
+                # if no containment overlap
+                if self.is_nocontainment_notparrallel_overlap():
+                    if self.basicdebugging:
+                        print("they are not parrallel in x or y and overlap")
+                    return self.rect_nocontainment_notparrallel_overlap()
+
+                # they x contained overlap
+                elif self.is_xcontained_overlap():
+                    if self.basicdebugging:
+                        print("they xcontained overlap")
+                    return self.rect_xcontained_overlap(self.r1,self.r2)
+
+                # they y contained overlap
+                elif self.is_ycontained_overlap():
+                    if self.basicdebugging:
+                        print("they ycontained overlap")
+                    return self.rect_ycontained_overlap(self.r1, self.r2)
+
+                # they x parrallel overlap
+                elif self.is_xparrallel_overlap():
+                    if self.basicdebugging:
+                        print("they are parrallel in x and overlap")
+                    return self.rect_xparrallel_overlap()
+
+                # they y parrallel overlap
+                elif self.is_yparrallel_overlap():
+                    if self.basicdebugging:
+                        print("they are parrallel in y and overlap")
+                    return self.rect_yparrallel_overlap()
                 else:
-                    # print("huh?..")
+                    if self.basicdebugging:
+                        print("huh?..")
                     return None
 
  # returns the intersection (overlap) area, of the two rectangles.
@@ -607,7 +636,7 @@ class CompareRectangles(object):
 
     # returns the union rectangle, of two rectangles.
     def area_union(self):
-        # r1.area + r2.area - int(r1,r2)
+        # union(r1.r2).area = r1.area + r2.area - int(r1,r2)
         if self.area_intersection() is not None:
             return self.r1.area() + self.r2.area() - self.area_intersection()
         else:
