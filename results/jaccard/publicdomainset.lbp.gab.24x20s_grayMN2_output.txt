@@ -18,7 +18,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_highway2.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/lbp.gab.24x20s.xml
-TP:1, FP: 1, FN: 0
+TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_hydro1.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/lbp.gab.24x20s.xml
 TP:0, FP: 0, FN: 1
@@ -36,7 +36,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_lowlight2.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/lbp.gab.24x20s.xml
-TP:1, FP: 1, FN: 0
+TP:0, FP: 2, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_night1.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/lbp.gab.24x20s.xml
 TP:0, FP: 0, FN: 1
@@ -69,15 +69,15 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_traffic4.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/lbp.gab.24x20s.xml
-TP:1, FP: 1, FN: 0
+TP:0, FP: 5, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_tunnel1.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/lbp.gab.24x20s.xml
 TP:0, FP: 0, FN: 1
 Total labelled objects: 24
 Total objects detected: 3
-Total TP:3, Total FP: 3, Total FN: 21
-Total TPR:0.125, Total FPR: 0.125
-Precision: 0.499991666806 
-Recall: 0.124999479169 
-Harmonic Mean: 0.199966671555 
+Total TP:1, Total FP: 7, Total FN: 21
+Total TPR:0.0416666666667, Total FPR: 0.291666666667
+Precision: 0.12499843752 
+Recall: 0.0454543388439 
+Harmonic Mean: 0.0666271339009 
 

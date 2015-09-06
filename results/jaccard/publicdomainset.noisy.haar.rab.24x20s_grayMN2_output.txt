@@ -69,15 +69,15 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset.noisy/resized_traffic4.jpg-noisy.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
-TP:1, FP: 1, FN: 0
+TP:0, FP: 5, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset.noisy/resized_tunnel1.jpg-noisy.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
 TP:0, FP: 0, FN: 1
 Total labelled objects: 24
 Total objects detected: 1
-Total TP:1, Total FP: 1, Total FN: 23
-Total TPR:0.0416666666667, Total FPR: 0.0416666666667
-Precision: 0.49997500125 
-Recall: 0.0416664930563 
-Harmonic Mean: 0.076908286099 
+Total TP:0, Total FP: 5, Total FN: 23
+Total TPR:0.0, Total FPR: 0.208333333333
+Precision: 0.0 
+Recall: 0.0 
+Harmonic Mean: 0.0 
 

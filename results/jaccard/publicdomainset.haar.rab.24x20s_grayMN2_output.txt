@@ -15,10 +15,10 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_highway1.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
-TP:1, FP: 0, FN: 0
+TP:0, FP: 3, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_highway2.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
-TP:2, FP: 1, FN: 0
+TP:0, FP: 8, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_hydro1.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
 TP:0, FP: 0, FN: 1
@@ -69,15 +69,15 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_traffic4.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
-TP:1, FP: 11, FN: 0
+TP:0, FP: 15, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/publicdomainset/resized_tunnel1.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
 TP:0, FP: 0, FN: 1
 Total labelled objects: 24
 Total objects detected: 6
-Total TP:4, Total FP: 12, Total FN: 21
-Total TPR:0.166666666667, Total FPR: 0.5
-Precision: 0.24999843751 
-Recall: 0.159999360003 
-Harmonic Mean: 0.195073420271 
+Total TP:0, Total FP: 26, Total FN: 21
+Total TPR:0.0, Total FPR: 1.08333333333
+Precision: 0.0 
+Recall: 0.0 
+Harmonic Mean: 0.0 
 

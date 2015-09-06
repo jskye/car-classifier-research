@@ -248,15 +248,18 @@ for imagePath in images:
 
             jaccard_similar = rectangle_comparison.similar_rectangles()
 
+            # print false positives in red
+            if not jaccard_similar:
+                cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (255, 0, 0), 1)
+                img_False_positives +=1
             # detected_rectangle is true positive if jaccard similar (JI > 0.5)
-            if jaccard_similar:
+            else:
                 print('rectangles are jaccard similar')
+                # print true positive in blue
                 cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (0, 255, 0), 2)
                 # cv2.rectangle(colorCVT, (0,0), (1,1), (0,0,255),2)
                 img_True_positives +=1
                 break
-            else: img_False_positives +=1
-
 
     # increment False negatives
     if expectedObjects>0 and len(detected_objects)<1:
