@@ -123,7 +123,7 @@ r1 = Rectangle(0,0,50,50)
 r2 = Rectangle(0,0,40,40)
 test_instance.test(r1,r2)
 test_instance.printImage(r1,r2)
-
+# r2 should contain r1
 r2 = Rectangle(0,0,50,50)
 r1 = Rectangle(0,0,40,40)
 test_instance.test(r1,r2)
