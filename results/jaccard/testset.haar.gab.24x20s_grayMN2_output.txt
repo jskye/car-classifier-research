@@ -114,7 +114,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 1, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0038.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.gab.24x20s.xml
-TP:0, FP: 1, FN: 0
+TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0039.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.gab.24x20s.xml
 TP:1, FP: 0, FN: 0
@@ -267,7 +267,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0089.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.gab.24x20s.xml
-TP:0, FP: 1, FN: 0
+TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0090.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.gab.24x20s.xml
 TP:0, FP: 0, FN: 1
@@ -300,9 +300,9 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Total labelled objects: 99
 Total objects detected: 35
-Total TP:8, Total FP: 29, Total FN: 71
-Total TPR:0.0808080808081, Total FPR: 0.292929292929
-Precision: 0.21621563185 
-Recall: 0.1012656946 
-Harmonic Mean: 0.137887365025 
+Total TP:10, Total FP: 27, Total FN: 71
+Total TPR:0.10101010101, Total FPR: 0.272727272727
+Precision: 0.270269539812 
+Recall: 0.123456637708 
+Harmonic Mean: 0.169448201083 
 

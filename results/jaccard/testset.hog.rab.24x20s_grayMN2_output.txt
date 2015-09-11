@@ -12,7 +12,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0004.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
-TP:0, FP: 3, FN: 0
+TP:1, FP: 2, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0005.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
 TP:1, FP: 1, FN: 0
@@ -54,13 +54,13 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 1, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0018.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
-TP:0, FP: 14, FN: 0
+TP:1, FP: 13, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0019.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
 TP:0, FP: 1, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0020.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
-TP:0, FP: 1, FN: 0
+TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0021.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
 TP:0, FP: 3, FN: 0
@@ -96,7 +96,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 2, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0032.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
-TP:0, FP: 5, FN: 0
+TP:1, FP: 4, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0033.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
 TP:1, FP: 17, FN: 0
@@ -147,7 +147,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:1, FP: 1, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0049.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
-TP:1, FP: 3, FN: 0
+TP:2, FP: 1, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0050.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
 TP:1, FP: 2, FN: 0
@@ -165,16 +165,16 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 4, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0055.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
-TP:0, FP: 2, FN: 0
+TP:1, FP: 1, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0056.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
 TP:0, FP: 4, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0057.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
-TP:0, FP: 2, FN: 0
+TP:1, FP: 1, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0058.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
-TP:0, FP: 1, FN: 0
+TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0059.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
 TP:0, FP: 3, FN: 0
@@ -204,7 +204,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:1, FP: 3, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0068.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
-TP:0, FP: 4, FN: 0
+TP:1, FP: 3, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0069.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
 TP:1, FP: 3, FN: 0
@@ -213,13 +213,13 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 7, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0071.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
-TP:0, FP: 2, FN: 0
+TP:1, FP: 1, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0072.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
 TP:1, FP: 2, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0073.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
-TP:0, FP: 1, FN: 0
+TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0074.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
 TP:0, FP: 1, FN: 0
@@ -294,15 +294,15 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 1, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0098.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
-TP:0, FP: 1, FN: 0
+TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0099.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/hog.rab.24x20s.xml
 TP:0, FP: 3, FN: 0
 Total labelled objects: 99
 Total objects detected: 273
-Total TP:36, Total FP: 285, Total FN: 1
-Total TPR:0.363636363636, Total FPR: 2.87878787879
-Precision: 0.112149497773 
-Recall: 0.972970343323 
-Harmonic Mean: 0.201098673687 
+Total TP:48, Total FP: 272, Total FN: 1
+Total TPR:0.484848484848, Total FPR: 2.74747474747
+Precision: 0.149999953125 
+Recall: 0.979589837572 
+Harmonic Mean: 0.260139431068 
 

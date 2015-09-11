@@ -48,7 +48,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0016.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/lbp.gab.24x20s.xml
-TP:0, FP: 2, FN: 0
+TP:1, FP: 1, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0017.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/lbp.gab.24x20s.xml
 TP:0, FP: 0, FN: 1
@@ -213,7 +213,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0071.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/lbp.gab.24x20s.xml
-TP:0, FP: 1, FN: 0
+TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset/image-0072.jpg resized.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/lbp.gab.24x20s.xml
 TP:0, FP: 0, FN: 1
@@ -300,9 +300,9 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Total labelled objects: 99
 Total objects detected: 10
-Total TP:1, Total FP: 10, Total FN: 90
-Total TPR:0.010101010101, Total FPR: 0.10101010101
-Precision: 0.0909082644703 
-Recall: 0.0109889989132 
-Harmonic Mean: 0.0195885808369 
+Total TP:3, Total FP: 8, Total FN: 90
+Total TPR:0.030303030303, Total FPR: 0.0808080808081
+Precision: 0.272724793411 
+Recall: 0.0322580298301 
+Harmonic Mean: 0.0576732864066 
 

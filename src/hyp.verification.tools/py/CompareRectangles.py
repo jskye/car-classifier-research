@@ -40,6 +40,7 @@ class CompareRectangles(object):
     basicdebugging = False
     debugging = True
     debugging = False
+    JI_LIMIT = 0.25
 
     if debugging:
         basicdebugging = True
@@ -654,6 +655,6 @@ class CompareRectangles(object):
     # define similar rectangles if JI > 0.5
     def similar_rectangles(self):
         if self.jaccard_index() != None:
-            return self.jaccard_index() > 0.5
+            return self.jaccard_index() > self.JI_LIMIT
         else:
              return None

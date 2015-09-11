@@ -1,9 +1,9 @@
 #!/bin/sh
 # This file is called ~/batchdetect.sh
 
-# #detect.script dir.to.images dir.to.classifier path.to.label.file colorspace
-#
-#
+#detect.script dir.to.images dir.to.classifier path.to.label.file colorspace
+
+
 # #run training set detection
 # python batch_detect.py /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset/ /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.gab.24x20s.xml /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset_100.txt gray 2
 # python batch_detect.py /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset/ /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset_100.txt gray 2

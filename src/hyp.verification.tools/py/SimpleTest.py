@@ -82,6 +82,10 @@ class SimpleTest(object):
         # cv2.putText(image,"r2", (int(r2.getLeftXCoord() + 0.4 * r2.getWidth()), int(r2.getTopYCoord()+ 0.4*r2.getHeight())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
         cv2.putText(image,"r2", (int(r2.getLeftXCoord()), int(r2.getBottomYCoord())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
 
+        cv2.circle(image,(r1.getCenter().getXCoord(), r1.getCenter().getYCoord()),2,(255, 255, 0), 1)
+        cv2.circle(image,(r2.getCenter().getXCoord(), r2.getCenter().getYCoord()),2,(255, 255, 0), 1)
+
+
         misc.imsave(filepath, image)
 
 

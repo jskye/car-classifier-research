@@ -141,7 +141,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset.noisy/car_0047.ppm.jpg-noisy.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
-TP:0, FP: 1, FN: 0
+TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset.noisy/car_0048.ppm.jpg-noisy.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
 TP:0, FP: 0, FN: 1
@@ -198,7 +198,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset.noisy/car_0066.ppm.jpg-noisy.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
-TP:0, FP: 1, FN: 0
+TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset.noisy/car_0067.ppm.jpg-noisy.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
 TP:0, FP: 0, FN: 1
@@ -255,7 +255,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset.noisy/car_0085.ppm.jpg-noisy.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
-TP:0, FP: 1, FN: 0
+TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset.noisy/car_0086.ppm.jpg-noisy.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
 TP:0, FP: 1, FN: 0
@@ -288,7 +288,7 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset.noisy/car_0096.ppm.jpg-noisy.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
-TP:0, FP: 1, FN: 0
+TP:1, FP: 0, FN: 0
 Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/trainingset.noisy/car_0097.ppm.jpg-noisy.jpg
 Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/haar.rab.24x20s.xml
 TP:0, FP: 0, FN: 1
@@ -300,9 +300,9 @@ Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/fina
 TP:0, FP: 0, FN: 1
 Total labelled objects: 99
 Total objects detected: 15
-Total TP:2, Total FP: 13, Total FN: 84
-Total TPR:0.020202020202, Total FPR: 0.131313131313
-Precision: 0.13333244445 
-Recall: 0.0232557869119 
-Harmonic Mean: 0.039578606378 
+Total TP:6, Total FP: 9, Total FN: 84
+Total TPR:0.0606060606061, Total FPR: 0.0909090909091
+Precision: 0.399997333351 
+Recall: 0.0666665925927 
+Harmonic Mean: 0.114261011953 
 

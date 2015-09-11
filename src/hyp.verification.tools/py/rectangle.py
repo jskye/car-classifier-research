@@ -1,4 +1,6 @@
 # # define rectangle class
+from Point import Point
+
 class Rectangle(object):
     def __init__(self, x,y,w,h):
         self.leftXCoord = x
@@ -25,6 +27,11 @@ class Rectangle(object):
         self.height = h
     def area(self):
         return self.getWidth() * self.getHeight()
+    def getCenter(self):
+        centerX = int(round(float(self.leftXCoord) + 0.5* float(self.width)))
+        centerY = int(round(float(self.topYCoord) + 0.5* float(self.height)))
+        center = Point(centerX, centerY)
+        return center
     def __str__(self):
      return "("+str(self.getLeftXCoord()) + ', ' + \
         str(self.getTopYCoord()) + ', ' + \
