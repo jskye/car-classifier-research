@@ -269,7 +269,7 @@ for imagePath in images:
                     labelled_rectangle_to_compare = labelled_rectangle
                 else:
                     labelled_rectangle_to_compare = labelled_rectangle_to_compare
-
+        #TODO: fix this error.
 
         # draw detected rectangle only if rectangles are similar according to Jaccard Index.
         # compare detected object with closest labelled rectangle
