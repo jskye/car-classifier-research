@@ -102,73 +102,75 @@ print("---------------------------------")
 # print("boundaries: "+ str(test_instance.bounds()) + \
 #     "inverse bounds: " + str(test_instance.inverse_bounds()))
 
-print("---------------------------------")
-print("case: same rects")
-print("---------------------------------")
-r1 = Rectangle(0,5,5,5)
-r2 = Rectangle(0,5,5,5)
-test_instance.test(r1,r2)
+# print("---------------------------------")
+# print("case: same rects")
+# print("---------------------------------")
+# r1 = Rectangle(0,5,5,5)
+# r2 = Rectangle(0,5,5,5)
+# test_instance.test(r1,r2)
+#
+# print("---------------------------------")
+# print("case: no intersection")
+# print("---------------------------------")
+# #correct
+# r1 = Rectangle(0,5,5,5)
+# r2 = Rectangle(0,100,5,5)
+# test_instance.test(r1,r2)
+#
+#
+# print("---------------------------------")
+# print("case: fully contained rectangle")
+# print("---------------------------------")
+# #correct
+# # r1 should contain r2, should be jaccard similar.
+# r1 = Rectangle(0,0,50,50)
+# r2 = Rectangle(0,0,40,40)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+# # r2 should contain r1
+# r2 = Rectangle(0,0,50,50)
+# r1 = Rectangle(0,0,40,40)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+#
+# print("---------------------------------")
+# print("case: x contained rectangle")
+# print("---------------------------------")
+# # correct
+# r1 = Rectangle(0,100,50,50)
+# r2 = Rectangle(20,100,20,100)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+#
+#
+# print("---------------------------------")
+# print("case: y contained rectangle")
+# print("---------------------------------")
+# # correct
+# r1 = Rectangle(10,0,100,100)
+# r2 = Rectangle(0,5,50,30)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+#
+# # correct
+# r1 = Rectangle(10,0,50,100)
+# r2 = Rectangle(0,5,20,30)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+#
+#
+# print("---------------------------------")
+# print("case: not contained not parra intersect")
+# print("---------------------------------")
+# # correct
+# r1 = Rectangle(0,0,50,50)
+# r2 = Rectangle(25,25,50,50)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
 
-print("---------------------------------")
-print("case: no intersection")
-print("---------------------------------")
-#correct
-r1 = Rectangle(0,5,5,5)
-r2 = Rectangle(0,100,5,5)
-test_instance.test(r1,r2)
-
-
-print("---------------------------------")
-print("case: fully contained rectangle")
-print("---------------------------------")
-#correct
-# r1 should contain r2, should be jaccard similar.
-r1 = Rectangle(0,0,50,50)
-r2 = Rectangle(0,0,40,40)
+r1 = Rectangle(16, 25, 89, 89)
+r2 = Rectangle(27, 38, 72, 52)
 test_instance.test(r1,r2)
 test_instance.printImage(r1,r2)
-# r2 should contain r1
-r2 = Rectangle(0,0,50,50)
-r1 = Rectangle(0,0,40,40)
-test_instance.test(r1,r2)
-test_instance.printImage(r1,r2)
-
-print("---------------------------------")
-print("case: x contained rectangle")
-print("---------------------------------")
-# correct
-r1 = Rectangle(0,100,50,50)
-r2 = Rectangle(20,100,20,100)
-test_instance.test(r1,r2)
-test_instance.printImage(r1,r2)
-
-
-print("---------------------------------")
-print("case: y contained rectangle")
-print("---------------------------------")
-# correct
-r1 = Rectangle(10,0,100,100)
-r2 = Rectangle(0,5,50,30)
-test_instance.test(r1,r2)
-test_instance.printImage(r1,r2)
-
-# correct
-r1 = Rectangle(10,0,50,100)
-r2 = Rectangle(0,5,20,30)
-test_instance.test(r1,r2)
-test_instance.printImage(r1,r2)
-
-
-print("---------------------------------")
-print("case: not contained not parra intersect")
-print("---------------------------------")
-# correct
-r1 = Rectangle(0,0,50,50)
-r2 = Rectangle(25,25,50,50)
-test_instance.test(r1,r2)
-test_instance.printImage(r1,r2)
-
-
-
 
 # print(test_instance.simple_contains())

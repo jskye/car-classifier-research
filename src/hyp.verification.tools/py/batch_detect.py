@@ -56,6 +56,7 @@ http://www.searchalleasy.com/q/20801015/2589776
 
 '''
 from __future__ import division
+from collections import OrderedDict
 import os
 import glob
 import cv2
@@ -105,7 +106,8 @@ outputFilename=testset+"."+cascadeNameMinusEx+'_'+colorspace+"MN"+min_neighbors+
 outputDestination = outputDirPath+outputFilename
 
 print("reading labelled rectangles from: ")
-labelled_rectangles = {}
+# labelled_rectangles = {}
+labelled_rectangles = OrderedDict()
 with open(testPath+labelName, "r") as rects:
 # with open("testset_rgb_100.txt", "r") as rects:
     for rect in rects:
@@ -137,6 +139,7 @@ for imagePath in images:
     img_False_positives=0
     img_False_neg =0
     imageName = os.path.basename(imagePath)
+    print("--------------------------------------------------------")
     print("loading image for detection: "+imageName +", image number {0}".format(imageNum))
     if imageNum<len(images):
         imageNum =imageNum+1
@@ -206,12 +209,13 @@ for imagePath in images:
     #draw the labelled rectangles
     # print('imageNum: '+imageNum)
     for labRect in labelled_rectangles[str(imageNum)]:
-        expectedObjects=+1
+        expectedObjects+=1
+        # print(expectedObjects)
         x = int(labRect[0])
         y = int(labRect[1])
         w = int(labRect[2])
         h = int(labRect[3])
-        print("printing rectangle: {0}: ({1},{2},{3},{4})".format(imageNum,x,y,w,h))
+        # print("printing rectangle: {0}.{1}: ({2},{3},{4},{5})".format(imageNum,expectedObjects,x,y,w,h))
 
         if colorspace =='lab' or 'luv':
             groundColor = (0, 0, 255)
@@ -228,13 +232,14 @@ for imagePath in images:
     for (detx, dety, detectedWidth, detectedHeight) in detected_objects:
 
         detected_rectangle = Rectangle(detx, dety, detectedHeight, detectedWidth)
+        print('the detected rectangle: '+ str(detected_rectangle))
         detectedArea = detected_rectangle.area()
 
 
         # get the labelled rectangle to compare the detection with.
         # we will compare the detection with that labelled rectangle
         # that is closest and most similar in area.
-        # we dont want to compare to all labelled rectangls,
+        # we dont want to compare to all labelled rectangles,
         # because detection might be only just dissimilar to a labelled
         # rectangle because it picked up certain features but not enough,
         # but is completely dissimilar to other labelled rectangles elsewhere.
@@ -244,39 +249,84 @@ for imagePath in images:
         # is under some constant
         PROXIMAL_RECTS_CONSTANT = 2
 
-        print("finding closest labelled rectangle to detected rectangle")
+        print("finding rectangle to compare detected to from the labelled rectangles: "+ str(labelled_rectangles[str(imageNum)]))
+        # print("print of labelled dictionary: " + str(labelled_rectangles))
 
-        # start with closest being some faraway distance
-        labelled_rectangle_to_compare = None
-        closest_distance = sys.maxsize
+        # loop through each image's labelled rectangles
+        # decide which labelled rectangle is most appropriate to compare detection to.
+        # initialise loop
+        iteration = 0
+        labelled_rectangle = None
+        closest_rectangle = None
 
+        # each image may have 1 or many labelled rectangles.
         for labelled_rect in labelled_rectangles[str(imageNum)]:
-            labelled_rectangle = Rectangle(labelled_rect[0],labelled_rect[1], labelled_rect[2], labelled_rect[3])
-            current_path = Line(detected_rectangle.getCenter(), labelled_rectangle.getCenter())
-            current_distance = current_path.getDistance()
-            in_same_neighborhood = (current_distance-closest_distance) < PROXIMAL_RECTS_CONSTANT
-            print("dist between" + str(labelled_rectangle) +"and" +str(detected_rectangle) + "is: "+str(current_distance))
-            if  (current_distance < closest_distance) and not in_same_neighborhood:
-                closest_distance = current_distance
-                labelled_rectangle_to_compare = labelled_rectangle
-            elif (current_distance < closest_distance) and in_same_neighborhood:
-                closest_distance = current_distance
-                comparison_detection_and_labelled_to_compare = CompareRectangles(detected_rectangle, labelled_rectangle_to_compare)
-                jacc_index_detection_and_labelled_to_compare = comparison_detection_and_labelled_to_compare.jaccard_index()
-                comparison_detection_and_labelled = CompareRectangles(detected_rectangle, labelled_rectangle)
-                jacc_index_detection_and_labelled = comparison_detection_and_labelled.jaccard_index()
-                if max(jacc_index_detection_and_labelled_to_compare, jacc_index_detection_and_labelled) == jacc_index_detection_and_labelled:
-                    labelled_rectangle_to_compare = labelled_rectangle
+            # labelled_rectangle = labelled_rects[iteration]
+            # print('image: ' + str(imageNum) + ', - labelled rect: '+str(labelled_rect))
+
+            if len(labelled_rectangles[str(imageNum)]) ==1:
+                    labelled_rectangle_to_compare = Rectangle(int(labelled_rect[0]),int(labelled_rect[1]), int(labelled_rect[2]), int(labelled_rect[3]))
+
+            else:
+
+                if iteration == 0:
+                    # define first labelled rectangle as closest
+                    closest_labelled_rectangle = Rectangle(int(labelled_rect[0]),int(labelled_rect[1]), int(labelled_rect[2]), int(labelled_rect[3]))
+                    current_path = Line(detected_rectangle.getCenter(), closest_labelled_rectangle.getCenter())
+                    closest_distance = current_path.getDistance()
+                    labelled_rectangle_to_compare = closest_labelled_rectangle
+
                 else:
-                    labelled_rectangle_to_compare = labelled_rectangle_to_compare
-        #TODO: fix this error.
+
+                    # get straight line distance between the center of labelled and detection rectangles.
+                    labelled_rectangle = Rectangle(int(labelled_rect[0]),int(labelled_rect[1]), int(labelled_rect[2]), int(labelled_rect[3]))
+                    current_path = Line(detected_rectangle.getCenter(), labelled_rectangle.getCenter())
+                    current_distance = current_path.getDistance()
+
+                    # if the difference between the detected rectangle and the two labelled rectangles is small, then theyre in same neighborhood.
+                    in_same_neighborhood = (current_distance-closest_distance) < PROXIMAL_RECTS_CONSTANT
+                    # print("dist between" + str(labelled_rectangle) +"and" +str(detected_rectangle) + "is: "+str(current_distance))
+
+                    # update the rectangle that should be compared if this rectangle is closer to previous,
+                    # where the two detections are not in same neighborhood.
+                    if  (current_distance < closest_distance) and not in_same_neighborhood:
+                        # print('current dist < closet dist and NOT IN same neighborhood')
+                        closest_distance = current_distance
+                        current_path = Line(detected_rectangle.getCenter(), labelled_rectangle_to_compare.getCenter())
+                        closest_labelled_rectangle = labelled_rectangle
+                        labelled_rectangle_to_compare = closest_labelled_rectangle
+
+                    # where the new distanc is closer but the two detections are in same neighborhood.
+                    # only update if new label has greater JI
+                    elif (current_distance < closest_distance) and in_same_neighborhood:
+                        # print('current dist < closest dist and IN same neighborhood')
+                        print('detected rectangle: ' + str(detected_rectangle) + '\n labelled rectangle to compare: '+ str(labelled_rectangle_to_compare))
+                        comparison_detection_and_labelled_to_compare = CompareRectangles(detected_rectangle, labelled_rectangle_to_compare)
+                        jacc_index_detection_and_labelled_to_compare = comparison_detection_and_labelled_to_compare.jaccard_index()
+                        comparison_detection_and_labelled = CompareRectangles(detected_rectangle, labelled_rectangle)
+                        jacc_index_detection_and_labelled = comparison_detection_and_labelled.jaccard_index()
+                        # comparison to this label is more appropriate than to current labelled_rectangle_to_compare
+                        if max(jacc_index_detection_and_labelled_to_compare, jacc_index_detection_and_labelled) == jacc_index_detection_and_labelled:
+                            print('new labelled rectangle is more relevant to compare')
+                            labelled_rectangle_to_compare = labelled_rectangle
+                        else:
+                            print('new labelled rectangle is NOT more relevant to compare')
+                            labelled_rectangle_to_compare = labelled_rectangle_to_compare
+                    else:
+                        pass
+                        # print('currnt dist > closest dist')
+
+                iteration+=1
+            print("most appropriate rectangle to compare detected to is: "+ str(labelled_rectangle_to_compare))
 
         # draw detected rectangle only if rectangles are similar according to Jaccard Index.
         # compare detected object with closest labelled rectangle
         # if true positive found, then stop comparing.
 
+        print('detected rectangle to compare'+str(detected_rectangle))
         print('labelled rectangle to comapre'+str(labelled_rectangle_to_compare))
-        break
+
+        # break
 
         # for true_rect in labelled_rectangles[str(imageNum)]:
             # true_x = int(true_rect[0])
@@ -288,14 +338,15 @@ for imagePath in images:
             # TrueArea = true_width*true_height
             #check if detected rectangle is considered TP or FP
 
-        print('true rectangle: '+str(true_rectangle)+'\n'+'detected rectangle: '+str(detected_rectangle))
+        # print('true rectangle: '+str(true_rectangle)+'\n'+'detected rectangle: '+str(detected_rectangle))
         # rectangle_comparison = CompareRectangles(detected_rectangle,true_rectangle)
 
+        # compare the detection with the labelled_rectangle_to_compare
         rectangle_comparison = CompareRectangles(detected_rectangle,labelled_rectangle_to_compare)
-
-
         jaccard_similar = rectangle_comparison.similar_rectangles()
+        jaccard_index = rectangle_comparison.jaccard_index()
 
+        print('Jaccard Index: '+str(jaccard_index))
         # print false positives in red
         if not jaccard_similar:
             print('rectangles ARE NOT jaccard similar')
@@ -318,7 +369,7 @@ for imagePath in images:
     tot_True_positives +=img_True_positives
     tot_False_positives += img_False_positives
 
-    print("TP:{0}, FP: {1}, FN: {2}".format(img_True_positives, img_False_positives, img_False_neg), colorCVT)
+    # print("TP:{0}, FP: {1}, FN: {2}".format(img_True_positives, img_False_positives, img_False_neg), colorCVT)
 
 
     # append to end of file
