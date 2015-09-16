@@ -37,10 +37,10 @@ from Rectangle import Rectangle
 class CompareRectangles(object):
 
     basicdebugging = True
-    # basicdebugging = False
+    basicdebugging = False
     debugging = True
     debugging = False
-    JI_LIMIT = 0.25
+    JI_LIMIT = 0.35
 
     if debugging:
         basicdebugging = True
@@ -538,6 +538,7 @@ class CompareRectangles(object):
                 print("was meant to return x contained overlap, but didnt")
             return None
 
+    # TODO: check why ycontained is not(and) but xcontained is (or)
     # for y contained overlap, y containing rectangle must be lowest and highest
     # and not both leftest and rightest
     def is_ycontained_overlap(self):

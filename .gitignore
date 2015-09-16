@@ -1,4 +1,5 @@
 *.pyc
 src/hyp.verification.tools/py/multiline.py
+/results
 
 *.pyc
