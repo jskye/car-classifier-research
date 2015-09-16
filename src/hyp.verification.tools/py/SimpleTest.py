@@ -61,6 +61,9 @@ class SimpleTest(object):
         #     print("union area: "+str(compare_rects.area_union()))
         # else:
         #     print("no intersection area")
+        print("intersection: " +str(compare_rects.area_union()))
+        print("union: " +str(compare_rects.area_intersection()))
+        # print("division result: "+ str(compare_rects.area_intersection() / compare_rects.area_union()))
         print("jaccard index: " +str(compare_rects.jaccard_index()))
         print("rectangles similar: "+str(compare_rects.similar_rectangles()))
         print("\n")
@@ -174,20 +177,62 @@ print("---------------------------------")
 # test_instance.printImage(r1,r2)
 
 
+# print("---------------------------------")
+# print("case:testing anomaly on images 26 No JI.")
+# print("---------------------------------")
+# r1 = Rectangle(16, 36, 82, 82)
+# r2 = Rectangle(1, 31, 100, 64)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+#
+# print("---------------------------------")
+# print("case:testing anomaly on images 42 No JI.")
+# print("---------------------------------")
+# r1 = Rectangle(24, 32, 81, 81)
+# r2 = Rectangle(6, 32, 95, 60)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+
+# print("---------------------------------")
+# print("case:testing anomaly on images 60 JI>1.")
+# print("---------------------------------")
+# r1 = Rectangle(38, 75, 22, 22)
+# r2 = Rectangle(12, 29, 89, 66)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+# # is for some reason doing union / intersection instead of int./ union
+
 print("---------------------------------")
-print("case:testing anomaly on images 26 No JI.")
+print("case:testing anomaly on images 60 JI>1.")
 print("---------------------------------")
-r1 = Rectangle(16, 36, 82, 82)
-r2 = Rectangle(1, 31, 100, 64)
+r1 = Rectangle(14, 21, 64, 64)
+r2 = Rectangle(4, 36, 95, 56)
 test_instance.test(r1,r2)
 test_instance.printImage(r1,r2)
 
-print("---------------------------------")
-print("case:testing anomaly on images 42 No JI.")
-print("---------------------------------")
-r1 = Rectangle(24, 32, 81, 81)
-r2 = Rectangle(6, 32, 95, 60)
-test_instance.test(r1,r2)
-test_instance.printImage(r1,r2)
+# intersection: 2671
+# union: 6745
+# division result: 2
+# jaccard index: 2.52527143392
+# rectangles similar: True
+
+# print("---------------------------------")
+# print("case:JI seems to be correct")
+# print("---------------------------------")
+# r1 = Rectangle(0, 6, 117, 117)
+# r2 = Rectangle(4, 36, 95, 56)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+
+#fully contained.
+# intersection: 13689
+# union: 5320
+# division result: 0
+# jaccard index: 0.388633209146
+# rectangles similar: True
+
+
+
+
 
 # print(test_instance.simple_contains())

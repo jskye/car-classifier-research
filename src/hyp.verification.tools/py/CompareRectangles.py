@@ -30,7 +30,7 @@ File Description:
 This class compares two rectangles r1 and r2.
 It also contains a function to calculate the intersection of two rectangles.
 '''
-
+from __future__ import division
 from Rectangle import Rectangle
 
 #class compares two rectangles.
@@ -449,33 +449,71 @@ class CompareRectangles(object):
         self.boundary_tests = self.inverse_boundary_tests
         return self.xcontained_overlap(r1,r2)
 
+    def xcontainer_notboundtop(self, r1,r2):
+        if (self.b0 != -1 and self.b1 == -1 and self.b2 != -1 and self.b3 != -1):
+            return r1
+        elif (self.i0 != -1 and self.i1 == -1 and self.i2 != -1 and self.i3 != -1):
+            return r2
+        else:
+            return None
+
+    def xcontainer_notboundbottom(self, r1,r2):
+        if (self.b0 == -1 and self.b1 != -1 and self.b2 != -1 and self.b3 != -1):
+            return r1
+        elif (self.i0 == -1 and self.i1 != -1 and self.i2 != -1 and self.i3 != -1):
+            return r2
+        else:
+            return None
+
+    def xcontainer_notboundtoporbottom(self, r1,r2):
+        if (self.b0 == -1 and self.b1 == -1 and self.b2 == 1 and self.b3 != -1):
+            return r1
+        elif (self.i0 == -1 and self.i1 == -1 and self.i2 == 1 and self.i3 != -1):
+            return r2
+        else:
+            return None
+
+    def xcontained(self, r1,r2):
+        if self.xcontainer_notboundtop(r1,r2) == r1 or \
+        self.xcontainer_notboundbottom == r1 or \
+        self.xcontainer_notboundtoporbottom == r1:
+            return r2
+        elif self.xcontainer_notboundtop(r1,r2) == r2 or \
+        self.xcontainer_notboundbottom == r2 or \
+        self.xcontainer_notboundtoporbottom == r2:
+            return r1
+        else:
+            return None
+
     def xcontained_overlap(self,r1,r2):
 
         if self.debugging:
             self.print_boundary_tests()
         # r2 is not bound at top
         # r1: level bottom or lowest and not highest and leftest and rightest
-        if (self.b0 != -1 and self.b1 == -1 and self.b2 != -1 and self.b3 != -1) or \
-            (self.i0 != -1 and self.i1 == -1 and self.i2 != -1 and self.i3 != -1):
+        if self.xcontainer_notboundtop(r1,r2) is not None:
             if self.basicdebugging:
                 print(' is not bound at top')
-            overlap_left = r2.getLeftXCoord()
-            overlap_right = r2.getRightXCoord()
-            overlap_bottom = r2.getBottomYCoord()
-            overlap_top = r1.getTopYCoord()
+            xcontainer = self.xcontainer_notboundtop(r1,r2)
+            xcontained = self.xcontained(r1,r2)
+            overlap_left = xcontained.getLeftXCoord()
+            overlap_right = xcontained.getRightXCoord()
+            overlap_bottom = xcontained.getBottomYCoord()
+            overlap_top = xcontainer.getTopYCoord()
             overlap_width = overlap_right - overlap_left
             overlap_height = overlap_bottom - overlap_top
             return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
         # r2 is not bound at bottom
-        elif (self.b0 == -1 and self.b1 != -1 and self.b2 != -1 and self.b3 != -1) or \
-            (self.i0 == -1 and self.i1 != -1 and self.i2 != -1 and self.i3 != -1):
+        elif self.xcontainer_notboundbottom() is not None:
             if self.basicdebugging:
                 print(' is not bound at bottom')
-            overlap_left = r2.getLeftXCoord()
-            overlap_right = r2.getRightXCoord()
-            overlap_bottom = r1.getBottomYCoord()
-            overlap_top = r2.getTopYCoord()
+            xcontainer = self.xcontainer_notboundbottom(r1,r2)
+            xcontained = self.xcontained(r1,r2)
+            overlap_left = xcontained.getLeftXCoord()
+            overlap_right = xcontained.getRightXCoord()
+            overlap_bottom = xcontainer.getBottomYCoord()
+            overlap_top = xcontained.getTopYCoord()
             overlap_width = overlap_right - overlap_left
             overlap_height = overlap_bottom - overlap_top
             return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
@@ -485,10 +523,12 @@ class CompareRectangles(object):
             (self.i0 == -1 and self.i1 == -1 and self.i2 == 1 and self.i3 != -1):
             if self.basicdebugging:
                 print(' is not bound at top or bottom')
-            overlap_left = r2.getLeftXCoord()
-            overlap_right = r2.getRightXCoord()
-            overlap_bottom = r1.getBottomYCoord()
-            overlap_top = r1.getTopYCoord()
+            xcontainer = self.xcontainer_notboundtoporbottom(r1,r2)
+            xcontained = self.xcontained(r1,r2)
+            overlap_left = xcontained.getLeftXCoord()
+            overlap_right = xcontained.getRightXCoord()
+            overlap_bottom = xcontainer.getBottomYCoord()
+            overlap_top = xcontainer.getTopYCoord()
             overlap_width = overlap_right - overlap_left
             overlap_height = overlap_bottom - overlap_top
             return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
@@ -725,7 +765,8 @@ class CompareRectangles(object):
     def area_union(self):
         # union(r1.r2).area = r1.area + r2.area - int(r1,r2)
         if self.area_intersection() is not None:
-            return self.r1.area() + self.r2.area() - self.area_intersection()
+            union = self.r1.area() + self.r2.area() - self.area_intersection()
+            return union
         else:
             return None
 
@@ -733,8 +774,12 @@ class CompareRectangles(object):
     # Formula: jaccard_index = intersection / union
     def jaccard_index(self):
         if self.area_intersection() is not None and \
-            self.area_union() is not None:
-            return self.area_intersection() / float(self.area_union())
+        self.area_union() is not None:
+            if self.basicdebugging:
+                print("intersection before division" + str(self.area_intersection()))
+                print("union before division" + str(self.area_union()))
+            division = (self.area_intersection() / self.area_union())
+            return division
         else:
             return None
 
