@@ -475,12 +475,12 @@ class CompareRectangles(object):
 
     def xcontained(self, r1,r2):
         if self.xcontainer_notboundtop(r1,r2) == r1 or \
-        self.xcontainer_notboundbottom == r1 or \
-        self.xcontainer_notboundtoporbottom == r1:
+        self.xcontainer_notboundbottom(r1,r2) == r1 or \
+        self.xcontainer_notboundtoporbottom(r1,r2) == r1:
             return r2
         elif self.xcontainer_notboundtop(r1,r2) == r2 or \
-        self.xcontainer_notboundbottom == r2 or \
-        self.xcontainer_notboundtoporbottom == r2:
+        self.xcontainer_notboundbottom(r1,r2) == r2 or \
+        self.xcontainer_notboundtoporbottom(r1,r2) == r2:
             return r1
         else:
             return None
@@ -505,7 +505,7 @@ class CompareRectangles(object):
             return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
         # r2 is not bound at bottom
-        elif self.xcontainer_notboundbottom() is not None:
+        elif self.xcontainer_notboundbottom(r1,r2) is not None:
             if self.basicdebugging:
                 print(' is not bound at bottom')
             xcontainer = self.xcontainer_notboundbottom(r1,r2)
@@ -519,8 +519,7 @@ class CompareRectangles(object):
             return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
         # r2 is not bound at top or bottom
-        elif self.b0 == -1 and self.b1 == -1 and self.b2 == 1 and self.b3 != -1 or \
-            (self.i0 == -1 and self.i1 == -1 and self.i2 == 1 and self.i3 != -1):
+        elif self.xcontainer_notboundtoporbottom(r1,r2) is not None:
             if self.basicdebugging:
                 print(' is not bound at top or bottom')
             xcontainer = self.xcontainer_notboundtoporbottom(r1,r2)
@@ -556,19 +555,6 @@ class CompareRectangles(object):
             return False
 
 
-        # def is_xcontained_overlap(self):
-        #     if not(self.b0 == 1 and self.b1 == 1) and self.b2 == 1 and self.b3 == 1:
-        #         if self.basicdebugging:
-        #             print("r1 x contains r2")
-        #         return True
-        #     elif not(self.i0 == 1 and self.i1 == 1) and self.i2 == 1 and self.i3 == 1:
-        #         if self.basicdebugging:
-        #             print("r2 x contains r1")
-        #         return True
-        #     else:
-        #         if self.basicdebugging:
-        #             print("is not x contained overlap")
-        #         return False
 
 
     # returns the rectangle overlap that is contained in y
