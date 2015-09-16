@@ -37,7 +37,7 @@ from Rectangle import Rectangle
 class CompareRectangles(object):
 
     basicdebugging = True
-    basicdebugging = False
+    # basicdebugging = False
     debugging = True
     debugging = False
     JI_LIMIT = 0.25
@@ -415,11 +415,11 @@ class CompareRectangles(object):
     # for x contained overlap, x containing rectangle must be leftest and rightest
     # and not both lowest and highest
     def is_xcontained_overlap(self):
-        if not(self.b0 == 1 and self.b1 == 1) and self.b2 != -1 and self.b3 != -1:
+        if (self.b0 == 1 or self.b1 == 1) and self.b2 != -1 and self.b3 != -1:
             if self.basicdebugging:
                 print("r1 x contains r2")
             return True
-        elif not(self.i0 == 1 and self.i1 == 1) and self.i2 != -1 and self.i3 != -1:
+        elif (self.i0 == 1 or self.i1 == 1) and self.i2 != -1 and self.i3 != -1:
             if self.basicdebugging:
                 print("r2 x contains r1")
             return True
@@ -487,7 +487,7 @@ class CompareRectangles(object):
 
     def xcontained_overlap(self,r1,r2):
 
-        if self.debugging:
+        if self.basicdebugging:
             self.print_boundary_tests()
         # r2 is not bound at top
         # r1: level bottom or lowest and not highest and leftest and rightest

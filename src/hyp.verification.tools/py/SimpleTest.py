@@ -202,13 +202,13 @@ print("---------------------------------")
 # test_instance.printImage(r1,r2)
 # # is for some reason doing union / intersection instead of int./ union
 
-print("---------------------------------")
-print("case:testing anomaly on images 60 JI>1.")
-print("---------------------------------")
-r1 = Rectangle(14, 21, 64, 64)
-r2 = Rectangle(4, 36, 95, 56)
-test_instance.test(r1,r2)
-test_instance.printImage(r1,r2)
+# print("---------------------------------")
+# print("case:testing anomaly on images 60 JI>1.")
+# print("---------------------------------")
+# r1 = Rectangle(14, 21, 64, 64)
+# r2 = Rectangle(4, 36, 95, 56)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
 
 # intersection: 2671
 # union: 6745
@@ -231,7 +231,13 @@ test_instance.printImage(r1,r2)
 # jaccard index: 0.388633209146
 # rectangles similar: True
 
-
+print("---------------------------------")
+print("case:testing anomaly on images 60 JI==None.")
+print("---------------------------------")
+r1 = Rectangle(19, 26, 82, 82)
+r2 = Rectangle(19, 31, 84, 59)
+test_instance.test(r1,r2)
+test_instance.printImage(r1,r2)
 
 
 
