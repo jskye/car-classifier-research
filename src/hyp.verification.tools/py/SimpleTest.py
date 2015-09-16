@@ -168,8 +168,25 @@ print("---------------------------------")
 # test_instance.test(r1,r2)
 # test_instance.printImage(r1,r2)
 
-r1 = Rectangle(16, 25, 89, 89)
-r2 = Rectangle(27, 38, 72, 52)
+# r1 = Rectangle(16, 25, 89, 89)
+# r2 = Rectangle(27, 38, 72, 52)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+
+
+print("---------------------------------")
+print("case:testing anomaly on images 26 No JI.")
+print("---------------------------------")
+r1 = Rectangle(16, 36, 82, 82)
+r2 = Rectangle(1, 31, 100, 64)
+test_instance.test(r1,r2)
+test_instance.printImage(r1,r2)
+
+print("---------------------------------")
+print("case:testing anomaly on images 42 No JI.")
+print("---------------------------------")
+r1 = Rectangle(24, 32, 81, 81)
+r2 = Rectangle(6, 32, 95, 60)
 test_instance.test(r1,r2)
 test_instance.printImage(r1,r2)
 

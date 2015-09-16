@@ -305,11 +305,13 @@ class CompareRectangles(object):
         self.b3 = self.boundary_tests[3]
 
         self.set_inverse_bounds()
-
-        if self.basicdebugging:
-            print("boundary test: " + str(self.boundary_tests))
-            print("inverse boundary test: " + str(self.inverse_boundary_tests))
-            print(str(self.rect_lowest()), str(self.rect_highest()), str(self.rect_leftmost()), str(self.rect_rightmost()))
+    def print_boundary_tests(self):
+        # if self.basicdebugging:
+        #     print("boundary test: " + str(self.boundary_tests))
+        #     print("inverse boundary test: " + str(self.inverse_boundary_tests))
+            # print(str(self.rect_lowest()), str(self.rect_highest()), str(self.rect_leftmost()), str(self.rect_rightmost()))
+        print(self.b0, self.b1, self.b2, self.b3)
+        print(self.i0, self.i1, self.i2, self.i3)
 
 #initialise inverse results as results
     def set_inverse_bounds(self):
@@ -413,31 +415,50 @@ class CompareRectangles(object):
     # for x contained overlap, x containing rectangle must be leftest and rightest
     # and not both lowest and highest
     def is_xcontained_overlap(self):
-        if not(self.b0 == 1 and self.b1 == 1) and self.b2 == 1 and self.b3 == 1:
-            if self.debugging:
+        if not(self.b0 == 1 and self.b1 == 1) and self.b2 != -1 and self.b3 != -1:
+            if self.basicdebugging:
                 print("r1 x contains r2")
             return True
-        elif not(self.i0 == 1 and self.i1 == 1) and self.i2 == 1 and self.i3 == 1:
-            if self.debugging:
+        elif not(self.i0 == 1 and self.i1 == 1) and self.i2 != -1 and self.i3 != -1:
+            if self.basicdebugging:
                 print("r2 x contains r1")
             return True
         else:
-            if self.debugging:
+            if self.basicdebugging:
                 print("is not x contained overlap")
             return False
 
     # returns the rectangle overlap that is strictly contained in x
     # this happens when tests have one differing result in y (no zeroes)
     def rect_xcontained_overlap(self,r1,r2):
-        # boundary_tests = [lowest, highest, leftest, rightest]
-                # b0 = 1 , r1 lower than r2
-                # b1 = 1 , r1 higher than r2
-                # b2 = 1 , r1 lefter than r2
-                # b3 = 1 , r1 righter than r2
 
+        if self.xcontained_overlap(r1,r2) is not None:
+            if self.basicdebugging:
+                print('x contained overlap not none')
+            return self.xcontained_overlap(r1,r2)
+        elif self.inverse_xcontained_overlap(r1,r2) is not None:
+            if self.basicdebugging:
+                print('inverse x contianed overlap not none')
+            return self.inverse_xcontained_overlap(r1,r2)
+        else:
+            if self.basicdebugging:
+                print('xcontained overlap none')
+            return None
+
+    def inverse_xcontained_overlap(self,r1,r2):
+        self.boundary_tests = self.inverse_boundary_tests
+        return self.xcontained_overlap(r1,r2)
+
+    def xcontained_overlap(self,r1,r2):
+
+        if self.debugging:
+            self.print_boundary_tests()
         # r2 is not bound at top
         # r1: level bottom or lowest and not highest and leftest and rightest
-        if self.b0 != -1 and self.b1 == -1 and self.b2 == 1 and self.b3 == 1:
+        if (self.b0 != -1 and self.b1 == -1 and self.b2 != -1 and self.b3 != -1) or \
+            (self.i0 != -1 and self.i1 == -1 and self.i2 != -1 and self.i3 != -1):
+            if self.basicdebugging:
+                print(' is not bound at top')
             overlap_left = r2.getLeftXCoord()
             overlap_right = r2.getRightXCoord()
             overlap_bottom = r2.getBottomYCoord()
@@ -447,7 +468,10 @@ class CompareRectangles(object):
             return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
         # r2 is not bound at bottom
-        elif self.b0 == -1 and self.b1 != -1 and self.b2 == 1 and self.b3 == 1:
+        elif (self.b0 == -1 and self.b1 != -1 and self.b2 != -1 and self.b3 != -1) or \
+            (self.i0 == -1 and self.i1 != -1 and self.i2 != -1 and self.i3 != -1):
+            if self.basicdebugging:
+                print(' is not bound at bottom')
             overlap_left = r2.getLeftXCoord()
             overlap_right = r2.getRightXCoord()
             overlap_bottom = r1.getBottomYCoord()
@@ -457,7 +481,10 @@ class CompareRectangles(object):
             return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
         # r2 is not bound at top or bottom
-        elif self.b0 == -1 and self.b1 == -1 and self.b2 == 1 and self.b3 == 1:
+        elif self.b0 == -1 and self.b1 == -1 and self.b2 == 1 and self.b3 != -1 or \
+            (self.i0 == -1 and self.i1 == -1 and self.i2 == 1 and self.i3 != -1):
+            if self.basicdebugging:
+                print(' is not bound at top or bottom')
             overlap_left = r2.getLeftXCoord()
             overlap_right = r2.getRightXCoord()
             overlap_bottom = r1.getBottomYCoord()
@@ -466,30 +493,43 @@ class CompareRectangles(object):
             overlap_height = overlap_bottom - overlap_top
             return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
-        # test inverse
-        elif  r1 == self.r1 and self.rect_xcontained_overlap(r2,r1) != None:
-            return self.rect_xcontained_overlap(r2,r1)
-
         else:
-            if self.debugging:
+            if self.basicdebugging:
+                # print('xcontainedoverlap'+str(self.rect_xcontained_overlap(r2,r1)))
                 print("was meant to return x contained overlap, but didnt")
             return None
 
     # for y contained overlap, y containing rectangle must be lowest and highest
     # and not both leftest and rightest
     def is_ycontained_overlap(self):
-        if self.b0 == 1 and self.b1 == 1 and not(self.b2 == 1 and self.b3 == 1):
-            if self.debugging:
+        if self.b0 != -1 and self.b1 != -1 and not(self.b2 == 1 and self.b3 == 1):
+            if self.basicdebugging:
                 print("r1 y contains r2")
             return True
-        elif self.i0 == 1 and self.i1 == 1 and not(self.i2 == 1 and self.i3 == 1):
-            if self.debugging:
+        elif self.i0 != -1 and self.i1 != -1 and not(self.i2 == 1 and self.i3 == 1):
+            if self.basicdebugging:
                 print("r2 y contains r1")
             return True
         else:
-            if self.debugging:
-                print("is not x contained overlap")
+            if self.basicdebugging:
+                print("is not y contained overlap")
             return False
+
+
+        # def is_xcontained_overlap(self):
+        #     if not(self.b0 == 1 and self.b1 == 1) and self.b2 == 1 and self.b3 == 1:
+        #         if self.basicdebugging:
+        #             print("r1 x contains r2")
+        #         return True
+        #     elif not(self.i0 == 1 and self.i1 == 1) and self.i2 == 1 and self.i3 == 1:
+        #         if self.basicdebugging:
+        #             print("r2 x contains r1")
+        #         return True
+        #     else:
+        #         if self.basicdebugging:
+        #             print("is not x contained overlap")
+        #         return False
+
 
     # returns the rectangle overlap that is contained in y
     # this happens when tests have one differing result in x (no zeroes)
@@ -497,7 +537,8 @@ class CompareRectangles(object):
         # boundary_tests = [lowest, highest, leftest, rightest]
 
             # r2 is not bound at left
-            if self.b0 == 1 and self.b1 == 1 and self.b2 == -1 and self.b3 != -1:
+            if (self.b0 != -1 and self.b1 != -1 and self.b2 == -1 and self.b3 != -1) or \
+                (self.i0 != -1 and self.i1 != -1 and self.i2 == -1 and self.i3 != -1):
                 if self.debugging:
                     print("r2 is not bound at left")
                 overlap_left = r1.getLeftXCoord()
@@ -509,7 +550,8 @@ class CompareRectangles(object):
                 return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
             # r2 is not bound at right
-            elif self.b0 == 1 and self.b1 == 1 and self.b2 != -1 and self.b3 == -1:
+            elif (self.b0 != -1 and self.b1 != -1 and self.b2 != -1 and self.b3 == -1) or \
+                (self.i0 != -1 and self.i1 != -1 and self.i2 != -1 and self.i3 == -1):
                 if self.debugging:
                     print("r2 is not bound at right")
                 overlap_left = r2.getLeftXCoord()
@@ -521,7 +563,8 @@ class CompareRectangles(object):
                 return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
             # r2 is not bound at left or right
-            elif self.b0 == 1 and self.b1 == 1 and self.b2 == -1 and self.b3 == -1:
+            elif (self.b0 != -1 and self.b1 != -1 and self.b2 == -1 and self.b3 == -1) or \
+                (self.i0 != -1 and self.i1 != -1 and self.i2 == -1 and self.i3 == -1):
                 if self.debugging:
                     print("r2 is not bound at left or right")
                 overlap_left = r1.getLeftXCoord()
@@ -531,10 +574,6 @@ class CompareRectangles(object):
                 overlap_width = overlap_right - overlap_left
                 overlap_height = overlap_bottom - overlap_top
                 return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
-
-            # test inverse
-            elif r1 == self.r1 and self.rect_ycontained_overlap(r2,r1) != None:
-                return self.rect_xcontained_overlap(r2,r1)
 
             else:
                 if self.debugging:
