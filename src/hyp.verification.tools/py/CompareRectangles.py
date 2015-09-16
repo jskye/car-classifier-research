@@ -555,7 +555,45 @@ class CompareRectangles(object):
             return False
 
 
+    def ycontainer_notboundleft(self, r1,r2):
 
+        if (self.b0 != -1 and self.b1 != -1 and self.b2 == -1 and self.b3 != -1):
+            return r1
+        elif (self.i0 != -1 and self.i1 != -1 and self.i2 == -1 and self.i3 != -1):
+            return r2
+        else:
+            return None
+
+    def ycontainer_notboundright(self, r1,r2):
+
+        if (self.b0 != -1 and self.b1 != -1 and self.b2 != -1 and self.b3 == -1):
+            return r1
+        elif (self.i0 != -1 and self.i1 != -1 and self.i2 != -1 and self.i3 == -1):
+            return r2
+        else:
+            return None
+
+    def ycontainer_notboundleftorright(self, r1,r2):
+        if (self.b0 != -1 and self.b1 != -1 and self.b2 == -1 and self.b3 == -1):
+            return r1
+        elif (self.i0 != -1 and self.i1 != -1 and self.i2 == -1 and self.i3 == -1):
+            return r2
+        else:
+             return None
+
+
+    def ycontained(self, r1,r2):
+
+        if self.ycontainer_notboundleft(r1,r2) == r1 or \
+        self.ycontainer_notboundright(r1,r2) == r1 or \
+        self.ycontainer_notboundleftorright(r1,r2) == r1:
+            return r2
+        elif self.ycontainer_notboundleft(r1,r2) == r2 or \
+        self.ycontainer_notboundright(r1,r2) == r2 or \
+        self.ycontainer_notboundleftorright(r1,r2) == r2:
+            return r1
+        else:
+            return None
 
     # returns the rectangle overlap that is contained in y
     # this happens when tests have one differing result in x (no zeroes)
@@ -563,40 +601,43 @@ class CompareRectangles(object):
         # boundary_tests = [lowest, highest, leftest, rightest]
 
             # r2 is not bound at left
-            if (self.b0 != -1 and self.b1 != -1 and self.b2 == -1 and self.b3 != -1) or \
-                (self.i0 != -1 and self.i1 != -1 and self.i2 == -1 and self.i3 != -1):
+            if self.ycontainer_notboundleft(r1,r2) is not None:
                 if self.debugging:
                     print("r2 is not bound at left")
-                overlap_left = r1.getLeftXCoord()
-                overlap_right = r2.getRightXCoord()
-                overlap_bottom = r2.getBottomYCoord()
-                overlap_top = r2.getTopYCoord()
+                ycontainer = self.ycontainer_notboundleft(r1,r2)
+                ycontained = self.ycontained(r1,r2)
+                overlap_left = ycontainer.getLeftXCoord()
+                overlap_right = ycontained.getRightXCoord()
+                overlap_bottom = ycontained.getBottomYCoord()
+                overlap_top = ycontained.getTopYCoord()
                 overlap_width = overlap_right - overlap_left
                 overlap_height = overlap_bottom - overlap_top
                 return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
             # r2 is not bound at right
-            elif (self.b0 != -1 and self.b1 != -1 and self.b2 != -1 and self.b3 == -1) or \
-                (self.i0 != -1 and self.i1 != -1 and self.i2 != -1 and self.i3 == -1):
+            elif self.ycontainer_notboundright(r1,r2) is not None:
                 if self.debugging:
                     print("r2 is not bound at right")
-                overlap_left = r2.getLeftXCoord()
-                overlap_right = r1.getRightXCoord()
-                overlap_bottom = r2.getBottomYCoord()
-                overlap_top = r2.getTopYCoord()
+                ycontainer = self.ycontainer_notboundright(r1,r2)
+                ycontained = self.ycontained(r1,r2)
+                overlap_left = ycontained.getLeftXCoord()
+                overlap_right = ycontainer.getRightXCoord()
+                overlap_bottom = ycontained.getBottomYCoord()
+                overlap_top = ycontained.getTopYCoord()
                 overlap_width = overlap_right - overlap_left
                 overlap_height = overlap_bottom - overlap_top
                 return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
 
             # r2 is not bound at left or right
-            elif (self.b0 != -1 and self.b1 != -1 and self.b2 == -1 and self.b3 == -1) or \
-                (self.i0 != -1 and self.i1 != -1 and self.i2 == -1 and self.i3 == -1):
+            elif self.ycontainer_notboundleftorright(r1,r2) is not None:
                 if self.debugging:
                     print("r2 is not bound at left or right")
-                overlap_left = r1.getLeftXCoord()
-                overlap_right = r1.getRightXCoord()
-                overlap_bottom = r2.getBottomYCoord()
-                overlap_top = r2.getTopYCoord()
+                ycontainer = self.ycontainer_notboundleftorright(r1,r2)
+                ycontained = self.ycontained(r1,r2)
+                overlap_left = ycontainer.getLeftXCoord()
+                overlap_right = ycontainer.getRightXCoord()
+                overlap_bottom = ycontained.getBottomYCoord()
+                overlap_top = ycontained.getTopYCoord()
                 overlap_width = overlap_right - overlap_left
                 overlap_height = overlap_bottom - overlap_top
                 return Rectangle(overlap_left, overlap_top, overlap_width, overlap_height)
@@ -764,8 +805,10 @@ class CompareRectangles(object):
             if self.basicdebugging:
                 print("intersection before division" + str(self.area_intersection()))
                 print("union before division" + str(self.area_union()))
-            division = (self.area_intersection() / self.area_union())
-            return division
+            jaccard_index = (self.area_intersection() / self.area_union())
+            if(jaccard_index > 1.0):
+                raise Exception('JI > 1.0')
+            return jaccard_index
         else:
             return None
 
