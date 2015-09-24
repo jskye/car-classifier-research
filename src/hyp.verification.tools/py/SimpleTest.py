@@ -61,6 +61,7 @@ class SimpleTest(object):
         #     print("union area: "+str(compare_rects.area_union()))
         # else:
         #     print("no intersection area")
+        print(compare_rects.boundary_tests)
         print("intersection: " +str(compare_rects.area_union()))
         print("union: " +str(compare_rects.area_intersection()))
         # print("division result: "+ str(compare_rects.area_intersection() / compare_rects.area_union()))
@@ -81,7 +82,7 @@ class SimpleTest(object):
         # cv2.putText(image,"r1", (int(r1.getLeftXCoord() + 0.4 * r1.getWidth()), int(r1.getTopYCoord()+ 0.4*r1.getHeight())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
         cv2.putText(image,"r1", (int(r1.getLeftXCoord()), int(r1.getBottomYCoord())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
 
-        cv2.rectangle(image, (r2.getLeftXCoord(), r2.getTopYCoord()), (r2.getLeftXCoord()+r2.getWidth(), r2.getTopYCoord()+r2.getHeight()), (255, 255, 0), 1)
+        cv2.rectangle(image, (r2.getLeftXCoord(), r2.getTopYCoord()), (r2.getLeftXCoord()+r2.getWidth(), r2.getTopYCoord()+r2.getHeight()), (0, 255, 0), 1)
         # cv2.putText(image,"r2", (int(r2.getLeftXCoord() + 0.4 * r2.getWidth()), int(r2.getTopYCoord()+ 0.4*r2.getHeight())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
         cv2.putText(image,"r2", (int(r2.getLeftXCoord()), int(r2.getBottomYCoord())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
 
@@ -231,13 +232,22 @@ print("---------------------------------")
 # jaccard index: 0.388633209146
 # rectangles similar: True
 
+# print("---------------------------------")
+# print("case:testing anomaly on images 60 JI==None.")
+# print("---------------------------------")
+# r1 = Rectangle(19, 26, 82, 82)
+# r2 = Rectangle(19, 31, 84, 59)
+# test_instance.test(r1,r2)
+# test_instance.printImage(r1,r2)
+
+
 print("---------------------------------")
-print("case:testing anomaly on images 60 JI==None.")
+print("case:error. leftest.right is none")
 print("---------------------------------")
-r1 = Rectangle(19, 26, 82, 82)
-r2 = Rectangle(19, 31, 84, 59)
-test_instance.test(r1,r2)
+r1 = Rectangle(51, 53, 71, 71)
+r2 = Rectangle(51, 28, 71, 81)
 test_instance.printImage(r1,r2)
+test_instance.test(r1,r2)
 
 
 

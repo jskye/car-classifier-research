@@ -413,20 +413,36 @@ with open(outputDestination, 'a') as results:
     else:
         tpr = 0
         fpr = 0
-    results.write("Total TPR:{0}, Total FPR: {1}".format(tpr, fpr))
-    results.write("\n")
-    #Precision or positive predictive value (PPV) ­ Calculated using PPV = TPR/FPR.
-    # ppv = tpr/fpr
+
+    # results.write("Total TPR:{0}, Total FPR: {1}".format(tpr, fpr))
+    # results.write("\n")
+
+    # Positive Likelyhood ratio: LR+ = TPR/FPR.
+    if fpr != 0:
+        LRPlus = tpr/fpr
+    else:
+        LRPlus = None
+
+    #Precision or positive predictive value (PPV) ­ Calculated using PPV = TP/(TP+FP).
+    if (tot_True_positives + tot_False_positives) != 0:
+        PPV = tot_True_positives/(tot_True_positives + tot_False_positives)
+    else:
+        PPV = None
 
     # precision is the number of correct positive results divided by the number of all positive results
     # recall is the number of correct positive results divided by the number of positive results that should have been returned.
 
     delta = 0.0001
+
     precision = tot_True_positives/(tot_True_positives+tot_False_positives+delta)
     recall = tot_True_positives/ (tot_True_positives + tot_False_neg+delta)
     #harmonic mean = 2 ((precisin x recall)/(precision + recall))
     harmonic_mean = ((precision*recall) / (precision+recall+delta))*2
 
+    results.write("TPR: {0} \n".format(tpr))
+    results.write("FPR: {0} \n".format(fpr))
+    results.write("PPV: {0} \n".format(PPV))
+    results.write("LR+: {0} \n".format(LRPlus))
     results.write("Precision: {0} \n".format(precision))
     results.write("Recall: {0} \n".format(recall))
     results.write("Harmonic Mean: {0} \n".format(harmonic_mean))

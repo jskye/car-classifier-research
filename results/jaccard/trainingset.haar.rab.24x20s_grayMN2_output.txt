@@ -301,7 +301,10 @@ TP:1, FP: 0, FN: 0
 Total labelled objects: 99
 Total objects detected: 90
 Total TP:85, Total FP: 5, Total FN: 13
-Total TPR:0.858585858586, Total FPR: 0.0505050505051
+TPR: 0.858585858586 
+FPR: 0.0505050505051 
+PPV: 0.944444444444 
+LR+: 17.0 
 Precision: 0.944443395063 
 Recall: 0.867346053729 
 Harmonic Mean: 0.904204450469 

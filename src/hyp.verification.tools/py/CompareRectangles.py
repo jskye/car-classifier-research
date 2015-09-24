@@ -542,6 +542,8 @@ class CompareRectangles(object):
     # for y contained overlap, y containing rectangle must be lowest and highest
     # and not both leftest and rightest
     def is_ycontained_overlap(self):
+        if self.basicdebugging:
+            print("testing y containment")
         if self.b0 != -1 and self.b1 != -1 and not(self.b2 == 1 and self.b3 == 1):
             if self.basicdebugging:
                 print("r1 y contains r2")
@@ -683,11 +685,17 @@ class CompareRectangles(object):
 
         vert_tests = [self.b0, self.b1]
         horiz_tests = [self.b2, self.b3]
-        if sum(vert_tests)==0 and sum(horiz_tests)==0 and not self.equals():
+        # print('vert tests'+ str(vert_tests))
+        # print('horiz tests'+ str(horiz_tests))
+        if sum(vert_tests)==0 and sum(horiz_tests)==0 and not self.equals() \
+            and not self.vert_parrallel() and not self.horiz_parallel():
             return True
+        else:
+            return False
 
     # gets the rectangle from the overlap when two rectangles are not parrallel or contained by other.
     def rect_nocontainment_notparrallel_overlap(self):
+
 
         overlap_top = self.rect_lowest().getTopYCoord()
         overlap_bottom = self.rect_highest().getBottomYCoord()
