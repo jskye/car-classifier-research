@@ -57,3 +57,4 @@ nb. [numPos needs to be somewhat less than the number of postive samples, based 
 (http://stackoverflow.com/questions/10863560/haar-training-opencv-assertion-failed)
 
 [General rule is: (numPos = 0.9 * total samples) will work most of the time.](http://answers.opencv.org/question/7141/about-traincascade-paremeters-samples-and-other/)
+Or 0.8 x numberOfElements in vec file to not risk failing.
