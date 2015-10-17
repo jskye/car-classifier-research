@@ -37,18 +37,18 @@ from Rectangle import Rectangle
 class CompareRectangles(object):
 
     basicdebugging = True
-    basicdebugging = False
+    # basicdebugging = False
     debugging = True
     debugging = False
-    JI_LIMIT = 0.35
 
     if debugging:
         basicdebugging = True
 
 
-    def __init__(self,r1,r2):
+    def __init__(self,r1,r2, JI_THRESH):
         self.r1 = r1
         self.r2 = r2
+        self.JI_THRESH = JI_THRESH
         print(r1)
         print(r2)
         self.initialise_boundary_tests()
@@ -823,7 +823,8 @@ class CompareRectangles(object):
 
     # define similar rectangles if JI > 0.5
     def similar_rectangles(self):
-        if self.jaccard_index() is not None:
-            return self.jaccard_index() > self.JI_LIMIT
+        print("debugging____"+str(self.JI_THRESH))
+        if self.jaccard_index() is not None and self.JI_THRESH:
+            return self.jaccard_index() > self.JI_THRESH
         else:
              return None
