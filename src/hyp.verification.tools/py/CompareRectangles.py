@@ -37,7 +37,7 @@ from Rectangle import Rectangle
 class CompareRectangles(object):
 
     basicdebugging = True
-    # basicdebugging = False
+    basicdebugging = False
     debugging = True
     debugging = False
 

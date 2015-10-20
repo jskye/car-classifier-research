@@ -1,0 +1,5 @@
+test-0.pgm.jpg 1 27 51 96 34
+test-1.pgm.jpg 2 21 58 96 37	133 56 108 45
+test-2.pgm.jpg 3 51 20 86 41
+test-3.pgm.jpg 4 23 28 84 39	123 30 89 44
+test-4.pgm.jpg 5 

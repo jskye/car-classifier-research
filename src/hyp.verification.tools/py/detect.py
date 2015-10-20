@@ -162,10 +162,10 @@ with open(outputDestination, 'w') as results:
     results.write("*********************************\n")
 results.close()
 
-# print(imageDir)
+print("loading images from: "+ str(imageDir))
 # for imagePath in imageDir:
 imageNum=0
-images = glob.glob(imageDir+'*.jpg')
+images = sorted(glob.glob(imageDir+'*.jpg'))
 for imagePath in images:
     img_True_positives=0
     img_False_positives=0

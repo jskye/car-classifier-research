@@ -1,7 +1,9 @@
 *.pyc
 src/hyp.verification.tools/py/multiline.py
 testresults/frontbacks/
+testresults/sides
 testresults/sides/
+testresults/sides/**
 testdata/sides/testset.ppm
 
 *.pyc
