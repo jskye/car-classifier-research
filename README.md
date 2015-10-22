@@ -58,3 +58,11 @@ nb. [numPos needs to be somewhat less than the number of postive samples, based 
 
 [General rule is: (numPos = 0.9 * total samples) will work most of the time.](http://answers.opencv.org/question/7141/about-traincascade-paremeters-samples-and-other/)
 Or 0.8 x numberOfElements in vec file to not risk failing.
+
+
+Useful links:
+Docs: http://docs.opencv.org/doc/user_guide/ug_traincascade.html
+Naotoshi Seo: http://note.sonots.com/SciSoftware/haartraining.html
+Descriptors: (HOG)
+Coding Robin: http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html
+Rotations when generating samples: http://athenanichol.com/blog/?p=815
