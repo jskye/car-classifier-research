@@ -71,3 +71,5 @@ Or 0.8 x numberOfElements in vec file to not risk failing.
 [Naotoshi Seo training classifier](http://note.sonots.com/SciSoftware/haartraining.html)
 
 [Rotations when generating samples](http://athenanichol.com/blog/?p=815)
+
+[Ubuntu manual] (http://manpages.ubuntu.com/manpages/precise/man1/opencv_createsamples.1.html)
