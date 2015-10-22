@@ -60,9 +60,14 @@ nb. [numPos needs to be somewhat less than the number of postive samples, based 
 Or 0.8 x numberOfElements in vec file to not risk failing.
 
 
-Useful links:
-Docs: http://docs.opencv.org/doc/user_guide/ug_traincascade.html
-Naotoshi Seo: http://note.sonots.com/SciSoftware/haartraining.html
-Descriptors: (HOG)
-Coding Robin: http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html
-Rotations when generating samples: http://athenanichol.com/blog/?p=815
+#Useful links:
+
+[openCV docs on Cascade classifiers] (http://docs.opencv.org/doc/user_guide/ug_traincascade.html)
+
+[Descriptors](HOG)
+
+[Coding Robin training classifier](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html)
+
+[Naotoshi Seo training classifier](http://note.sonots.com/SciSoftware/haartraining.html)
+
+[Rotations when generating samples](http://athenanichol.com/blog/?p=815)
