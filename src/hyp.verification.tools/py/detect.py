@@ -150,6 +150,13 @@ print("total labelled objects: "+str(total_labelled_objects))
 # load the trained cascade
 print("loading classifier...")
 trainedCascade = cv2.CascadeClassifier(cascadePath)
+print("trained cascade is: "+str(trainedCascade))
+
+# no attribute empty but in docs.
+# if cv2.CascadeClassifier.empty():
+#     print("trained cascade is empty!")
+
+
 total_objects_detected = 0
 
 print("using JI_THRESH:"+str(JI_THRESH))
@@ -220,6 +227,11 @@ for imagePath in images:
     MIN_SIZE = (10,10)
     MAX_SIZE = (128,128)
 
+    print("using SCALE_FACTOR: " +str(SCALE_FACTOR))
+    print("using MIN_NEIGHBORS: " + str(MIN_NEIGHBORS))
+    print("using MIN_SIZE windows: " +str(MIN_SIZE))
+    print("using MAX_SIZE windows: " +str(MAX_SIZE))
+
     # Detect objects in the image
     detected_objects = trainedCascade.detectMultiScale(
         colorCVT,
@@ -230,6 +242,7 @@ for imagePath in images:
         flags = cv2.cv.CV_HAAR_SCALE_IMAGE
     )
 
+    print("detected: " + str(len(detected_objects)) + " objects")
 
     # if we were in grayspace we want to convert back to rgb so we have colored
     # detection windows.

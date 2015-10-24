@@ -55,22 +55,22 @@ class SimpleTest(object):
         # str(r1.getWidth())+", " + str(r1.getHeight())+"]"+" | Area(r1): "+str(r1.area()))
         # print("Rectangle r2: ["+str(r2.getLeftXCoord())+", "+str(r2.getTopYCoord())+", "+ \
         # str(r2.getWidth())+", " + str(r2.getHeight())+"]"+" | Area(r2): "+str(r2.area()))
-        compare_rects = CompareRectangles(r1,r2)
+        compare_rects = CompareRectangles(r1,r2, 0.35)
         # if compare_rects.rect_intersection() is not None:
         #     print("overlapping/intersection area: "+str(compare_rects.area_intersection()))
         #     print("union area: "+str(compare_rects.area_union()))
         # else:
         #     print("no intersection area")
         print(compare_rects.boundary_tests)
-        print("intersection: " +str(compare_rects.area_union()))
-        print("union: " +str(compare_rects.area_intersection()))
+        print("union: " +str(compare_rects.area_union()))
+        print("intersection: " +str(compare_rects.area_intersection()))
         # print("division result: "+ str(compare_rects.area_intersection() / compare_rects.area_union()))
         print("jaccard index: " +str(compare_rects.jaccard_index()))
         print("rectangles similar: "+str(compare_rects.similar_rectangles()))
         print("\n")
 
     def printImage(self,r1,r2):
-        filepath = "/Users/juliusskye/COMP4120 Car Detection/car-classifier-research/src/hyp.verification.tools/py/test.png"
+        filepath = "/Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/src/hyp.verification.tools/py/test.png"
         if os.path.exists(filepath):
             image = cv2.imread(filepath)
         else:
@@ -80,11 +80,12 @@ class SimpleTest(object):
 
         cv2.rectangle(image, (r1.getLeftXCoord(), r1.getTopYCoord()), (r1.getLeftXCoord()+r1.getWidth(), r1.getTopYCoord()+r1.getHeight()), (255, 255, 0), 1)
         # cv2.putText(image,"r1", (int(r1.getLeftXCoord() + 0.4 * r1.getWidth()), int(r1.getTopYCoord()+ 0.4*r1.getHeight())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
-        cv2.putText(image,"r1", (int(r1.getLeftXCoord()), int(r1.getBottomYCoord())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
+        # cv2.putText(image,"r1"+str(r1), (int(r1.getLeftXCoord()), int(r1.getBottomYCoord())), cv2.FONT_HERSHEY_PLAIN, 0.5, 255)
+        cv2.putText(image,"r1"+str(r1), (int(r1.getCenter().getXCoord()-0.5*r1.getWidth()), int(r1.getCenter().getYCoord())), cv2.FONT_HERSHEY_PLAIN, 0.5, 255)
 
         cv2.rectangle(image, (r2.getLeftXCoord(), r2.getTopYCoord()), (r2.getLeftXCoord()+r2.getWidth(), r2.getTopYCoord()+r2.getHeight()), (0, 255, 0), 1)
         # cv2.putText(image,"r2", (int(r2.getLeftXCoord() + 0.4 * r2.getWidth()), int(r2.getTopYCoord()+ 0.4*r2.getHeight())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
-        cv2.putText(image,"r2", (int(r2.getLeftXCoord()), int(r2.getBottomYCoord())), cv2.FONT_HERSHEY_SIMPLEX, 0.25, 255)
+        cv2.putText(image,"r2"+str(r2), (int(r2.getCenter().getXCoord()-0.5*r2.getWidth()), int(r2.getCenter().getYCoord())), cv2.FONT_HERSHEY_PLAIN, 0.5, 255)
 
         cv2.circle(image,(r1.getCenter().getXCoord(), r1.getCenter().getYCoord()),2,(255, 255, 0), 1)
         cv2.circle(image,(r2.getCenter().getXCoord(), r2.getCenter().getYCoord()),2,(255, 255, 0), 1)
@@ -241,14 +242,22 @@ print("---------------------------------")
 # test_instance.printImage(r1,r2)
 
 
+# print("---------------------------------")
+# print("case:error. leftest.right is none")
+# print("---------------------------------")
+# r1 = Rectangle(51, 53, 71, 71)
+# r2 = Rectangle(51, 28, 71, 81)
+# test_instance.printImage(r1,r2)
+# test_instance.test(r1,r2)
+
+
 print("---------------------------------")
 print("case:error. leftest.right is none")
 print("---------------------------------")
-r1 = Rectangle(51, 53, 71, 71)
-r2 = Rectangle(51, 28, 71, 81)
+r1 = Rectangle(133, 67, 24, 24)
+r2 = Rectangle(137, 32, 30, 19)
 test_instance.printImage(r1,r2)
 test_instance.test(r1,r2)
-
 
 
 # print(test_instance.simple_contains())

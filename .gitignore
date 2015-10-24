@@ -6,4 +6,4 @@ testresults/sides/
 testresults/sides/**
 testdata/sides/testset.ppm
 
-*.pyc
+src/hyp.verification.tools/py/CompareRectangles.pyc

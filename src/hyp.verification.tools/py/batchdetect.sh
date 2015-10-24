@@ -2,7 +2,7 @@
 # This file is called ~/batchdetect.sh
 # This is a batch script to run the detections with the following params:
 
-PROJ_ROOT="/Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research"
+PROJ_ROOT="/Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research"
 
 # the detection script to use
 DETECT_SCRIPT=$PROJ_ROOT"/src/hyp.verification.tools/py/detect.py"
@@ -33,7 +33,8 @@ LOG_RESULTS_DIR=$TEST_RESULTS_DIR
 IMG_RESULTS_DIR=$TEST_RESULTS_DIR
 
 # path to trained classifiers
-CLASSIFIER_DIR_FB=$PROJ_ROOT"/trained_classifiers/frontbacks"
+CLASSIFIER_DIR_S=$PROJ_ROOT"/trained_classifiers/sides"
+CLASSIFIER_DIR_FB=$PROJ_ROOT"/trained_classifiers/sides"
 
 # path to groundtruth labelled data
 LABELLED_DATA_DIR_FB=$TESTDATA_DIR"/frontbacks/labelled.groundtruths"
@@ -300,6 +301,6 @@ COLORSPACE="gray"
 # python $DETECT_SCRIPT $TESTDATA_IMG_S_TRAINSET_NOISY $CLASSIFIER_DIR_S"/hog.gab.24x20s.xml" $LABELLED_DATA_DIR_S"/trainingset_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 5 S
 # python $DETECT_SCRIPT $TESTDATA_IMG_S_TRAINSET_NOISY $CLASSIFIER_DIR_S"/lbp.gab.24x20s.xml" $LABELLED_DATA_DIR_S"/trainingset_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 5 S
 # python $DETECT_SCRIPT $TESTDATA_IMG_S_TRAINSET_NOISY $CLASSIFIER_DIR_S"/cars3.xml" $LABELLED_DATA_DIR_S"/trainingset_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 5 S
-
-python $DETECT_SCRIPT $TESTDATA_IMG_S_TESTSET $CLASSIFIER_DIR_S"/haar.gab.24x20s.xml" $LABELLED_DATA_DIR_S"/uiuc_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 5 S
-python $DETECT_SCRIPT $TESTDATA_IMG_S_TRAINSET $CLASSIFIER_DIR_S"/haar.gab.24x20s.xml" $LABELLED_DATA_DIR_S"/uiuc_trainset_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 5 S
+python $DETECT_SCRIPT $TESTDATA_IMG_S_TESTSET $CLASSIFIER_DIR_S"/cars3.xml" $LABELLED_DATA_DIR_S"/uiuc_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
+# python $DETECT_SCRIPT $TESTDATA_IMG_S_TESTSET $CLASSIFIER_DIR_S"/haar.gab.24x16s_side.xml" $LABELLED_DATA_DIR_S"/uiuc_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
+# python $DETECT_SCRIPT $TESTDATA_IMG_S_TRAINSET $CLASSIFIER_DIR_S"/haar.gab.24x16s_side.xml" $LABELLED_DATA_DIR_S"/uiuc_trainset_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
