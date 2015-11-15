@@ -74,33 +74,35 @@ import argparse
 parser = argparse.ArgumentParser(description='Run detection code using multiple cascades')
 
 # pass at least one, or more, args to multi variable
-parser.add_argument('--multi', nargs='+', dest='all')
+# parser.add_argument('--multi', nargs='+', dest='all')
 
 # example of parsing boolean
 # parser.add_argument('-a', action="store_true", default=False)
 
-# store cwd path string in cwd var
-parser.add_argument('-cwd', action="store", dest="cwd")
-# store imageDir arg string in imageDir var
-parser.add_argument('-imageDir', action="store", dest="imageDir")
-# store labelPath arg string in imageDir var
-parser.add_argument('-labelPath', action="store", dest="labelPath")
-# store imgresultspath arg string in imgresultspath var
-parser.add_argument('-imgresultspath', action="store", dest="imgresultspath")
-# store logresultspath arg string in logresultspath var
-parser.add_argument('-logresultspath', action="store", dest="logresultspath")
-# store min_neighbors arg in min_neighbors as an int
-parser.add_argument('-min_neighbors', action="store", dest="min_neighbors", type=int)
-# store testtype arg string in testtype var
-parser.add_argument('-testtype', action="store", dest="testtype")
+# # store cwd path string in cwd var
+# parser.add_argument('-cwd', action="store", dest="cwd")
+# # store imageDir arg string in imageDir var
+# parser.add_argument('-imageDir', action="store", dest="imageDir")
+# # store labelPath arg string in imageDir var
+# parser.add_argument('-labelPath', action="store", dest="labelPath")
+# # store imgresultspath arg string in imgresultspath var
+# parser.add_argument('-imgresultspath', action="store", dest="imgresultspath")
+# # store logresultspath arg string in logresultspath var
+# parser.add_argument('-logresultspath', action="store", dest="logresultspath")
+# # store min_neighbors arg in min_neighbors as an int
+# parser.add_argument('-min_neighbors', action="store", dest="min_neighbors", \
+# type=int, default=None, help='Specify the minimum number of neighbors needed to form \
+# a detection hypothesis')
+# # store testtype arg string in testtype var
+# parser.add_argument('-testtype', action="store", dest="testtype")
+# # store JI_thresh arg in min_neighbors as a float
+# parser.add_argument('-min_neighbors', action="store", dest="min_neighbors", \
+# type=int, default=None, help='Specify the threshold for the jaccard index)
 
-# store min_neighbors arg in min_neighbors as an int
-parser.add_argument('-min_neighbors', action="store", dest="min_neighbors", \
-type=int, default=None, help='Specify the minimum number of neighbors needed to form \
-a detection hypothesis')
 
 # Get user supplied values
-if len(sys.argv) == 9:
+# when testtype and JI_thresh not specified.
+if len(sys.argv) == 6:
     cwd = sys.argv[0][:-3]
     imageDir = sys.argv[1]
     labelPath = sys.argv[2]
@@ -112,6 +114,7 @@ if len(sys.argv) == 9:
     testtype = sys.argv[6]
     JI_THRESH = 0.35
     # cascadePath = sys.argv[2]
+# when testtype and JI_thresh specified.
 elif len(sys.argv) == 9:
     cwd = sys.argv[0][:-3]
     imageDir = sys.argv[1]
