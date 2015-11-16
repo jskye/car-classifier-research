@@ -7,3 +7,5 @@ testresults/sides/**
 testdata/sides/testset.ppm
 
 src/hyp.verification.tools/py/CompareRectangles.pyc
+
+*.pyc
