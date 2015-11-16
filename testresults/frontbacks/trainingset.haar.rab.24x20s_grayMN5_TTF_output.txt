@@ -1,0 +1,410 @@
+*********************************
+Batch Detection results 
+*********************************
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0001.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0002.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0003.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0004.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0005.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0006.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0007.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0008.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0009.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0010.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0011.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0012.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0013.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0014.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0015.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0016.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0017.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0018.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 1, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0019.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0020.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0021.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0022.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0023.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0024.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0025.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0026.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0027.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0028.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0029.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0030.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0031.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0032.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0033.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0034.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0035.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0036.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0037.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0038.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0039.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0040.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0041.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0042.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0043.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0044.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0045.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 1, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0046.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0047.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0048.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0049.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0050.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0051.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0052.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0053.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0054.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0055.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0056.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0057.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0058.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0059.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 1, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0060.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0061.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0062.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0063.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0064.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:2, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0065.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0066.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0067.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0068.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0069.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0070.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0071.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0072.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 1, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0073.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0074.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0075.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0076.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0077.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0078.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0079.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0080.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0081.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0082.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0083.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0084.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0085.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0086.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0087.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0088.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0089.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:2, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0090.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0091.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0092.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0093.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0094.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0095.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0096.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0097.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0098.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:0, FP: 0, FN: 1
+
+Running detection on image:  /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/testdata/frontbacks/trainingset/car_0099.ppm.jpg
+Detecting using trained classifier: /Users/juliusskye/COMP4120.CarDetectionResearch/car-classifier-research/trained_classifiers/frontbacks/haar.rab.24x20s.xml
+TP:1, FP: 0, FN: 0
+
+Total labelled objects: 99
+Total objects detected: 82
+Total TP:78, Total FP: 4, Total FN: 20
+TPR: 0.787878787879 
+FPR: 0.040404040404 
+PPV: 0.951219512195 
+LR+: 19.5 
+Precision: 0.951218352173 
+Recall: 0.795917555186 
+Harmonic Mean: 0.866616101605 
+

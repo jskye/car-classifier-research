@@ -1,0 +1,311 @@
+*********************************
+Batch Detection results 
+*********************************
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0001.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0002.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0003.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0004.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0005.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0006.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0007.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0008.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0009.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0010.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 2
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0011.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 2
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0012.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0013.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0014.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0015.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0016.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0017.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0018.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 2
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0019.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0020.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0021.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0022.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0023.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0024.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 2
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0025.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0026.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0027.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0028.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0029.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0030.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0031.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0032.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0033.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 3
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0034.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 2
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0035.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0036.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0037.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0038.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0039.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0040.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0041.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0042.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0043.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0044.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0045.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 2
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0046.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0047.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0048.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0049.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 2
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0050.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0051.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 2
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0052.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0053.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0054.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0055.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0056.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0057.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0058.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0059.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0060.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 2
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0061.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 2
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0062.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0063.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0064.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0065.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0066.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0067.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0068.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0069.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0070.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0071.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0072.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0073.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0074.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0075.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0076.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0077.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0078.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0079.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0080.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0081.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0082.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0083.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0084.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0085.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0086.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0087.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0088.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 2
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0089.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0090.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0091.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0092.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0093.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0094.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0095.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0096.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0097.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0098.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Running detection on image:  /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/testset.noisy/image-0099.jpg resized.jpg-noisy.jpg
+Detecting using trained classifier: /Users/juliusskye/Documents/COMP.VISION/final.tests/final_testing/final.results/classifiers/cars3.xml
+TP:0, FP: 0, FN: 1
+Total labelled objects: 99
+Total objects detected: 0
+Total TP:0, Total FP: 0, Total FN: 112
+TPR: 0.0 
+FPR: 0.0 
+PPV: None 
+LR+: None 
+Precision: 0.0 
+Recall: 0.0 
+Harmonic Mean: 0.0 
+
