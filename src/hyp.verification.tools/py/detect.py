@@ -61,6 +61,7 @@ import os
 import glob
 import cv2
 import sys
+import time
 from scipy import misc
 from CompareRectangles import CompareRectangles
 from Rectangle import Rectangle
@@ -105,6 +106,9 @@ elif len(sys.argv) == 10:
 else:
 	print("check arguments!")
 
+debugging = False
+# for running live detection or testing how long detection takes.
+livedetectionmode = False
 
 # initiate variables
 tot_True_positives = 0
@@ -245,6 +249,12 @@ for imagePath in images:
 	print("using MIN_SIZE windows: " +str(MIN_SIZE))
 	print("using MAX_SIZE windows: " +str(MAX_SIZE))
 
+	# start timer
+	# TODO: timertesting should be done without printing groundtruths, saving images.
+	# since were just timing the detection.
+	# in a real setting we would just detect and print to screen.
+	starttime = time.time()
+
 	# Detect objects in the image
 	detected_objects = trainedCascade.detectMultiScale(
 		colorCVT,
@@ -255,7 +265,9 @@ for imagePath in images:
 		flags = cv2.cv.CV_HAAR_SCALE_IMAGE
 	)
 
-	print("detected: " + str(len(detected_objects)) + " objects")
+
+	if debugging:
+		print("detected: " + str(len(detected_objects)) + " objects")
 
 	# if we were in grayspace we want to convert back to rgb so we have colored
 	# detection windows.
@@ -270,44 +282,50 @@ for imagePath in images:
 
 
 	#draw the labelled rectangles
+	# for testing detection time, this drawing is not done.
 	# print('imageNum: '+imageNum)
-	for labRect in labelled_rectangles[str(imageNum)]:
-		expectedObjects+=1
-		# print(expectedObjects)
-		x = int(labRect[0])
-		y = int(labRect[1])
-		w = int(labRect[2])
-		h = int(labRect[3])
-		# print("printing rectangle: {0}.{1}: ({2},{3},{4},{5})".format(imageNum,expectedObjects,x,y,w,h))
+	if not livedetectionmode:
+		for labRect in labelled_rectangles[str(imageNum)]:
+			expectedObjects+=1
+			# print(expectedObjects)
+			x = int(labRect[0])
+			y = int(labRect[1])
+			w = int(labRect[2])
+			h = int(labRect[3])
+			# print("printing rectangle: {0}.{1}: ({2},{3},{4},{5})".format(imageNum,expectedObjects,x,y,w,h))
 
-		# if colorspace =='lab' or 'luv':
-		#     groundColor = (0, 0, 255)
-		# else:
-		groundColor = (0, 0, 255)
+			# if colorspace =='lab' or 'luv':
+			#     groundColor = (0, 0, 255)
+			# else:
+			groundColor = (0, 0, 255)
 
-		cv2.rectangle(colorCVT, (x, y), (x+w, y+h), groundColor, 1)
-
-
-
+			cv2.rectangle(colorCVT, (x, y), (x+w, y+h), groundColor, 1)
 
 
 	# Draw detected objects
 	for (detx, dety, detectedWidth, detectedHeight) in detected_objects:
 
+		# use the opencv returned rectangle and create our own.
 		detected_rectangle = Rectangle(detx, dety, detectedHeight, detectedWidth)
 
 
-		# TODO: finish this. compare the slidingWindows
-		# with labels as is already being done, and if the comparison is better
-		# than with the original detected rectangle, then use that sliding window.
-		# caveat: sometims the first check will be better and quite good,
+		# we use sliding windows of similar proportions to car sides
+		# within the feature hypothesis, to compare the hypothesis
+		# with the groundtruths when testing side car classifiers.
+		# If the comparison is better than with the original hypothesis,
+		# then we use that result.
+		# We do this because when we compare to JI, it wont be similar
+		# because ground truths are cropped to the car and the collated features
+		# return us square (assumed to bound the features).
+		# TODO: this assumption should be checked, how the minneighbors
+		# collates features in opencv.
+		# By considering rectangles
+		# sometimes the first check will be better and quite good,
 		# and we will waste computation and time by checking others.
 		# so, sliding window should be accepted if JI under certain limit.
 		#
-		# if were using a side trained classifier, we will want to check our
-		# resulting object windows for car proportioned objects.
-		# because when we compare to JI, it wont be similar if we dont.
-		# (because ground truths are cropped to car).
+
+		#
 		# so what we can do is keep the width of the hypothesis the same.
 		# but contract the height so that its in more similar proportions to a side car.
 		# but if we just kept the middle of the hypothesis, sometimes this might
@@ -315,58 +333,72 @@ for imagePath in images:
 		# so we check top/middle/bottom (or N proportioned sliding windows) etc.
 		# for the most similar (proportioned) window to the labelled car.
 
-		if classifier_type == "S":
+		if classifier_type == "S" and not livedetectionmode:
 			# see if any proportioned sliding windows are better than hypothesis
 
-			numwindows = 5 # 3,4,2,5,1
+			numwindows = 5
 			heightWidthRatioCar = 2.5
 			slidingWindows = []
 
-			# TODO: overlap wrt hypothesis can be fixed up abit more
-			# TODO: in most cases, the better slidingwindow is probably closest
-			# to the middle of the hypothesis. so for speed, its probably better
-			#  to check those first,and then wont need to check rest if good enough.
-			# but will do for now.
-			for i in range(0,numwindows):
+			# # TODO: in most cases, the better slidingwindow is probably closest
+			# # to the middle of the hypothesis. so for speed, its probably better
+			# #  to check those first,and then wont need to check rest if good enough.
+			# # but checking in turn will do for now.
+			for i in range(0,5):
 				# print(i)
-				# height of sliding window is round of
-				# height of avg car based on width of hypo. rectangle
+
+				# we first consider when hypothesis bounds width of car.
+				# but height is too big to get valid comparison.
+				# in this case, height is a portion of the hypothesis height.
+
+				# keeping width constant, define new height of hypothesis window
 				heightSlidingWindow = int(round(detected_rectangle.getWidth() / heightWidthRatioCar))
-				# print(heightSlidingWindow)
+				# width defaults to same
+				widthSlidingWindow = detected_rectangle.getWidth()
+				xSlidingWindow = detected_rectangle.getLeftXCoord()
 
-				# here we round the height to the nearest integer
-				# floorDiffSlidingWindow = heightSlidingWindow - math.floor(heightSlidingWindow)
-				# ceilingDiffSlidingWindow = heightSlidingWindow - math.ceil(heightSlidingWindow)
-				# if floorDiffSlidingWindow < ceilingDiffSlidingWindow:
-				# 	heightSlidingWindow = int(math.floor(heightSlidingWindow))
-				# elif ceilingDiffSlidingWindow < floorDiffSlidingWindow:
-				# 	heightSlidingWindow = int(math.ceil(heightSlidingWindow))
-				# else: # when same diff
-				# 	#choose ceiling for abit more height
-				# 	heightSlidingWindow = int(math.ceil(heightSlidingWindow))
+				# print windows when debugging.
+				if debugging:
+					# alternate printing color and stagger
+					if i ==(numwindows-1):
+						color = (0, 255, 0)
+						#stagger
+						# xSlidingWindow = detected_rectangle.getLeftXCoord() - 50
+					else:
+						color = (0, 0, 255)
 
-				# print(heightSlidingWindow)
-				# width is defaulted to same
-				# TODO: in most cases width is smaller than car.
-				# so could try bit more than width.
-				widthSlidingWindow = r1.getWidth
-
-				xSlidingWindow = r1.getLeftXCoord()
-
-				# alternate printing color and stagger (for printing/testing)
-				# if i%2 == 0:
-				# 	color = (0, 255, 0)
-				# 	xSlidingWindow = r1.getLeftXCoord() - 50
-				#
-				# else:
-				# 	color = (0, 0, 255)
-
-				ySlidingWindow = (detected_rectangle.getTopYCoord()-heightSlidingWindow/2) + (detected_rectangle.getHeight()/numwindows)*i
-				slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, detected_rectangle.getLeftXCoord()+detected_rectangle.getWidth(), ySlidingWindow+heightSlidingWindow)
+				# sliding window vertical position is based on detected height, window height and how many windows
+				if i ==(numwindows-1):
+						ySlidingWindow = int(round((detected_rectangle.getTopYCoord()) + detected_rectangle.getWidth() / 3))
+				else:
+					ySlidingWindow = (detected_rectangle.getTopYCoord()) + (detected_rectangle.getHeight()/numwindows)*i
+				slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow,heightSlidingWindow)
+				slidingWindows.append(slidingWindow)
 				# print(slidingWindow)
 				#print the sliding window
-				# cv2.rectangle(image, (slidingWindow.getLeftXCoord(), slidingWindow.getTopYCoord()), (slidingWindow.getLeftXCoord()+slidingWindow.getWidth(), slidingWindow.getHeight()), color, 1)
-				slidingWindows.append(slidingWindow)
+				# cv2.rectangle(image, (slidingWindow.getLeftXCoord(), slidingWindow.getTopYCoord()), (slidingWindow.getLeftXCoord()+slidingWindow.getWidth(), slidingWindow.getTopYCoord()+slidingWindow.getHeight()), color, 1)
+
+
+			# we also consider the car proportioned sliding window that bounds
+			# the hypothesis vertically but not horizontally
+			# so we scale width to potentially bound it horizontally too.
+			# and update the hypothesis if that gets a better comparison.
+
+			# height remains constant.
+			heightSlidingWindow = detected_rectangle.getHeight()
+			# width gets scaled according to car ratio.
+			widthSlidingWindow = int(round(detected_rectangle.getWidth()*heightWidthRatioCar))
+			# new x is current x - overhang
+			overhang_percentage = (heightWidthRatioCar-1)/2
+			overhang = detected_rectangle.getWidth()*overhang_percentage
+			xSlidingWindow = int(round((detected_rectangle.getLeftXCoord() - overhang)))
+			# new y is same
+			ySlidingWindow = detected_rectangle.getTopYCoord()
+			slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow, heightSlidingWindow)
+			# print(slidingWindow)
+			slidingWindows.append(slidingWindow)
+			# cv2.rectangle(image, (slidingWindow.getLeftXCoord(), slidingWindow.getTopYCoord()), (slidingWindow.getLeftXCoord()+slidingWindow.getWidth(), slidingWindow.getTopYCoord()+slidingWindow.getHeight()), color, 1)
+
 
 
 		print('the detected rectangle: '+ str(detected_rectangle))
@@ -374,6 +406,12 @@ for imagePath in images:
 
 
 		# get the labelled rectangle to compare the detection with.
+		# Note. the below is relevant to testing against known labelled groundtruths.
+		# in a live system, your not evaluating against groundtruths.
+		# the feature (collated feature group) forms an unverifiable hypothesis.
+		# if the classifier is trained well, then it should evaluate well
+		# when comparing to groundtruths in testing and to the eye when live.
+
 		# we will compare the detection with that labelled rectangle
 		# that is closest and most similar in area.
 		# we dont want to compare to all labelled rectangles,
