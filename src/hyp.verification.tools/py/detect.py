@@ -30,15 +30,20 @@ Date: 1.05.2015
 File Description:
 This program uses opencv's cascade function: detectMuliScale
 to perfom detection with a given detector on a given image.
-The image can be preprocessed for diff color spaces:
-grayscale, YUV, HSV, HLS, CIELAB, CIELUV
-Note: by default, im.read outputs in BGR order not RGB
 
-For more info about convesion algorithms see:
-http://docs.opencv.org/master/de/d25/
-imgproc_color_conversions.html#color_convert_rgb_hls
+# The image can be preprocessed for diff color spaces:
+# grayscale, YUV, HSV, HLS, CIELAB, CIELUV
+# Note: by default, im.read outputs in BGR order not RGB
+# For more info about convesion algorithms see:
+# http://docs.opencv.org/master/de/d25/
+# imgproc_color_conversions.html#color_convert_rgb_hls
+# note: colorspace is deprecated. opencv doesnt implement this properly.
+# it expects grayscale. grayscale is better for computation anyhow.
+# it was badly documented initially.
 
-For good default values see:
+
+
+For good default param values see:
 http://www.searchalleasy.com/q/20801015/2589776
 	Means checking scales 10percent of size increments
 	scaleFactor=1.1
@@ -52,7 +57,8 @@ http://www.searchalleasy.com/q/20801015/2589776
 
 	use like this:
 
-	python cardetect.py image/path/image.extension cascade/path/cascade.xml colorspace
+	# python cardetect.py image/path/image.extension cascade/path/cascade.xml colorspace
+	# this is old. see args parsed below or see the batch shell script.
 
 '''
 from __future__ import division
@@ -62,6 +68,7 @@ import glob
 import cv2
 import sys
 import time
+import numpy as np
 from scipy import misc
 from CompareRectangles import CompareRectangles
 from Rectangle import Rectangle
@@ -109,6 +116,9 @@ else:
 debugging = False
 # for running live detection or testing how long detection takes.
 livedetectionmode = False
+
+# keep a list of detection times.
+detectiontime_list = []
 
 # initiate variables
 tot_True_positives = 0
@@ -566,7 +576,10 @@ for imagePath in images:
 
 
 		detectionend_time = time.time()
-		print("detection and printing hypthesese to screen took: "+str(detection_starttime-detection_endtime))
+		detectiontime = detection_starttime-detection_endtime
+		if debugging:
+			print("detection and printing hypthesese to screen took: "+str(detectiontime))
+		detectiontime_list.append(detectiontime)
 
 	# increment False negatives
 	if expectedObjects>0 and len(detected_objects)<1:
@@ -647,6 +660,10 @@ with open(outputDestination, 'a') as results:
 	#harmonic mean = 2 ((precisin x recall)/(precision + recall))
 	harmonic_mean = ((precision*recall) / (precision+recall+delta))*2
 
+	# average detection time
+	adt = np.mean(detectiontime_list)
+
+	results.write("Average Detection Time: {0} \n".format(adt))
 	results.write("TPR: {0} \n".format(tpr))
 	results.write("FPR: {0} \n".format(fpr))
 	results.write("PPV: {0} \n".format(PPV))
