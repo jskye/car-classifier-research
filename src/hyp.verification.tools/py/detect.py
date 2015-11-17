@@ -253,7 +253,7 @@ for imagePath in images:
 	# TODO: timertesting should be done without printing groundtruths, saving images.
 	# since were just timing the detection.
 	# in a real setting we would just detect and print to screen.
-	starttime = time.time()
+	detection_starttime = time.time()
 
 	# Detect objects in the image
 	detected_objects = trainedCascade.detectMultiScale(
@@ -400,8 +400,8 @@ for imagePath in images:
 			# cv2.rectangle(image, (slidingWindow.getLeftXCoord(), slidingWindow.getTopYCoord()), (slidingWindow.getLeftXCoord()+slidingWindow.getWidth(), slidingWindow.getTopYCoord()+slidingWindow.getHeight()), color, 1)
 
 
-
-		print('the detected rectangle: '+ str(detected_rectangle))
+		if debugging:
+			print('the detected rectangle: '+ str(detected_rectangle))
 		detectedArea = detected_rectangle.area()
 
 
@@ -424,7 +424,8 @@ for imagePath in images:
 		# is under some constant
 		PROXIMAL_RECTS_CONSTANT = 2
 
-		print("finding rectangle to compare detected to from the labelled rectangles: "+ str(labelled_rectangles[str(imageNum)]))
+		if debugging:
+			print("finding rectangle to compare detected to from the labelled rectangles: "+ str(labelled_rectangles[str(imageNum)]))
 		# print("print of labelled dictionary: " + str(labelled_rectangles))
 
 		# loop through each image's labelled rectangles
@@ -478,31 +479,39 @@ for imagePath in images:
 					# only update if new label has greater JI
 					elif (current_distance < closest_distance) and in_same_neighborhood:
 						# print('current dist < closest dist and IN same neighborhood')
-						print('detected rectangle: ' + str(detected_rectangle) + '\n labelled rectangle to compare: '+ str(labelled_rectangle_to_compare))
+						if debugging:
+							print('detected rectangle: ' + str(detected_rectangle) + '\n labelled rectangle to compare: '+ str(labelled_rectangle_to_compare))
 						comparison_detection_and_labelled_to_compare = CompareRectangles(detected_rectangle, labelled_rectangle_to_compare, JI_THRESH)
 						jacc_index_detection_and_labelled_to_compare = comparison_detection_and_labelled_to_compare.jaccard_index()
 						comparison_detection_and_labelled = CompareRectangles(detected_rectangle, labelled_rectangle, JI_THRESH)
 						jacc_index_detection_and_labelled = comparison_detection_and_labelled.jaccard_index()
 						# comparison to this label is more appropriate than to current labelled_rectangle_to_compare
 						if max(jacc_index_detection_and_labelled_to_compare, jacc_index_detection_and_labelled) == jacc_index_detection_and_labelled:
-							print('new labelled rectangle is more relevant to compare')
+							if debugging:
+								print('new labelled rectangle is more relevant to compare')
 							labelled_rectangle_to_compare = labelled_rectangle
 						else:
-							print('new labelled rectangle is NOT more relevant to compare')
+							if debugging:
+								print('new labelled rectangle is NOT more relevant to compare')
 							labelled_rectangle_to_compare = labelled_rectangle_to_compare
 					else:
 						pass
 						# print('currnt dist > closest dist')
 
 				iteration+=1
-			print("most appropriate rectangle to compare detected to is: "+ str(labelled_rectangle_to_compare))
+			if debugging:
+				print("most appropriate rectangle to compare detected to is: "+ str(labelled_rectangle_to_compare))
+
+
 
 		# draw detected rectangle only if rectangles are similar according to Jaccard Index.
 		# compare detected object with closest labelled rectangle
 		# if true positive found, then stop comparing.
 
-		print('detected rectangle to compare'+str(detected_rectangle))
-		print('labelled rectangle to comapre'+str(labelled_rectangle_to_compare))
+
+		if debugging:
+			print('detected rectangle to compare'+str(detected_rectangle))
+			print('labelled rectangle to comapre'+str(labelled_rectangle_to_compare))
 
 
 
@@ -536,22 +545,28 @@ for imagePath in images:
 		# determine if rectangles similar, using the Jaccard threshold if its set.
 		jaccard_similar = rectangle_comparison.similar_rectangles()
 
-
-		print('Jaccard Index: '+str(det_jaccard_index))
+		if debugging:
+			print('Jaccard Index: '+str(det_jaccard_index))
 
 		# print false positives in red
 		if not jaccard_similar:
-			print('rectangles ARE NOT jaccard similar')
+			if debugging:
+				print('rectangles ARE NOT jaccard similar')
 			cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (255, 0, 0), 1)
 			img_False_positives +=1
 		# detected_rectangle is true positive if jaccard similar (JI > 0.5)
 		else:
-			print('rectangles ARE jaccard similar')
+			if debugging:
+				print('rectangles ARE jaccard similar')
 			# print true positive in blue
 			cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (0, 255, 0), 2)
 			# cv2.rectangle(colorCVT, (0,0), (1,1), (0,0,255),2)
 			img_True_positives +=1
 			# break
+
+
+		detectionend_time = time.time()
+		print("detection and printing hypthesese to screen took: "+str(detection_starttime-detection_endtime))
 
 	# increment False negatives
 	if expectedObjects>0 and len(detected_objects)<1:
