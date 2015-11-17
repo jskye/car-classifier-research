@@ -69,7 +69,8 @@ from PIL import Image
 
 
 # Get user supplied values
-if len(sys.argv) == 9:
+# TODO: use a more elegant param parser.
+if len(sys.argv) == 8:
 	cwd = sys.argv[0][:-3]
 	imageDir = sys.argv[1]
 	cascadePath = sys.argv[2]
@@ -78,7 +79,17 @@ if len(sys.argv) == 9:
 	logresultspath = sys.argv[5]
 	colorspace = sys.argv[6]
 	min_neighbors = sys.argv[7]
-	testtype = sys.argv[8]
+	JI_THRESH = 0.35
+elif len(sys.argv) == 9:
+	cwd = sys.argv[0][:-3]
+	imageDir = sys.argv[1]
+	cascadePath = sys.argv[2]
+	labelPath = sys.argv[3]
+	imgresultspath = sys.argv[4]
+	logresultspath = sys.argv[5]
+	colorspace = sys.argv[6]
+	min_neighbors = sys.argv[7]
+	classifier_type = sys.argv[8]
 	JI_THRESH = 0.35
 elif len(sys.argv) == 10:
 	cwd = sys.argv[0][:-3]
@@ -89,7 +100,7 @@ elif len(sys.argv) == 10:
 	logresultspath = sys.argv[5]
 	colorspace = sys.argv[6]
 	min_neighbors = sys.argv[7]
-	testtype = sys.argv[8]
+	classifier_type = sys.argv[8]
 	JI_THRESH = sys.argc[9]
 else:
 	print("check arguments!")
@@ -121,7 +132,7 @@ print("using cascade: "+cascadeNameMinusEx+": "+cascadePathWithoutExtension)
 outputLogDir = logresultspath
 
 # the output filename
-outputFilename=testset+"."+cascadeNameMinusEx+'_'+colorspace+"MN"+min_neighbors+'_'+"TT"+testtype+'_'+'output.txt'
+outputFilename=testset+"."+cascadeNameMinusEx+'_'+colorspace+"MN"+min_neighbors+'_'+"TT"+classifier_type+'_'+'output.txt'
 # save the output file here
 outputDestination = outputLogDir+outputFilename
 
@@ -286,7 +297,7 @@ for imagePath in images:
 		detected_rectangle = Rectangle(detx, dety, detectedHeight, detectedWidth)
 
 
-		# TODO: finish this. all the slidingWindows should be compared
+		# TODO: finish this. compare the slidingWindows
 		# with labels as is already being done, and if the comparison is better
 		# than with the original detected rectangle, then use that sliding window.
 		# caveat: sometims the first check will be better and quite good,
@@ -304,32 +315,40 @@ for imagePath in images:
 		# so we check top/middle/bottom (or N proportioned sliding windows) etc.
 		# for the most similar (proportioned) window to the labelled car.
 
-		if testtype == "S":
+		if classifier_type == "S":
 			# see if any proportioned sliding windows are better than hypothesis
 
-			numwindows = 5
+			numwindows = 5 # 3,4,2,5,1
 			heightWidthRatioCar = 2.5
 			slidingWindows = []
 
-			# overlap wrt hypothesis can be fixed up abit more
+			# TODO: overlap wrt hypothesis can be fixed up abit more
+			# TODO: in most cases, the better slidingwindow is probably closest
+			# to the middle of the hypothesis. so for speed, its probably better
+			#  to check those first,and then wont need to check rest if good enough.
 			# but will do for now.
 			for i in range(0,numwindows):
 				# print(i)
-				# height of sliding window is height of avg car based on width of hypo. rectangle
-				heightSlidingWindow = detected_rectangle.getWidth() / heightWidthRatioCar
+				# height of sliding window is round of
+				# height of avg car based on width of hypo. rectangle
+				heightSlidingWindow = int(round(detected_rectangle.getWidth() / heightWidthRatioCar))
 				# print(heightSlidingWindow)
-				floorDiffSlidingWindow = heightSlidingWindow - math.floor(heightSlidingWindow)
-				ceilingDiffSlidingWindow = heightSlidingWindow - math.ceil(heightSlidingWindow)
-				if floorDiffSlidingWindow < ceilingDiffSlidingWindow:
-					heightSlidingWindow = int(math.floor(heightSlidingWindow))
-				elif ceilingDiffSlidingWindow < floorDiffSlidingWindow:
-					heightSlidingWindow = int(math.ceil(heightSlidingWindow))
-				else:
-					#choose ceiling for abit more height
-					heightSlidingWindow = int(math.ceil(heightSlidingWindow))
 
-				print(heightSlidingWindow)
-				# width is defaulted to same TODO: could try double/factors.
+				# here we round the height to the nearest integer
+				# floorDiffSlidingWindow = heightSlidingWindow - math.floor(heightSlidingWindow)
+				# ceilingDiffSlidingWindow = heightSlidingWindow - math.ceil(heightSlidingWindow)
+				# if floorDiffSlidingWindow < ceilingDiffSlidingWindow:
+				# 	heightSlidingWindow = int(math.floor(heightSlidingWindow))
+				# elif ceilingDiffSlidingWindow < floorDiffSlidingWindow:
+				# 	heightSlidingWindow = int(math.ceil(heightSlidingWindow))
+				# else: # when same diff
+				# 	#choose ceiling for abit more height
+				# 	heightSlidingWindow = int(math.ceil(heightSlidingWindow))
+
+				# print(heightSlidingWindow)
+				# width is defaulted to same
+				# TODO: in most cases width is smaller than car.
+				# so could try bit more than width.
 				widthSlidingWindow = r1.getWidth
 
 				xSlidingWindow = r1.getLeftXCoord()
@@ -372,6 +391,9 @@ for imagePath in images:
 
 		# loop through each image's labelled rectangles
 		# decide which labelled rectangle is most appropriate to compare detection to.
+		# note: the sliding windows will be somewhere more or less inside or about the detected.
+		# so we can just keep this calculated for the detected before seeing if slidingwindows are more similar.
+
 		# initialise loop
 		iteration = 0
 		labelled_rectangle = None
@@ -445,35 +467,39 @@ for imagePath in images:
 		print('labelled rectangle to comapre'+str(labelled_rectangle_to_compare))
 
 
-		#### this code probably needs to removed, no longer used.
-		#### TODO: check and remove.
-		# this was to break once a TP was found, without comparing neighborhood.
-		# break
-
-		# for true_rect in labelled_rectangles[str(imageNum)]:
-			# true_x = int(true_rect[0])
-			# true_y = int(true_rect[1])
-			# true_width = int(true_rect[2])
-			# true_height = int(true_rect[3])
-
-			# true_rectangle = Rectangle(true_x, true_y, true_width, true_height)
-			# TrueArea = true_width*true_height
-			#check if detected rectangle is considered TP or FP
-
-		# print('true rectangle: '+str(true_rectangle)+'\n'+'detected rectangle: '+str(detected_rectangle))
-		# rectangle_comparison = CompareRectangles(detected_rectangle,true_rectangle)
-		####
-		####
 
 		# compare the detection with the labelled_rectangle_to_compare
 		rectangle_comparison = CompareRectangles(detected_rectangle,labelled_rectangle_to_compare, JI_THRESH)
+		# get the jaccard index (used later on)
+		det_jaccard_index = rectangle_comparison.jaccard_index()
+		# get jaccard index of comparisons with the sliding windows.
+		if classifier_type = "S":
+			break_limit = 0.7
+			for slidingWindow in slidingWindows:
+				sw_comparison = CompareRectangles(slidingWindow,labelled_rectangle_to_compare, JI_THRESH)
+				sw_jaccard_index = rectangle_comparison.jaccard_index()
+				if sw_jaccard_index > break_limit and sw_jaccard_index > det_jaccard_index:
+					# update hypothesis
+					detected_rectangle = slidingWindow
+					det_jaccard_index = sw_jaccard_index
+					# break loop cos we dont wanna waste computation/time
+					break
+				# if not awesome similar but still better
+			elif sw_jaccard_index < break_limit and sw_jaccard_index > det_jaccard_index:
+					# update but dont break, so check others.
+					# update hypothesis
+					detected_rectangle = slidingWindow
+					det_jaccard_index = sw_jaccard_index
+			else: # we continue looking for better hypothesis in slidingwindows
+				continue
 
+		# update rectangle comparison
+		rectangle_comparison = CompareRectangles(detected_rectangle,labelled_rectangle_to_compare, JI_THRESH)
 		# determine if rectangles similar, using the Jaccard threshold if its set.
 		jaccard_similar = rectangle_comparison.similar_rectangles()
 
-		# get the jaccard index (used later on)
-		jaccard_index = rectangle_comparison.jaccard_index()
-		print('Jaccard Index: '+str(jaccard_index))
+
+		print('Jaccard Index: '+str(det_jaccard_index))
 
 		# print false positives in red
 		if not jaccard_similar:

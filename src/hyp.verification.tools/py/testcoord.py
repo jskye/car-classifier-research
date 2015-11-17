@@ -10,7 +10,8 @@ import os.path
 import math
 
 
-filepath = "/Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/src/hyp.verification.tools/py/test.png"
+# filepath = "/Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/src/hyp.verification.tools/py/test.png"
+filepath = os.getcwd() + "/test.png"
 if os.path.exists(filepath):
 	image = cv2.imread(filepath)
 else:
@@ -46,20 +47,22 @@ def testSlide(image):
 	for i in range(0,numwindows):
 		print(i)
 		# height of sliding window is height of avg car based on width of hypo. rectangle
-		heightSlidingWindow = r1.getWidth() / heightWidthRatioCar
+		heightSlidingWindow = int(round(r1.getWidth() / heightWidthRatioCar))
 		# print(heightSlidingWindow)
-		floorDiffSlidingWindow = heightSlidingWindow - math.floor(heightSlidingWindow)
-		ceilingDiffSlidingWindow = heightSlidingWindow - math.ceil(heightSlidingWindow)
-		if floorDiffSlidingWindow < ceilingDiffSlidingWindow:
-			heightSlidingWindow = int(math.floor(heightSlidingWindow))
-		elif ceilingDiffSlidingWindow < floorDiffSlidingWindow:
-			heightSlidingWindow = int(math.ceil(heightSlidingWindow))
-		else:
-			#choose ceiling for abit more height
-			heightSlidingWindow = int(math.ceil(heightSlidingWindow))
+		# floorDiffSlidingWindow = heightSlidingWindow - math.floor(heightSlidingWindow)
+		# ceilingDiffSlidingWindow = heightSlidingWindow - math.ceil(heightSlidingWindow)
+		# if floorDiffSlidingWindow < ceilingDiffSlidingWindow:
+		# 	heightSlidingWindow = int(math.floor(heightSlidingWindow))
+		# elif ceilingDiffSlidingWindow < floorDiffSlidingWindow:
+		# 	heightSlidingWindow = int(math.ceil(heightSlidingWindow))
+		# else:
+		# 	#choose ceiling for abit more height
+		# 	heightSlidingWindow = int(math.ceil(heightSlidingWindow))
 
 		print(heightSlidingWindow)
-		# width is defaulted to same TODO: could try double/factors.
+		# width is defaulted to same
+		# TODO: in most cases width is smaller than car.
+		# so could try bit more than width.
 		widthSlidingWindow = r1.getWidth
 
 		xSlidingWindow = r1.getLeftXCoord()

@@ -8,7 +8,8 @@
 # SPECIFYING COMMON VARS USED FOR TESTRUNS
 ############################################################
 
-PROJ_ROOT="/Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research"
+# PROJ_ROOT="/Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research"
+PROJ_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # the detection script to use
 DETECT_SCRIPT=$PROJ_ROOT"/src/hyp.verification.tools/py/detect.py"
