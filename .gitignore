@@ -1,5 +1,6 @@
 *.pyc
 src/hyp.verification.tools/py/multiline.py
+testresults
 testresults/frontbacks/
 testresults/sides
 testresults/sides/
@@ -9,3 +10,9 @@ testdata/sides/testset.ppm
 src/hyp.verification.tools/py/CompareRectangles.pyc
 
 *.pyc
+
+*.pyc
+
+src/hyp.verification.tools/py/Line.pyc
+
+src/hyp.verification.tools/py/Point.pyc

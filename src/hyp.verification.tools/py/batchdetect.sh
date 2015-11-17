@@ -1,6 +1,12 @@
 #!/bin/sh
 # This file is called ~/batchdetect.sh
 # This is a batch script to run the detections with the following params:
+# to debug use: bash -x batchdetect.sh
+
+
+############################################################
+# SPECIFYING COMMON VARS USED FOR TESTRUNS
+############################################################
 
 PROJ_ROOT="/Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research"
 
@@ -33,8 +39,8 @@ LOG_RESULTS_DIR=$TEST_RESULTS_DIR
 IMG_RESULTS_DIR=$TEST_RESULTS_DIR
 
 # path to trained classifiers
-CLASSIFIER_DIR_S=$PROJ_ROOT"/trained_classifiers/frontbacks"
-CLASSIFIER_DIR_FB=$PROJ_ROOT"/trained_classifiers/sides"
+CLASSIFIER_DIR_S=$PROJ_ROOT"/trained_classifiers/sides"
+CLASSIFIER_DIR_FB=$PROJ_ROOT"/trained_classifiers/frontbacks"
 
 # path to groundtruth labelled data
 LABELLED_DATA_DIR_FB=$TESTDATA_DIR"/frontbacks/labelled.groundtruths"
@@ -43,6 +49,15 @@ LABELLED_DATA_DIR_S=$TESTDATA_DIR"/sides/labelled.groundtruths"
 # the colorspace to detect in (default should be $TEST_RESULTS_DIR_FB $TEST_RESULTS_DIR_FB $COLORSPACE others mightnt be accurate.)
 COLORSPACE="gray"
 
+
+
+
+############################################################
+# CALL THE TESTRUNS
+############################################################
+
+# a run is specified as format:
+# python $path_to_detect_script $path_to_test_images_directory $path_to_classifier_directory"/example.xml" $path_to_labelled_groundtruths"/exampleset_100.txt" $path_to_save_images_after_detection $path_to_save_txtfile_after_detection $COLORSPACE number_of_min_neighbors test_type_F_or_S
 
 # ########## BELOW WILL RUN THE DETECTIONS ########
 #
@@ -303,7 +318,56 @@ COLORSPACE="gray"
 # python $DETECT_SCRIPT $TESTDATA_IMG_S_TRAINSET_NOISY $CLASSIFIER_DIR_S"/cars3.xml" $LABELLED_DATA_DIR_S"/trainingset_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 5 S
 # python $DETECT_SCRIPT $TESTDATA_IMG_S_TESTSET $CLASSIFIER_DIR_S"/cars3.xml" $LABELLED_DATA_DIR_S"/uiuc_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
 
-# python $DETECT_SCRIPT $TESTDATA_IMG_S_TESTSET $CLASSIFIER_DIR_S"/haar.gab.24x16s_side.xml" $LABELLED_DATA_DIR_S"/uiuc_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
-# python $DETECT_SCRIPT $TESTDATA_IMG_S_TRAINSET $CLASSIFIER_DIR_S"/haar.gab.24x16s_side.xml" $LABELLED_DATA_DIR_S"/uiuc_trainset_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
-python $DETECT_SCRIPT $TESTDATA_IMG_S_TESTSET $CLASSIFIER_DIR_S"/lbp1.gab.24x20s_side.xml" $LABELLED_DATA_DIR_S"/uiuc_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
-python $DETECT_SCRIPT $TESTDATA_IMG_S_TRAINSET $CLASSIFIER_DIR_S"/lbp1.gab.24x20s_side.xml" $LABELLED_DATA_DIR_S"/uiuc_trainset_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
+# python $DETECT_SCRIPT $TESTDATA_IMG_S_TESTSET $CLASSIFIER_DIR_S"/haar.gab.24x20s_side.xml" $LABELLED_DATA_DIR_S"/uiuc_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
+# python $DETECT_SCRIPT $TESTDATA_IMG_S_TESTSET $CLASSIFIER_DIR_S"/lbp1.gab.24x20s_side.xml" $LABELLED_DATA_DIR_S"/uiuc_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
+python $DETECT_SCRIPT $TESTDATA_IMG_S_TESTSET $CLASSIFIER_DIR_S"/lbp2.gab.24x20s_side.xml" $LABELLED_DATA_DIR_S"/uiuc_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
+# python $DETECT_SCRIPT $TESTDATA_IMG_S_TRAINSET $CLASSIFIER_DIR_S"/haar.gab.24x20s_side.xml" $LABELLED_DATA_DIR_S"/uiuc_trainset_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
+# python $DETECT_SCRIPT $TESTDATA_IMG_FB_TRAINSET $CLASSIFIER_DIR_FB"/haar.gab.24x20s_fb.xml" $LABELLED_DATA_DIR_FB"/trainingset_100.txt" $TEST_RESULTS_DIR_FB $TEST_RESULTS_DIR_FB $COLORSPACE 2 F
+
+
+
+
+
+
+############################################################
+# BELOW USED FOR DEBUGGING
+############################################################
+# echo "params used for Side Run: "
+# echo "DETECT_SCRIPT: $DETECT_SCRIPT"
+# echo "TESTDATA_IMG_S_TRAINSET: $TESTDATA_IMG_S_TRAINSET"
+# echo "CLASSIFIER_DIR_S: $CLASSIFIER_DIR_S/haar.gab.24x20s_side.xml"
+# echo "LABELLED_DATA_DIR_S: $LABELLED_DATA_DIR_S/uiuc_trainset_100.txt"
+# echo "TEST_RESULTS_DIR_S: $TEST_RESULTS_DIR_S"
+# echo "TEST_RESULTS_DIR_S: $TEST_RESULTS_DIR_S"
+# echo "where to save images: $TESTDATA_IMG_S_TRAINSET"
+# echo "where to save txt file results: $TESTDATA_IMG_S_TRAINSET"
+# echo "colorspace to used: $COLORSPACE"
+# echo "minneighbors used: 2"
+# echo "testtype: S"
+
+
+# echo "params used for Frontback run: "
+# echo "DETECT_SCRIPT: $DETECT_SCRIPT"
+# echo "TESTDATA_IMG_FB_TRAINSET: $TESTDATA_IMG_FB_TRAINSET"
+# echo "CLASSIFIER_DIR_FB the classifier: $CLASSIFIER_DIR_FB/haar.gab.24x20s_fb.xml"
+# echo "LABELLED_DATA_DIR_FB: $LABELLED_DATA_DIR_FB/uiuc_trainset_100.txt"
+# echo "TEST_RESULTS_DIR_FB: $TEST_RESULTS_DIR_FB"
+# echo "TEST_RESULTS_DIR_FB: $TEST_RESULTS_DIR_FB"
+# echo "where to save images: $TESTDATA_IMG_FB_TRAINSET"
+# echo "where to save txt file results: $TESTDATA_IMG_FB_TRAINSET"
+# echo "colorspace to used: $COLORSPACE"
+# echo "minneighbors used: 2"
+# echo "testtype: F"
+
+############################################################
+# TODO: write params to file for easier debugging.
+# testset_run=$DETECT_SCRIPT $TESTDATA_IMG_S_TESTSET $CLASSIFIER_DIR_S"/hog.gab.24x20s_side.xml" $LABELLED_DATA_DIR_S"/uiuc_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
+# trainset_run=$DETECT_SCRIPT $TESTDATA_IMG_S_TRAINSET $CLASSIFIER_DIR_S"/hog.gab.24x20s_side.xml" $LABELLED_DATA_DIR_S"/uiuc_trainset_100.txt" $TEST_RESULTS_DIR_S $TEST_RESULTS_DIR_S $COLORSPACE 2 S
+# python echo $testset_run
+# python echo $trainset_run
+
+
+# #get rid of any existing file (optional)
+# rm lastbatchrun_params.txt 2>/$PROJ_ROOT/lastbatchrun_params.txt
+# echo "testset_run_params = $testset_run" >>lastbatchrun_params.txt
+# echo "trainset_run_params = $trainset_run" >>lastbatchrun_params.txt
