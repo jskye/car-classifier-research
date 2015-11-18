@@ -344,6 +344,9 @@ for imagePath in images:
 		# not be ideal (eg. the car might be in the bottom part of hypothesis)
 		# so we check top/middle/bottom (or N proportioned sliding windows) etc.
 		# for the most similar (proportioned) window to the labelled car.
+		# TODO: actually this is a valid strategy for livedetectionmode if
+		# we just wish to guess the middle portion of the square hypothesis.
+		# because most of the time, the car is in the middle.
 
 		if classifier_type == "S" and not livedetectionmode and useslidingwindows:
 			# see if any proportioned sliding windows are better than hypothesis
@@ -356,7 +359,7 @@ for imagePath in images:
 			# # to the middle of the hypothesis. so for speed, its probably better
 			# #  to check those first,and then wont need to check rest if good enough.
 			# # but checking in turn will do for now.
-			for i in range(0,5):
+			for i in range(0,numwindows-1):
 				# print(i)
 
 				# we first consider when hypothesis bounds width of car.
@@ -379,11 +382,12 @@ for imagePath in images:
 					else:
 						color = (0, 0, 255)
 
-				# sliding window vertical position is based on detected height, window height and how many windows
-				if i ==(numwindows-1):
+				if i ==0:
+						# sliding window is in middle of hypothesis.
 						ySlidingWindow = int(round((detected_rectangle.getTopYCoord()) + detected_rectangle.getWidth() / 3))
-				else:
-					ySlidingWindow = (detected_rectangle.getTopYCoord()) + (detected_rectangle.getHeight()/numwindows)*i
+						slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow,heightSlidingWindow)
+						slidingWindows.append(slidingWindow)
+				ySlidingWindow = int(round((detected_rectangle.getTopYCoord()) + (detected_rectangle.getHeight()/numwindows)*i))
 				slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow,heightSlidingWindow)
 				slidingWindows.append(slidingWindow)
 				# print(slidingWindow)
@@ -536,7 +540,9 @@ for imagePath in images:
 			break_limit = 0.7
 			for slidingWindow in slidingWindows:
 				sw_comparison = CompareRectangles(slidingWindow,labelled_rectangle_to_compare, JI_THRESH)
-				sw_jaccard_index = rectangle_comparison.jaccard_index()
+				sw_jaccard_index = sw_comparison.jaccard_index()
+				if debugging:
+					print("hypothesis_JI: {0}, slidingwindow_JI: {1}".format(det_jaccard_index, sw_jaccard_index))
 				if sw_jaccard_index > break_limit and sw_jaccard_index > det_jaccard_index:
 					# update hypothesis
 					detected_rectangle = slidingWindow
@@ -544,6 +550,8 @@ for imagePath in images:
 					# update rectangle comparison
 					rectangle_comparison = CompareRectangles(detected_rectangle,labelled_rectangle_to_compare, JI_THRESH)
 					# break loop cos we dont wanna waste computation/time
+					if debugging:
+						print("this sliding window is significantly better, confident is car, stop looking")
 					break
 				# if not awesome similar but still better
 				elif sw_jaccard_index < break_limit and sw_jaccard_index > det_jaccard_index:
@@ -553,7 +561,11 @@ for imagePath in images:
 						det_jaccard_index = sw_jaccard_index
 						# update rectangle comparison
 						rectangle_comparison = CompareRectangles(detected_rectangle,labelled_rectangle_to_compare, JI_THRESH)
-				else: # we continue looking for better hypothesis in slidingwindows
+						if debugging:
+							print("this sliding window is somewhat better, keep looking")
+				else: # JI not better, we continue looking for better hypothesis in slidingwindows
+					if debugging:
+						print("JI not better")
 					continue
 
 
@@ -575,7 +587,12 @@ for imagePath in images:
 			if debugging:
 				print('rectangles ARE jaccard similar')
 			# print true positive in blue
-			cv2.rectangle(colorCVT, (detx, dety), (detx+detectedWidth, dety+detectedHeight), (0, 255, 0), 2)
+			cv2.rectangle(colorCVT,
+			(detected_rectangle.getLeftXCoord(),
+			 detected_rectangle.getTopYCoord()),
+			 (detected_rectangle.getLeftXCoord()+detected_rectangle.getWidth(),
+			  detected_rectangle.getTopYCoord()+detected_rectangle.getHeight()),
+			   (0, 255, 0), 2)
 			# cv2.rectangle(colorCVT, (0,0), (1,1), (0,0,255),2)
 			img_True_positives +=1
 			# break

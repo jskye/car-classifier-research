@@ -3,7 +3,8 @@ from PIL import Image
 import os, sys
 import glob
 import cv2
-from Rectangle import Rectangle
+sys.path.append('..')
+from py.Rectangle import Rectangle
 from scipy import misc
 import numpy as np
 import os.path
@@ -34,39 +35,49 @@ else:
 def testSlide(image):
 	detected_rectangle = Rectangle(50,50,150,150)
 	print("detected_rectangle:" +str(detected_rectangle))
+	color = (255, 0, 0)
 	cv2.rectangle(image, (detected_rectangle.getLeftXCoord(), detected_rectangle.getTopYCoord()), (detected_rectangle.getLeftXCoord()+detected_rectangle.getWidth(), detected_rectangle.getTopYCoord()+detected_rectangle.getHeight()), (255, 0, 0), -1)
 		# copy the detected rectangle
 		# we use a deep copy because our Rectangle contain a Point.
 		# detected_rectangle_copy = copy.deepcopy(detected_rectangle)
 		# now we make N prop. windows
 
+	debugging = True
 	numwindows = 5
 	heightWidthRatioCar = 2.5
+	slidingWindows = []
 
-	# this can be potentially fixed up abit more. overlap wrt hypothesis.
-	# but will do for now.
-	for i in range(0,5):
-		print(i)
-		# height of sliding window is height of avg car based on width of hypo. rectangle
+	# # TODO: in most cases, the better slidingwindow is probably closest
+	# # to the middle of the hypothesis. so for speed, its probably better
+	# #  to check those first,and then wont need to check rest if good enough.
+	# # but checking in turn will do for now.
+	for i in range(0,numwindows-1):
+		# print(i)
 
+		# we first consider when hypothesis bounds width of car.
+		# but height is too big to get valid comparison.
+		# in this case, height is a portion of the hypothesis height.
+
+		# keeping width constant, define new height of hypothesis window
 		heightSlidingWindow = int(round(detected_rectangle.getWidth() / heightWidthRatioCar))
+		# width defaults to same
 		widthSlidingWindow = detected_rectangle.getWidth()
 		xSlidingWindow = detected_rectangle.getLeftXCoord()
 
-		# alternate printing color and stagger
-		if i ==(numwindows-1):
-			color = (0, 255, 0)
-			#stagger
-			# xSlidingWindow = detected_rectangle.getLeftXCoord() - 50
-		else:
-			color = (0, 0, 255)
 
-		if i ==(numwindows-1):
+		color = (0, 0, 255)
+
+		if i ==0:
+				color = (0, 255, 0)
+				# sliding window is in middle of hypothesis.
 				ySlidingWindow = int(round((detected_rectangle.getTopYCoord()) + detected_rectangle.getWidth() / 3))
-		else:
-			ySlidingWindow = (detected_rectangle.getTopYCoord()) + (detected_rectangle.getHeight()/numwindows)*i
+				slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow,heightSlidingWindow)
+				slidingWindows.append(slidingWindow)
+				cv2.rectangle(image, (slidingWindow.getLeftXCoord(), slidingWindow.getTopYCoord()), (slidingWindow.getLeftXCoord()+slidingWindow.getWidth(), slidingWindow.getTopYCoord()+slidingWindow.getHeight()), color, 1)
+		ySlidingWindow = (detected_rectangle.getTopYCoord()) + (detected_rectangle.getHeight()/numwindows)*i
 		slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow,heightSlidingWindow)
-		print(slidingWindow)
+		slidingWindows.append(slidingWindow)
+		# print(slidingWindow)
 		#print the sliding window
 		cv2.rectangle(image, (slidingWindow.getLeftXCoord(), slidingWindow.getTopYCoord()), (slidingWindow.getLeftXCoord()+slidingWindow.getWidth(), slidingWindow.getTopYCoord()+slidingWindow.getHeight()), color, 1)
 
@@ -87,8 +98,8 @@ def testSlide(image):
 	# new y is same
 	ySlidingWindow = detected_rectangle.getTopYCoord()
 	slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow, heightSlidingWindow)
-	print(slidingWindow)
-	# slidingWindows.append(slidingWindow)
+	# print(slidingWindow)
+	slidingWindows.append(slidingWindow)
 	cv2.rectangle(image, (slidingWindow.getLeftXCoord(), slidingWindow.getTopYCoord()), (slidingWindow.getLeftXCoord()+slidingWindow.getWidth(), slidingWindow.getTopYCoord()+slidingWindow.getHeight()), color, 1)
 
 testSlide(image)
