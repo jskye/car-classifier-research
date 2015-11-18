@@ -8,8 +8,13 @@
 # SPECIFYING COMMON VARS USED FOR TESTRUNS
 ############################################################
 
-# PROJ_ROOT="/Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research"
-PROJ_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# PROJ_ROOT gives path to the shell script.
+# PROJ_ROOT="car-classifier-research/src/hyp.verification.tools/
+# PROJ_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # this gets path to script
+
+# PROJ_ROOT gives path to the git home.
+# PROJ_ROOT="car-classifier-research
+PROJ_ROOT="$( git rev-parse --show-toplevel )"
 
 # the detection script to use
 DETECT_SCRIPT=$PROJ_ROOT"/src/hyp.verification.tools/py/detect.py"

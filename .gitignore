@@ -16,3 +16,5 @@ src/hyp.verification.tools/py/CompareRectangles.pyc
 src/hyp.verification.tools/py/Line.pyc
 
 src/hyp.verification.tools/py/Point.pyc
+
+*.pyc

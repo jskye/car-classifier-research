@@ -116,6 +116,8 @@ else:
 debugging = False
 # for running live detection or testing how long detection takes.
 livedetectionmode = False
+# whether to use sliding windows when testing sides and comparing against groundtruths.
+useslidingwindows = True
 
 # keep a list of detection times.
 detectiontime_list = []
@@ -343,7 +345,7 @@ for imagePath in images:
 		# so we check top/middle/bottom (or N proportioned sliding windows) etc.
 		# for the most similar (proportioned) window to the labelled car.
 
-		if classifier_type == "S" and not livedetectionmode:
+		if classifier_type == "S" and not livedetectionmode and useslidingwindows:
 			# see if any proportioned sliding windows are better than hypothesis
 
 			numwindows = 5
@@ -530,7 +532,7 @@ for imagePath in images:
 		# get the jaccard index (used later on)
 		det_jaccard_index = rectangle_comparison.jaccard_index()
 		# get jaccard index of comparisons with the sliding windows.
-		if classifier_type = "S":
+		if classifier_type == "S" and useslidingwindows:
 			break_limit = 0.7
 			for slidingWindow in slidingWindows:
 				sw_comparison = CompareRectangles(slidingWindow,labelled_rectangle_to_compare, JI_THRESH)
@@ -539,19 +541,23 @@ for imagePath in images:
 					# update hypothesis
 					detected_rectangle = slidingWindow
 					det_jaccard_index = sw_jaccard_index
+					# update rectangle comparison
+					rectangle_comparison = CompareRectangles(detected_rectangle,labelled_rectangle_to_compare, JI_THRESH)
 					# break loop cos we dont wanna waste computation/time
 					break
 				# if not awesome similar but still better
-			elif sw_jaccard_index < break_limit and sw_jaccard_index > det_jaccard_index:
-					# update but dont break, so check others.
-					# update hypothesis
-					detected_rectangle = slidingWindow
-					det_jaccard_index = sw_jaccard_index
-			else: # we continue looking for better hypothesis in slidingwindows
-				continue
+				elif sw_jaccard_index < break_limit and sw_jaccard_index > det_jaccard_index:
+						# update but dont break, so check others.
+						# update hypothesis
+						detected_rectangle = slidingWindow
+						det_jaccard_index = sw_jaccard_index
+						# update rectangle comparison
+						rectangle_comparison = CompareRectangles(detected_rectangle,labelled_rectangle_to_compare, JI_THRESH)
+				else: # we continue looking for better hypothesis in slidingwindows
+					continue
 
-		# update rectangle comparison
-		rectangle_comparison = CompareRectangles(detected_rectangle,labelled_rectangle_to_compare, JI_THRESH)
+
+
 		# determine if rectangles similar, using the Jaccard threshold if its set.
 		jaccard_similar = rectangle_comparison.similar_rectangles()
 
@@ -575,8 +581,8 @@ for imagePath in images:
 			# break
 
 
-		detectionend_time = time.time()
-		detectiontime = detection_starttime-detection_endtime
+		detection_endtime = time.time()
+		detectiontime = detection_endtime-detection_starttime
 		if debugging:
 			print("detection and printing hypthesese to screen took: "+str(detectiontime))
 		detectiontime_list.append(detectiontime)
@@ -663,7 +669,7 @@ with open(outputDestination, 'a') as results:
 	# average detection time
 	adt = np.mean(detectiontime_list)
 
-	results.write("Average Detection Time: {0} \n".format(adt))
+	results.write("ADT: {0:.2f} seconds \n".format(adt))
 	results.write("TPR: {0} \n".format(tpr))
 	results.write("FPR: {0} \n".format(fpr))
 	results.write("PPV: {0} \n".format(PPV))
@@ -675,8 +681,22 @@ with open(outputDestination, 'a') as results:
 	results.write("\n")
 results.close()
 
-# print('total objects deteced: '+total_objects_detected)
-print("finished detection")
+print("Total labelled objects: {0}".format(total_labelled_objects))
+print("\n")
+print("Total objects detected: {0}".format(total_objects_detected))
+print("\n")
+print("Total TP:{0}, Total FP: {1}, Total FN: {2}".format(tot_True_positives, tot_False_positives, tot_False_neg))
+print("\n")
+# print("Detection Times: {0} \n".format(str(detectiontime_list)))
+print("Average Time to detect hypotheses per image: {0:.2f} seconds \n".format(adt))
+print("TPR: {0} \n".format(tpr))
+print("FPR: {0} \n".format(fpr))
+print("PPV: {0} \n".format(PPV))
+print("LR+: {0} \n".format(LRPlus))
+print("Precision: {0} \n".format(precision))
+print("Recall: {0} \n".format(recall))
+print("Harmonic Mean: {0} \n".format(harmonic_mean))
+print("finished detection and evaluation")
 print("=================================================================")
 	# cv2.imshow("Found {0} objects!".format(len(objects)), colorCVT)
 	# cv2.waitKey(0)
