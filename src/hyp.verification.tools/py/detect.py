@@ -351,7 +351,7 @@ for imagePath in images:
 		if classifier_type == "S" and not livedetectionmode and useslidingwindows:
 			# see if any proportioned sliding windows are better than hypothesis
 
-			numwindows = 5
+			# numwindows = 5
 
 			# 1.5-2.5 seems to give very similar results.
 			heightWidthRatioCar = 2.5
