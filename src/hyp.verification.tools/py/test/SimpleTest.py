@@ -71,7 +71,7 @@ class SimpleTest(object):
         print("\n")
 
     def printImage(self,r1,r2):
-        filepath = "/Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/src/hyp.verification.tools/py/test.png"
+        filepath = "/Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/src/hyp.verification.tools/py/test/testcoord.png"
         if os.path.exists(filepath):
             image = cv2.imread(filepath)
         else:
@@ -261,13 +261,13 @@ print("---------------------------------")
 # test_instance.test(r1,r2)
 
 
-print("---------------------------------")
-print("case:error. ")
-print("---------------------------------")
-r1 = Rectangle(114, 52, 57, 23)
-r2 = Rectangle(75, 52, 84, 23)
-test_instance.printImage(r1,r2)
-test_instance.test(r1,r2)
+# print("---------------------------------")
+# print("case:error. ")
+# print("---------------------------------")
+# r1 = Rectangle(114, 52, 57, 23)
+# r2 = Rectangle(75, 52, 84, 23)
+# test_instance.printImage(r1,r2)
+# test_instance.test(r1,r2)
 
 
 
