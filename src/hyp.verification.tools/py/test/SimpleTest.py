@@ -1,9 +1,10 @@
 __author__ = 'juliusskye'
 
-from Rectangle import Rectangle
-from CompareRectangles import CompareRectangles
-from PIL import Image
 import os, sys
+sys.path.append('..')
+from py.Rectangle import Rectangle
+from py.CompareRectangles import CompareRectangles
+from PIL import Image
 import glob
 import cv2
 from scipy import misc
@@ -51,10 +52,10 @@ class SimpleTest(object):
 
     def test(self, r1, r2):
 
-        # print("Rectangle r1: ["+str(r1.getLeftXCoord())+", "+str(r1.getTopYCoord())+", "+ \
-        # str(r1.getWidth())+", " + str(r1.getHeight())+"]"+" | Area(r1): "+str(r1.area()))
-        # print("Rectangle r2: ["+str(r2.getLeftXCoord())+", "+str(r2.getTopYCoord())+", "+ \
-        # str(r2.getWidth())+", " + str(r2.getHeight())+"]"+" | Area(r2): "+str(r2.area()))
+        print("Rectangle r1: ["+str(r1.getLeftXCoord())+", "+str(r1.getTopYCoord())+", "+ \
+        str(r1.getWidth())+", " + str(r1.getHeight())+"]"+" | Area(r1): "+str(r1.area()))
+        print("Rectangle r2: ["+str(r2.getLeftXCoord())+", "+str(r2.getTopYCoord())+", "+ \
+        str(r2.getWidth())+", " + str(r2.getHeight())+"]"+" | Area(r2): "+str(r2.area()))
         compare_rects = CompareRectangles(r1,r2, 0.35)
         # if compare_rects.rect_intersection() is not None:
         #     print("overlapping/intersection area: "+str(compare_rects.area_intersection()))
@@ -251,13 +252,24 @@ print("---------------------------------")
 # test_instance.test(r1,r2)
 
 
+# print("---------------------------------")
+# print("case:error. ")
+# print("---------------------------------")
+# r1 = Rectangle(133, 67, 24, 24)
+# r2 = Rectangle(137, 32, 30, 19)
+# test_instance.printImage(r1,r2)
+# test_instance.test(r1,r2)
+
+
 print("---------------------------------")
-print("case:error. leftest.right is none")
+print("case:error. ")
 print("---------------------------------")
-r1 = Rectangle(133, 67, 24, 24)
-r2 = Rectangle(137, 32, 30, 19)
+r1 = Rectangle(114, 52, 57, 23)
+r2 = Rectangle(75, 52, 84, 23)
 test_instance.printImage(r1,r2)
 test_instance.test(r1,r2)
+
+
 
 
 # print(test_instance.simple_contains())

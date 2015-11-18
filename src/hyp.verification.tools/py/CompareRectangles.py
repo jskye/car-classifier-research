@@ -79,7 +79,7 @@ class CompareRectangles(object):
 			self.r1.getBottomYCoord()==self.r2.getBottomYCoord():
 			if self.debugging:
 				print("rects are horiz. parra")
-				return True
+			return True
 		else:
 			if self.debugging:
 				print("rects are not horiz. parra")
@@ -245,7 +245,9 @@ class CompareRectangles(object):
 			print("lowest rect is: "+str(self.rect_lowest()))
 			print("highest rect bottomY: "+str(self.rect_highest().getBottomYCoord()))
 			print("lowest rect topY: "+str(self.rect_lowest().getTopYCoord()))
-		if self.rect_highest() is not None and self.rect_lowest() is not None and \
+		if not self.vert_parrallel() and not self.horiz_parallel() and \
+			self.rect_highest() is not None and \
+			self.rect_lowest() is not None and \
 			self.rect_highest().getBottomYCoord() <= self.rect_lowest().getTopYCoord():
 			if self.debugging:
 				print("they dont y overlap")
@@ -686,10 +688,13 @@ class CompareRectangles(object):
 
 		vert_tests = [self.b0, self.b1]
 		horiz_tests = [self.b2, self.b3]
+
 		# print('vert tests'+ str(vert_tests))
 		# print('horiz tests'+ str(horiz_tests))
-		if sum(vert_tests)==0 and sum(horiz_tests)==0 and not self.equals() \
-			and not self.vert_parrallel() and not self.horiz_parallel():
+		# if not any(horiz_tests) and not any(vert_tests) and \
+		if sum(vert_tests)==0 and sum(horiz_tests)==0 and not self.equals() and \
+			not self.vert_parrallel() and not self.horiz_parallel():
+			print("is_nocontainment_notparrallel_overlap true, not self.horiz_parallel() true ")
 			return True
 		else:
 			return False

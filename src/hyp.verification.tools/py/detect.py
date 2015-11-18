@@ -367,6 +367,7 @@ for imagePath in images:
 			ySlidingWindow = int(round((detected_rectangle.getTopYCoord()) + detected_rectangle.getWidth() / 3))
 			slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow,heightSlidingWindow)
 			slidingWindows.append(slidingWindow)
+			# print(slidingWindow)
 
 
 			# deprecated: its not really valid to use the best slidingwindow
@@ -556,6 +557,7 @@ for imagePath in images:
 			break_limit = 0.7
 			for slidingWindow in slidingWindows:
 				sw_comparison = CompareRectangles(slidingWindow,labelled_rectangle_to_compare, JI_THRESH)
+				print("slidingwindow: {0} vs labelrect: {1}, JITHRESH:{2}".format(slidingWindow, labelled_rectangle_to_compare, JI_THRESH))
 				sw_jaccard_index = sw_comparison.jaccard_index()
 				if debugging:
 					print("hypothesis_JI: {0}, slidingwindow_JI: {1}".format(det_jaccard_index, sw_jaccard_index))
@@ -729,6 +731,14 @@ print("LR+: {0} \n".format(LRPlus))
 print("Precision: {0} \n".format(precision))
 print("Recall: {0} \n".format(recall))
 print("Harmonic Mean: {0} \n".format(harmonic_mean))
+
+
+with open(outputLogDir+"varyneighbors/{0}.txt".format(cascadeNameMinusEx), 'a') as results:
+	results.write("{0}\t".format(min_neighbors))
+	results.write("{0:.2f}\t".format(precision))
+	results.write("{0:.2f}\t".format(recall))
+	results.write("{0:.2f}\t".format(harmonic_mean))
+	results.write("{0:.2f}\n".format(adt))
 print("finished detection and evaluation")
 print("=================================================================")
 	# cv2.imshow("Found {0} objects!".format(len(objects)), colorCVT)
