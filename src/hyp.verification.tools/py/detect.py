@@ -352,68 +352,84 @@ for imagePath in images:
 			# see if any proportioned sliding windows are better than hypothesis
 
 			numwindows = 5
+
+			# 1.5-2.5 seems to give very similar results.
 			heightWidthRatioCar = 2.5
 			slidingWindows = []
 
-			# # TODO: in most cases, the better slidingwindow is probably closest
-			# # to the middle of the hypothesis. so for speed, its probably better
-			# #  to check those first,and then wont need to check rest if good enough.
-			# # but checking in turn will do for now.
-			for i in range(0,numwindows-1):
-				# print(i)
 
-				# we first consider when hypothesis bounds width of car.
-				# but height is too big to get valid comparison.
-				# in this case, height is a portion of the hypothesis height.
+			# keeping width constant, define new height of hypothesis window
+			heightSlidingWindow = int(round(detected_rectangle.getWidth() / heightWidthRatioCar))
+			# width defaults to same
+			widthSlidingWindow = detected_rectangle.getWidth()
+			xSlidingWindow = detected_rectangle.getLeftXCoord()
+			# sliding window is in middle of hypothesis.
+			ySlidingWindow = int(round((detected_rectangle.getTopYCoord()) + detected_rectangle.getWidth() / 3))
+			slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow,heightSlidingWindow)
+			slidingWindows.append(slidingWindow)
 
-				# keeping width constant, define new height of hypothesis window
-				heightSlidingWindow = int(round(detected_rectangle.getWidth() / heightWidthRatioCar))
-				# width defaults to same
-				widthSlidingWindow = detected_rectangle.getWidth()
-				xSlidingWindow = detected_rectangle.getLeftXCoord()
 
-				# print windows when debugging.
-				if debugging:
-					# alternate printing color and stagger
-					if i ==(numwindows-1):
-						color = (0, 255, 0)
-						#stagger
-						# xSlidingWindow = detected_rectangle.getLeftXCoord() - 50
-					else:
-						color = (0, 0, 255)
-
-				if i ==0:
-						# sliding window is in middle of hypothesis.
-						ySlidingWindow = int(round((detected_rectangle.getTopYCoord()) + detected_rectangle.getWidth() / 3))
-						slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow,heightSlidingWindow)
-						slidingWindows.append(slidingWindow)
-				ySlidingWindow = int(round((detected_rectangle.getTopYCoord()) + (detected_rectangle.getHeight()/numwindows)*i))
-				slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow,heightSlidingWindow)
-				slidingWindows.append(slidingWindow)
+			# deprecated: its not really valid to use the best slidingwindow
+			# in testing but only have the ability to choose a middle one live.
+			# for i in range(0,numwindows-1):
+			# 	# print(i)
+			#
+			# 	# we first consider when hypothesis bounds width of car.
+			# 	# but height is too big to get valid comparison.
+			# 	# in this case, height is a portion of the hypothesis height.
+			#
+			# 	# keeping width constant, define new height of hypothesis window
+			# 	heightSlidingWindow = int(round(detected_rectangle.getWidth() / heightWidthRatioCar))
+			# 	# width defaults to same
+			# 	widthSlidingWindow = detected_rectangle.getWidth()
+			# 	xSlidingWindow = detected_rectangle.getLeftXCoord()
+			#
+			# 	# print windows when debugging.
+			# 	if debugging:
+			# 		# alternate printing color and stagger
+			# 		if i ==(numwindows-1):
+			# 			color = (0, 255, 0)
+			# 			#stagger
+			# 			# xSlidingWindow = detected_rectangle.getLeftXCoord() - 50
+			# 		else:
+			# 			color = (0, 0, 255)
+			#
+			# 	if i ==0:
+			# 			# sliding window is in middle of hypothesis.
+			# 			ySlidingWindow = int(round((detected_rectangle.getTopYCoord()) + detected_rectangle.getWidth() / 3))
+			# 			slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow,heightSlidingWindow)
+			# 			slidingWindows.append(slidingWindow)
+			# 	ySlidingWindow = int(round((detected_rectangle.getTopYCoord()) + (detected_rectangle.getHeight()/numwindows)*i))
+			# 	slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow,heightSlidingWindow)
+			# 	slidingWindows.append(slidingWindow)
 				# print(slidingWindow)
 				#print the sliding window
 				# cv2.rectangle(image, (slidingWindow.getLeftXCoord(), slidingWindow.getTopYCoord()), (slidingWindow.getLeftXCoord()+slidingWindow.getWidth(), slidingWindow.getTopYCoord()+slidingWindow.getHeight()), color, 1)
 
 
-			# we also consider the car proportioned sliding window that bounds
-			# the hypothesis vertically but not horizontally
-			# so we scale width to potentially bound it horizontally too.
-			# and update the hypothesis if that gets a better comparison.
-
-			# height remains constant.
-			heightSlidingWindow = detected_rectangle.getHeight()
-			# width gets scaled according to car ratio.
-			widthSlidingWindow = int(round(detected_rectangle.getWidth()*heightWidthRatioCar))
-			# new x is current x - overhang
-			overhang_percentage = (heightWidthRatioCar-1)/2
-			overhang = detected_rectangle.getWidth()*overhang_percentage
-			xSlidingWindow = int(round((detected_rectangle.getLeftXCoord() - overhang)))
-			# new y is same
-			ySlidingWindow = detected_rectangle.getTopYCoord()
-			slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow, heightSlidingWindow)
-			# print(slidingWindow)
-			slidingWindows.append(slidingWindow)
-			# cv2.rectangle(image, (slidingWindow.getLeftXCoord(), slidingWindow.getTopYCoord()), (slidingWindow.getLeftXCoord()+slidingWindow.getWidth(), slidingWindow.getTopYCoord()+slidingWindow.getHeight()), color, 1)
+			# # the validity of having another guess based on proportion depends on use case.
+			# # extending width deprecated:
+ 		# 	# could make new Hypo inaccurate if initial Hyp was bounding the width tightly.
+			#
+			# # the car proportioned sliding window that bounds
+			# # the hypothesis vertically but not horizontally
+			# # so we scale width to potentially bound it horizontally too.
+			# # and update the hypothesis if that gets a better comparison.
+			#
+			# # height remains constant.
+			# heightSlidingWindow = detected_rectangle.getHeight()
+			# # width gets scaled according to car ratio.
+			# widthSlidingWindow = int(round(detected_rectangle.getWidth()*heightWidthRatioCar))
+			# # new x is current x - overhang
+			# overhang_percentage = (heightWidthRatioCar-1)/2
+			# overhang = detected_rectangle.getWidth()*overhang_percentage
+			# xSlidingWindow = int(round((detected_rectangle.getLeftXCoord() - overhang)))
+			# # new y is same
+			# ySlidingWindow = detected_rectangle.getTopYCoord()
+			# slidingWindow = Rectangle(xSlidingWindow, ySlidingWindow, widthSlidingWindow, heightSlidingWindow)
+			# # print(slidingWindow)
+			# slidingWindows.append(slidingWindow)
+			# # cv2.rectangle(image, (slidingWindow.getLeftXCoord(), slidingWindow.getTopYCoord()), (slidingWindow.getLeftXCoord()+slidingWindow.getWidth(), slidingWindow.getTopYCoord()+slidingWindow.getHeight()), color, 1)
 
 
 		if debugging:
