@@ -694,7 +694,8 @@ class CompareRectangles(object):
 		# if not any(horiz_tests) and not any(vert_tests) and \
 		if sum(vert_tests)==0 and sum(horiz_tests)==0 and not self.equals() and \
 			not self.vert_parrallel() and not self.horiz_parallel():
-			print("is_nocontainment_notparrallel_overlap true, not self.horiz_parallel() true ")
+			if self.debugging:
+				print("is_nocontainment_notparrallel_overlap true, not self.horiz_parallel() true ")
 			return True
 		else:
 			return False

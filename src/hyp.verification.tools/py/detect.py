@@ -127,6 +127,27 @@ tot_True_positives = 0
 tot_False_positives = 0
 tot_False_neg = 0
 
+# set noisy boolean based on image dir path.
+# also set dataset based on image directory path
+# either 4 chars till the 4th from the right or 4 till the 10th when noisy.
+# "trai<ning>set/" or "trai<ning>set.noisy/"
+# we couldve just passed a code in. but were already using alot of params.
+noisytest = False
+print(imageDir)
+if imageDir[-6:] == "noisy/":
+	print("noisy")
+	noisytest = True
+	dataset = imageDir[-14:-10]
+else:
+	dataset = imageDir[-8:-4]
+if dataset == "ning":
+	dataset = "training"
+elif dataset == "test":
+	dataset = "test"
+elif dataset == "main": #publicdo<main>
+	dataset = "pd"
+
+
 testset = os.path.basename(imageDir[:-1])
 # cwd = os.path.dirname(os.path.realpath(cascadePath))
 
@@ -557,7 +578,8 @@ for imagePath in images:
 			break_limit = 0.7
 			for slidingWindow in slidingWindows:
 				sw_comparison = CompareRectangles(slidingWindow,labelled_rectangle_to_compare, JI_THRESH)
-				print("slidingwindow: {0} vs labelrect: {1}, JITHRESH:{2}".format(slidingWindow, labelled_rectangle_to_compare, JI_THRESH))
+				if debugging:
+					print("slidingwindow: {0} vs labelrect: {1}, JITHRESH:{2}".format(slidingWindow, labelled_rectangle_to_compare, JI_THRESH))
 				sw_jaccard_index = sw_comparison.jaccard_index()
 				if debugging:
 					print("hypothesis_JI: {0}, slidingwindow_JI: {1}".format(det_jaccard_index, sw_jaccard_index))
@@ -658,6 +680,7 @@ for imagePath in images:
 
 
 
+
 # print("Total objects detected: {0}".format(len(objects)))
 with open(outputDestination, 'a') as results:
 	results.write("Total labelled objects: {0}".format(total_labelled_objects))
@@ -702,7 +725,10 @@ with open(outputDestination, 'a') as results:
 	harmonic_mean = ((precision*recall) / (precision+recall+delta))*2
 
 	# average detection time
-	adt = np.mean(detectiontime_list)
+	if len(detectiontime_list) != 0:
+		adt = np.mean(detectiontime_list)
+	else:
+		 adt = 0.0
 
 	results.write("ADT: {0:.2f} seconds \n".format(adt))
 	results.write("TPR: {0} \n".format(tpr))
@@ -732,8 +758,12 @@ print("Precision: {0} \n".format(precision))
 print("Recall: {0} \n".format(recall))
 print("Harmonic Mean: {0} \n".format(harmonic_mean))
 
+if noisytest:
+	varyoutputfile = outputLogDir+"varyneighbors/{0}.{1}.noisy.txt".format(cascadeNameMinusEx, dataset)
+else:
+	varyoutputfile = outputLogDir+"varyneighbors/{0}.{1}.txt".format(cascadeNameMinusEx, dataset)
 
-with open(outputLogDir+"varyneighbors/{0}.txt".format(cascadeNameMinusEx), 'a') as results:
+with open(varyoutputfile, 'a') as results:
 	results.write("{0}\t".format(min_neighbors))
 	results.write("{0:.2f}\t".format(precision))
 	results.write("{0:.2f}\t".format(recall))

@@ -10,5 +10,10 @@
 # sw_jaccard_index = 100
 # print("hypothesis_JI: {0}, slidingwindow_JI: {1}".format(det_jaccard_index, sw_jaccard_index))
 
-x=[0,0,0,1]
-print(not any(x))
+# x=[0,0,0,1]
+# print(not any(x))
+
+imageDir = "this.noisy"
+if imageDir[-5:] == "noisy":
+	noisytest = True
+	print("noisytest: "+str(noisytest))
