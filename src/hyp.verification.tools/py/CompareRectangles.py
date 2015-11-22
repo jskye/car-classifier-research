@@ -239,21 +239,21 @@ class CompareRectangles(object):
 	#       this may already be fixed.
 	# returns True if rectangles have an y gap (dont have to be y parralel)
 	def dont_y_overlap(self):
-		if self.debugging:
+		if self.basicdebugging:
 			print("testing if they dont y overlap")
 			print("highest rect is: "+str(self.rect_highest()))
 			print("lowest rect is: "+str(self.rect_lowest()))
 			print("highest rect bottomY: "+str(self.rect_highest().getBottomYCoord()))
 			print("lowest rect topY: "+str(self.rect_lowest().getTopYCoord()))
-		if not self.vert_parrallel() and not self.horiz_parallel() and \
+		if not self.horiz_parallel() and \
 			self.rect_highest() is not None and \
 			self.rect_lowest() is not None and \
 			self.rect_highest().getBottomYCoord() <= self.rect_lowest().getTopYCoord():
-			if self.debugging:
+			if self.basicdebugging:
 				print("they dont y overlap")
 			return True
 		else:
-			if self.debugging:
+			if self.basicdebugging:
 				print("they do y overlap")
 			return False
 
@@ -823,7 +823,10 @@ class CompareRectangles(object):
 				print("union before division: " + str(self.area_union()))
 			jaccard_index = (self.area_intersection() / self.area_union())
 			if(jaccard_index > 1.0):
+				print(self.r1)
+				print(self.r2)
 				raise Exception('JI > 1.0')
+				exit()
 			return jaccard_index
 		else:
 			return None

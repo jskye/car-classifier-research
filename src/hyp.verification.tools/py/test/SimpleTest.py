@@ -10,6 +10,7 @@ import cv2
 from scipy import misc
 import numpy as np
 import os.path
+import time
 
 class SimpleTest(object):
 
@@ -71,7 +72,7 @@ class SimpleTest(object):
         print("\n")
 
     def printImage(self,r1,r2):
-        filepath = "/Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/src/hyp.verification.tools/py/test/testcoord.png"
+        filepath = "/Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/src/hyp.verification.tools/py/test/testcoord"+str(time.time())+".png"
         if os.path.exists(filepath):
             image = cv2.imread(filepath)
         else:
@@ -266,6 +267,16 @@ print("---------------------------------")
 # print("---------------------------------")
 # r1 = Rectangle(114, 52, 57, 23)
 # r2 = Rectangle(75, 52, 84, 23)
+# test_instance.printImage(r1,r2)
+# test_instance.test(r1,r2)
+
+
+# # they intersect and shouldnt. fixed.
+# print("---------------------------------")
+# print("case:JI>1. ")
+# print("---------------------------------")
+# r1 = Rectangle(69, 18, 46, 46)
+# r2 = Rectangle(69, 73, 46, 55)
 # test_instance.printImage(r1,r2)
 # test_instance.test(r1,r2)
 
