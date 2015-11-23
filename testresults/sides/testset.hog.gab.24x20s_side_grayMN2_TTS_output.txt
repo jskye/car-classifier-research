@@ -2,413 +2,414 @@
 Batch Detection results 
 *********************************
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-00.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-01.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 3, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-02.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-03.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-04.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-05.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-06.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-07.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-08.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-09.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-10.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-11.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-12.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-13.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-14.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-15.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 3
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:3, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-16.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-17.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-18.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-19.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 4
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:3, FP: 3, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-20.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 4
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-21.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-22.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-23.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-24.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-25.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-26.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-27.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 3
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-28.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-29.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 3
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-30.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-31.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-32.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-33.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-34.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
 TP:0, FP: 0, FN: 2
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-35.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-36.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-37.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 4, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-38.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-39.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-40.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 5, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-41.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-42.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
 TP:0, FP: 0, FN: 1
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-43.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:0, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-44.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:0, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-45.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-46.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-47.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
 TP:0, FP: 0, FN: 1
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-48.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-49.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-50.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-51.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-52.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-53.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-54.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-55.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-56.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-57.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-58.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-59.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-60.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-61.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:0, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-62.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-63.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-64.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-65.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 3
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-66.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-67.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-68.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-69.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-70.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-71.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-72.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-73.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-74.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:0, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-75.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-76.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-77.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-78.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-79.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-80.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-81.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 3, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-82.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-83.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:0, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-84.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-85.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-86.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 3
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-87.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 3
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:0, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-88.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-89.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 3
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-90.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-91.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-92.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-93.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-94.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-95.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 1
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 0, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-96.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 1, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-97.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 2, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-98.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:2, FP: 3, FN: 0
 
 Running detection on image:  /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/testdata/sides/testset/test-99.jpg
-Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/frontbacks/hog.gab.24x20s_side.xml
-TP:0, FP: 0, FN: 2
+Detecting using trained classifier: /Users/juliusskye/COMP4120.Car.Detection.Research/car-classifier-research/trained_classifiers/sides/hog.gab.24x20s_side.xml
+TP:1, FP: 1, FN: 0
 
 Total labelled objects: 100
-Total objects detected: 0
-Total TP:0, Total FP: 0, Total FN: 154
-TPR: 0.0 
-FPR: 0.0 
-PPV: None 
-LR+: None 
-Precision: 0.0 
-Recall: 0.0 
-Harmonic Mean: 0.0 
+Total objects detected: 204
+Total TP:114, Total FP: 90, Total FN: 4
+ADT: 0.08 seconds 
+TPR: 1.14 
+FPR: 0.9 
+PPV: 0.558823529412 
+LR+: 1.26666666667 
+Precision: 0.558823255479 
+Recall: 0.966100876186 
+Harmonic Mean: 0.70802766401 
 

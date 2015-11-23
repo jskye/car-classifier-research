@@ -141,14 +141,17 @@ if imageDir[-6:] == "noisy/":
 	dataset = imageDir[-14:-10]
 else:
 	dataset = imageDir[-8:-4]
-if dataset == "ning":
+
+
+if dataset == "ning" or dataset=="focu": #training or training.focused
 	dataset = "training"
 elif dataset == "test":
 	dataset = "test"
 elif dataset == "main": #publicdo<main>
 	dataset = "pd"
-
-
+# print(dataset)
+# print(noisytest)
+# exit()
 testset = os.path.basename(imageDir[:-1])
 # cwd = os.path.dirname(os.path.realpath(cascadePath))
 
@@ -304,7 +307,7 @@ for imagePath in images:
 	# get rid of hypotheses that are contained inside others
 	# because ... there shouldnt be a car within a car...
 	detected_objects_clone = detected_objects
-	print(detected_objects_clone)
+	# print(detected_objects_clone)
 
 
 	# get rid of hypotheses that are contained inside others
@@ -347,11 +350,13 @@ for imagePath in images:
 				if contained == this_detected_rect:
 					# detected_objects_clone.pop(this_index)
 					detected_objects_clone = np.delete(detected_objects_clone, this_index, 0)
-					print("this rect is contained. removed this rectangle.")
+					if debugging:
+						print("this rect is contained. removed this rectangle.")
 				elif contained == that_detected_rect:
 					# detected_objects_clone.delete(that_index)
 					detected_objects_clone = np.delete(detected_objects_clone, that_index, 0)
-					print("that rect is contained. removed that rectangle")
+					if debugging:
+						print("that rect is contained. removed that rectangle")
 				else:
 					pass
 					if debugging:
@@ -386,8 +391,14 @@ for imagePath in images:
 		for labRect in labelled_rectangles[str(imageNum)]:
 			expectedObjects+=1
 			# print(expectedObjects)
-			x = int(labRect[0])
-			y = int(labRect[1])
+
+			# if focused:
+			if classifier_type == "S" and dataset =="training":
+				x = int(labRect[0]) + int((110-100)/2)
+				y = int(labRect[1]) + int((110-40)/2)
+			else:
+				x = int(labRect[0])
+				y = int(labRect[1])
 			w = int(labRect[2])
 			h = int(labRect[3])
 			# print("printing rectangle: {0}.{1}: ({2},{3},{4},{5})".format(imageNum,expectedObjects,x,y,w,h))
@@ -434,7 +445,8 @@ for imagePath in images:
 		# we just wish to guess the middle portion of the square hypothesis.
 		# because most of the time, the car is in the middle.
 
-		if classifier_type == "S" and not livedetectionmode and useslidingwindows:
+		# if classifier_type == "S" and not livedetectionmode and useslidingwindows:
+		if classifier_type == "S" and useslidingwindows:
 			# see if any proportioned sliding windows are better than hypothesis
 
 			# numwindows = 5
@@ -562,22 +574,40 @@ for imagePath in images:
 			# labelled_rectangle = labelled_rects[iteration]
 			# print('image: ' + str(imageNum) + ', - labelled rect: '+str(labelled_rect))
 
+			# only one label in this image
 			if len(labelled_rectangles[str(imageNum)]) ==1:
-					labelled_rectangle_to_compare = Rectangle(int(labelled_rect[0]),int(labelled_rect[1]), int(labelled_rect[2]), int(labelled_rect[3]))
-
+					if classifier_type == "S" and dataset =="training":
+						relabel_x = int(labRect[0]) + int((110-100)/2)
+						relabel_y = int(labRect[1]) + int((110-40)/2)
+						labelled_rectangle_to_compare = Rectangle(relabel_x,relabel_y, int(labelled_rect[2]), int(labelled_rect[3]))
+					else:
+						labelled_rectangle_to_compare = Rectangle(int(labelled_rect[0]),int(labelled_rect[1]), int(labelled_rect[2]), int(labelled_rect[3]))
+			#many labels
 			else:
 
 				if iteration == 0:
+					if classifier_type == "S" and dataset =="training":
+						relabel_x = int(labRect[0]) + int((110-100)/2)
+						relabel_y = int(labRect[1]) + int((110-40)/2)
+						closest_labelled_rectangle = Rectangle(relabel_x,relabel_y, int(labelled_rect[2]), int(labelled_rect[3]))
+					else:
+						closest_labelled_rectangle = Rectangle(int(labelled_rect[0]),int(labelled_rect[1]), int(labelled_rect[2]), int(labelled_rect[3]))
+
 					# define first labelled rectangle as closest
-					closest_labelled_rectangle = Rectangle(int(labelled_rect[0]),int(labelled_rect[1]), int(labelled_rect[2]), int(labelled_rect[3]))
 					current_path = Line(detected_rectangle.getCenter(), closest_labelled_rectangle.getCenter())
 					closest_distance = current_path.getDistance()
 					labelled_rectangle_to_compare = closest_labelled_rectangle
 
 				else:
 
+					if classifier_type == "S" and dataset =="training":
+						relabel_x = int(labRect[0]) + int((110-100)/2)
+						relabel_y = int(labRect[1]) + int((110-40)/2)
+						labelled_rectangle = Rectangle(relabel_x,relabel_y, int(labelled_rect[2]), int(labelled_rect[3]))
+					else:
+						labelled_rectangle = Rectangle(int(labelled_rect[0]),int(labelled_rect[1]), int(labelled_rect[2]), int(labelled_rect[3]))
+
 					# get straight line distance between the center of labelled and detection rectangles.
-					labelled_rectangle = Rectangle(int(labelled_rect[0]),int(labelled_rect[1]), int(labelled_rect[2]), int(labelled_rect[3]))
 					current_path = Line(detected_rectangle.getCenter(), labelled_rectangle.getCenter())
 					current_distance = current_path.getDistance()
 
