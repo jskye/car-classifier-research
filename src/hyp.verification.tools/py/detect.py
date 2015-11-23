@@ -114,6 +114,7 @@ elif len(sys.argv) == 10:
 else:
 	print("check arguments!")
 
+
 debugging = False
 # for running live detection or testing how long detection takes.
 livedetectionmode = False
@@ -168,10 +169,12 @@ cascadeName = os.path.basename(cascadePath)
 cascadeNameMinusEx = cascadeName[:-4]
 
 print("using cascade: "+cascadeNameMinusEx+": "+cascadePathWithoutExtension)
+print("using MN: "+str(min_neighbors))
 
 # the directory to put the output logs
 outputLogDir = logresultspath
 
+# print(classifier_type)
 # the output filename
 outputFilename=testset+"."+cascadeNameMinusEx+'_'+colorspace+"MN"+min_neighbors+'_'+"TT"+classifier_type+'_'+'output.txt'
 # save the output file here

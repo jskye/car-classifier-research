@@ -404,7 +404,7 @@ TP:1, FP: 1, FN: 0
 Total labelled objects: 100
 Total objects detected: 279
 Total TP:116, Total FP: 163, Total FN: 8
-ADT: 0.14 seconds 
+ADT: 0.05 seconds 
 TPR: 1.16 
 FPR: 1.63 
 PPV: 0.415770609319 
